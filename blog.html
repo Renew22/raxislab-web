@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — RaxisLab</title>
+  <meta name="description" content="Conocimiento estratégico sobre marketing digital, SEO, Meta Ads, automatización e IA. Artículos escritos desde la experiencia real."/>
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://raxislab.com/blog.html"/>
+  <meta property="og:title"       content="Blog — Estrategia Digital Real · RaxisLab"/>
+  <meta property="og:description" content="Artículos prácticos sobre SEO, Meta Ads, Google Ads, IA y estrategia de contenido. Sin fluff, solo resultados."/>
+  <meta property="og:image"       content="https://raxislab.com/images/og-home.jpg"/>
+  <meta name="twitter:card"       content="summary_large_image"/>
+  <link rel="canonical"           href="https://raxislab.com/blog.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/blog.css"/>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGR4RYY1ER"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EGR4RYY1ER');</script>
+</head>
+<body>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
+      <div class="logo-wordmark"><span class="logo-name">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"    class="nav-link"><span class="nav-dot"></span>Home</a></li>
+      <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
+      <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
+      <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
+      <li><a href="blog.html"     class="nav-link active"><span class="nav-dot"></span>Blog</a></li>
+      <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
+      <li><a href="contact.html"  class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-link nav-dropdown-btn"><span class="nav-dot"></span>Más ▾</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="cases.html"  class="nav-link">Casos de Éxito</a></li>
+          <li><a href="about.html"  class="nav-link">Sobre mí</a></li>
+          <li><a href="roi.html"    class="nav-link">Calculadora ROI</a></li>
+          <li><a href="lab.html"    class="nav-link">The Lab</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-cta-area">
+      <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
+      <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </div>
+  </div></div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html"    class="nav-link">Home</a>
+  <a href="services.html" class="nav-link">Servicios</a>
+  <a href="cases.html"    class="nav-link">Casos</a>
+  <a href="about.html"    class="nav-link">Sobre mí</a>
+  <a href="blog.html"     class="nav-link active">Blog</a>
+  <a href="pricing.html"  class="nav-link">Precios</a>
+  <a href="roi.html"      class="nav-link">ROI</a>
+  <a href="lab.html"      class="nav-link">The Lab</a>
+  <a href="contact.html"  class="nav-link">Contacto</a>
+  <a href="contact.html"  class="btn btn-primary">Iniciar Proyecto</a>
+</div>
+
+<main class="page-content">
+
+  <!-- HERO -->
+  <section class="blog-hero" data-reveal>
+    <div class="container">
+      <div class="blog-hero-label">📝 Conocimiento sin filtros</div>
+      <h1 class="blog-hero-title">
+        Lo que funciona<br/><span class="gradient-text">en el mundo real</span>
+      </h1>
+      <p class="blog-hero-sub">
+        Sin teoría vacía. Estrategias, frameworks y datos extraídos directamente 
+        de campañas reales. Todo lo que aprendo, lo comparto aquí.
+      </p>
+
+      <!-- Search -->
+      <div class="blog-search-wrap">
+        <input type="text" class="blog-search-input" id="blogSearch"
+               placeholder="Buscar artículo, tema o herramienta..."
+               aria-label="Buscar artículos"/>
+        <div class="blog-search-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Filter -->
+      <div class="blog-filter-bar" id="blogFilterBar">
+        <button class="blog-filter-btn active" data-cat="all">Todos</button>
+        <button class="blog-filter-btn" data-cat="ads">Meta &amp; Google Ads</button>
+        <button class="blog-filter-btn" data-cat="seo">SEO</button>
+        <button class="blog-filter-btn" data-cat="cro">CRO &amp; Conversión</button>
+        <button class="blog-filter-btn" data-cat="ia">IA &amp; Automatización</button>
+        <button class="blog-filter-btn" data-cat="estrategia">Estrategia</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG CONTENT -->
+  <section class="section" style="padding-top:0; padding-bottom:120px;">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- Articles -->
+        <div>
+          <div class="blog-grid" id="blogGrid">
+            <!-- Articles injected by JS -->
+          </div>
+          <div class="blog-no-results" id="blogNoResults">
+            No se encontraron artículos para tu búsqueda.
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+
+          <!-- Popular topics -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">Temas populares</div>
+            <div class="sidebar-topics" id="sidebarTopics">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">Newsletter semanal</div>
+            <p class="sidebar-newsletter-desc">
+              Una estrategia accionable cada semana. Sin spam. Sin relleno. Solo lo que funciona.
+            </p>
+            <div class="sidebar-newsletter-form">
+              <input type="email" class="sidebar-newsletter-input"
+                     id="newsletterEmail" placeholder="tu@email.com"/>
+              <button class="sidebar-newsletter-btn" id="newsletterBtn">
+                Suscribirme →
+              </button>
+            </div>
+            <div class="sidebar-newsletter-ok" id="newsletterOk">
+              ✓ ¡Apuntado! Nos vemos en tu bandeja.
+            </div>
+          </div>
+
+          <!-- Latest articles -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">Más recientes</div>
+            <div class="sidebar-latest" id="sidebarLatest">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:inline-flex;">
+          <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
+          <div class="logo-wordmark"><span class="logo-name">RaxisLab</span><span class="logo-tagline">Digital Lab</span></div>
+        </a>
+        <p>Laboratorio estratégico digital. Convertimos inversión en resultados medibles con tecnología, datos y creatividad.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <a href="services.html">Meta &amp; Google Ads</a>
+        <a href="services.html">SEO Técnico</a>
+        <a href="services.html">CRM &amp; Automatización</a>
+        <a href="services.html">Diseño Web CRO</a>
+        <a href="services.html">Brand Film</a>
+      </div>
+      <div class="footer-col">
+        <h5>Agencia</h5>
+        <a href="about.html">Sobre mí</a>
+        <a href="cases.html">Casos de Éxito</a>
+        <a href="blog.html">Blog</a>
+        <a href="roi.html">Calculadora ROI</a>
+        <a href="lab.html">The Lab</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:hola@raxislab.com">hola@raxislab.com</a>
+        <a href="contact.html">Solicitar propuesta</a>
+        <a href="client-portal.html">🔐 Portal de cliente</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RaxisLab. Todos los derechos reservados. — <span class="text-mono">PRECISION · INNOVATION · SCALABILITY</span></p>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="blog-modal-overlay" id="blogOverlay"></div>
+<div class="blog-modal" id="blogModal" role="dialog" aria-modal="true">
+  <div id="blogModalContent"></div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/blog.js"></script>
+</body>
+</html>

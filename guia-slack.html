@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Slack para Negocios — RaxisLab</title>
+<link rel="stylesheet" href="css/pdf.css"/>
+<script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+<script src="js/pdf-download.js"></script>
+</head>
+<body>
+<div class="pdf-topbar">
+  <a href="resources.html" class="pdf-topbar-brand">◀ RAXISLAB · Recursos</a>
+  <div class="pdf-topbar-actions">
+    <a href="resources.html" class="pdf-btn-back">← Volver</a>
+    <button class="pdf-btn-download" onclick="downloadGuiaAsPDF('raxislab-guia-slack','Slack para negocios: estructura y flujos de trabajo')">⬇ Descargar PDF</button>
+  </div>
+</div>
+
+<div class="pdf-wrap">
+
+  <div class="pdf-cover">
+    <div class="pdf-cover-badge">💬 Guía #3 · Sistemas · RaxisLab</div>
+    <span class="pdf-cover-icon">💬</span>
+    <h1 class="pdf-cover-title">Slack para negocios:<br/><span>estructura y flujos de trabajo</span></h1>
+    <p class="pdf-cover-desc">Cómo organizar tu empresa en Slack para que la comunicación sea eficiente, no caótica. Estructura de canales, convenciones, onboarding y 5 automatizaciones con n8n incluidas.</p>
+    <div class="pdf-cover-meta">
+      <div class="pdf-cover-meta-item"><span>📄</span><span>22 páginas · PDF</span></div>
+      <div class="pdf-cover-meta-item"><span>🎯</span><span>Nivel: Avanzado</span></div>
+      <div class="pdf-cover-meta-item"><span>👤</span><span>René Benegas · RaxisLab</span></div>
+      <div class="pdf-cover-meta-item"><span>📅</span><span>2025</span></div>
+    </div>
+  </div>
+
+  <div class="pdf-body">
+
+    <div class="pdf-section">
+      <div class="pdf-section-label">El problema</div>
+      <h2 class="pdf-section-title">Por qué Slack sin estructura es peor que el WhatsApp</h2>
+      <div class="pdf-section-body">
+        <p>Slack es una herramienta de productividad. Sin estructura, se convierte en WhatsApp con notificaciones cada 2 minutos. El 70% de los equipos que "prueban Slack" lo abandonan en 3 meses porque lo configuran mal desde el inicio.</p>
+        <p>Esta guía es la configuración que implemento con mis clientes desde el día 1. Funciona para equipos de 2 personas hasta 50.</p>
+      </div>
+      <div class="pdf-callout">
+        <strong>Principio fundamental:</strong> Un canal de Slack = un tema, un propósito, un tipo de conversación. Si no puedes explicar en una frase qué va en ese canal, no debería existir.
+      </div>
+    </div>
+
+    <hr class="pdf-divider"/>
+
+    <div class="pdf-section">
+      <div class="pdf-section-label">Estructura de canales</div>
+      <h2 class="pdf-section-title">Arquitectura recomendada por tamaño de equipo</h2>
+
+      <table class="pdf-table">
+        <thead>
+          <tr><th>Canal</th><th>Propósito</th><th>Quién lo usa</th><th>Frecuencia</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong class="hl-accent">#general</strong></td><td>Anuncios de toda la empresa</td><td>Todos</td><td>Solo admin</td></tr>
+          <tr><td><strong class="hl-accent">#bienvenidos</strong></td><td>Presentaciones de nuevos miembros</td><td>Todos</td><td>Al incorporar</td></tr>
+          <tr><td><strong class="hl-accent">#proyectos-activos</strong></td><td>Updates de proyectos en curso</td><td>Equipo proyecto</td><td>Diaria</td></tr>
+          <tr><td><strong class="hl-accent">#marketing</strong></td><td>Campañas, contenido, redes</td><td>Marketing</td><td>Diaria</td></tr>
+          <tr><td><strong class="hl-accent">#ventas</strong></td><td>Leads, seguimientos, cierres</td><td>Ventas</td><td>Diaria</td></tr>
+          <tr><td><strong class="hl-accent">#operaciones</strong></td><td>Procesos, tareas, logística</td><td>Operaciones</td><td>Diaria</td></tr>
+          <tr><td><strong class="hl-accent">#clientes</strong></td><td>Comunicaciones con clientes</td><td>Account managers</td><td>Por evento</td></tr>
+          <tr><td><strong class="hl-accent">#finanzas-alertas</strong></td><td>Pagos recibidos, facturas, alertas</td><td>Admin + Finanzas</td><td>Automático</td></tr>
+          <tr><td><strong class="hl-accent">#errores-alertas</strong></td><td>Bugs, fallos del sistema</td><td>Técnico</td><td>Automático</td></tr>
+          <tr><td><strong class="hl-accent">#celebraciones</strong></td><td>Logros, ventas cerradas, hitos</td><td>Todos</td><td>Semanal</td></tr>
+          <tr><td><strong class="hl-accent">#aleatorio</strong></td><td>Off-topic, cultura de equipo</td><td>Todos</td><td>Libre</td></tr>
+        </tbody>
+      </table>
+
+      <div class="pdf-callout pdf-callout-warn" style="margin-top:20px;">
+        <strong>Regla de oro:</strong> Nunca uses mensajes directos (DMs) para conversaciones que deberían estar en un canal. Si la información es relevante para el equipo, va al canal. Si es personal o privada, al DM. La mezcla es el origen del caos.
+      </div>
+    </div>
+
+    <hr class="pdf-divider"/>
+
+    <div class="pdf-section">
+      <div class="pdf-section-label">Convenciones de uso</div>
+      <h2 class="pdf-section-title">Las reglas que todos deben conocer desde el día 1</h2>
+
+      <div class="pdf-steps">
+        <div class="pdf-step">
+          <div class="pdf-step-num">1</div>
+          <div class="pdf-step-content">
+            <div class="pdf-step-title">Nombrado de canales: prefijos consistentes</div>
+            <div class="pdf-step-body">
+              — <span class="hl-accent">proyec-</span> : canales de proyectos (proyec-nombre-cliente)<br/>
+              — <span class="hl-accent">equipo-</span> : canales de departamento (equipo-marketing)<br/>
+              — <span class="hl-accent">alertas-</span> : notificaciones automáticas (alertas-stripe)<br/>
+              — <span class="hl-accent">ext-</span> : canales compartidos con externos (ext-agencia-xyz)
+            </div>
+          </div>
+        </div>
+        <div class="pdf-step">
+          <div class="pdf-step-num">2</div>
+          <div class="pdf-step-content">
+            <div class="pdf-step-title">Hilos obligatorios</div>
+            <div class="pdf-step-body">Toda respuesta a un mensaje va en hilo (Thread), nunca en el canal principal. Esto mantiene el canal limpio y las conversaciones agrupadas. Pega en el canal principal el resumen final cuando el hilo tiene conclusión.</div>
+          </div>
+        </div>
+        <div class="pdf-step">
+          <div class="pdf-step-num">3</div>
+          <div class="pdf-step-content">
+            <div class="pdf-step-title">Estado del trabajo (Status)</div>
+            <div class="pdf-step-body">
+              Configura estados personalizados que el equipo use consistentemente:<br/>
+              🟢 Disponible / 🟡 En reunión / 🔴 No molestar / ✈️ Fuera de oficina / 🎧 En modo focus<br/>
+              El status visible elimina el 80% de los mensajes "¿estás ahí?"
+            </div>
+          </div>
+        </div>
+        <div class="pdf-step">
+          <div class="pdf-step-num">4</div>
+          <div class="pdf-step-content">
+            <div class="pdf-step-title">No al @ aquí o @canal indiscriminado</div>
+            <div class="pdf-step-body">@aquí notifica a todos los que están en línea. @canal notifica a TODOS aunque estén dormidos. Úsalos solo en emergencias reales. Define "emergencia real" con tu equipo (ejemplo: caída del sistema en producción, no "necesito un archivo").</div>
+          </div>
+        </div>
+        <div class="pdf-step">
+          <div class="pdf-step-num">5</div>
+          <div class="pdf-step-content">
+            <div class="pdf-step-title">Reacciones como confirmaciones</div>
+            <div class="pdf-step-body">
+              Define reacciones con significado claro:<br/>
+              ✅ = "Visto y entendido" / 👀 = "Lo estoy revisando" / 🔄 = "En proceso" / ✔️ = "Hecho"<br/>
+              Esto elimina el "ok!", "entendido", "perfecto" que llena canales de basura sin valor.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="pdf-divider"/>
+
+    <div class="pdf-section">
+      <div class="pdf-section-label">Plantilla de onboarding</div>
+      <h2 class="pdf-section-title">Mensaje de bienvenida a Slack (copia y pega)</h2>
+
+      <div class="pdf-callout" style="font-family: monospace; font-size:13px; line-height:1.9;">
+        <strong>📌 BIENVENIDO/A A [EMPRESA] EN SLACK</strong><br/><br/>
+        Hola [nombre], bienvenido/a al equipo.<br/><br/>
+        Aquí van las reglas básicas para que todo fluya bien:<br/><br/>
+        📌 <strong>Canales principales:</strong><br/>
+        — #general → solo anuncios de la empresa<br/>
+        — #[tu-departamento] → tu canal de trabajo diario<br/>
+        — #aleatorio → todo lo que no es trabajo<br/><br/>
+        📌 <strong>Normas de uso:</strong><br/>
+        1. Siempre responde en hilo (Thread), no en el canal<br/>
+        2. Usa ✅ para confirmar que viste algo<br/>
+        3. Pon tu estado cuando no puedas responder<br/>
+        4. Evita @aquí o @canal salvo urgencia real<br/><br/>
+        📌 <strong>Tu primer paso:</strong><br/>
+        Preséntate en #bienvenidos con: nombre, rol y una cosa que nadie sabe de ti.<br/><br/>
+        Cualquier duda, escríbeme por DM. 🚀
+      </div>
+    </div>
+
+    <hr class="pdf-divider"/>
+
+    <div class="pdf-section">
+      <div class="pdf-section-label">Automatizaciones con n8n</div>
+      <h2 class="pdf-section-title">5 workflows que implemento con todos mis clientes</h2>
+
+      <div class="pdf-cards">
+        <div class="pdf-card">
+          <div class="pdf-card-icon">💳</div>
+          <div class="pdf-card-title">Workflow 1: Stripe → Slack</div>
+          <div class="pdf-card-body">
+            Cuando llega un pago en Stripe → n8n recibe el webhook → envía mensaje automático a #finanzas-alertas con: cliente, importe, producto y fecha.<br/><br/>
+            <span class="hl-green">Resultado: equipo siempre informado de ingresos sin revisar el panel.</span>
+          </div>
+        </div>
+        <div class="pdf-card">
+          <div class="pdf-card-icon">📋</div>
+          <div class="pdf-card-title">Workflow 2: Formulario → Slack</div>
+          <div class="pdf-card-body">
+            Cuando alguien rellena el formulario de contacto → n8n procesa → envía alerta a #ventas con todos los datos y un link para responder por email en un clic.<br/><br/>
+            <span class="hl-green">Resultado: tiempo de respuesta de leads &lt;5 minutos.</span>
+          </div>
+        </div>
+        <div class="pdf-card">
+          <div class="pdf-card-icon">📊</div>
+          <div class="pdf-card-title">Workflow 3: Google Sheets → Slack</div>
+          <div class="pdf-card-body">
+            Cada lunes a las 9h → n8n lee la hoja de KPIs de Google Sheets → genera resumen semanal → lo posta en #general con el estado de cada métrica clave.<br/><br/>
+            <span class="hl-green">Resultado: briefing semanal automático sin reunión.</span>
+          </div>
+        </div>
+        <div class="pdf-card">
+          <div class="pdf-card-icon">⚠️</div>
+          <div class="pdf-card-title">Workflow 4: Alerta de error → Slack</div>
+          <div class="pdf-card-body">
+            Si una automatización de n8n falla → genera alerta inmediata → mensaje en #alertas-errores con el workflow que falló, el error exacto y el timestamp.<br/><br/>
+            <span class="hl-green">Resultado: problemas resueltos en minutos, no en días.</span>
+          </div>
+        </div>
+        <div class="pdf-card">
+          <div class="pdf-card-icon">🎉</div>
+          <div class="pdf-card-title">Workflow 5: CRM → Celebración</div>
+          <div class="pdf-card-body">
+            Cuando un lead se marca como "Cerrado ganado" en el CRM → n8n captura el evento → envía mensaje de celebración a #celebraciones con el nombre del cliente y el valor del contrato.<br/><br/>
+            <span class="hl-green">Resultado: cultura de equipo y motivación automática.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pdf-callout" style="margin-top:20px;">
+        <strong>Para implementar estas automatizaciones</strong> necesitas n8n (cloud o self-hosted) y las credenciales de API de cada servicio. Si quieres que lo configure yo directamente para tu negocio, escríbeme a <strong>hola@raxislab.com</strong>.
+      </div>
+    </div>
+
+    <hr class="pdf-divider"/>
+
+    <div class="pdf-section">
+      <div class="pdf-section-label">Checklist de configuración</div>
+      <h2 class="pdf-section-title">Setup completo de Slack — paso a paso</h2>
+      <ul class="pdf-checklist">
+        <li>Crear workspace con nombre de empresa y logo</li>
+        <li>Configurar canales según la arquitectura de esta guía</li>
+        <li>Escribir descripción y propósito de CADA canal (campo "Descripción")</li>
+        <li>Configurar estados personalizados del equipo</li>
+        <li>Añadir reacciones personalizadas con significado definido</li>
+        <li>Crear el mensaje de onboarding y anclarlo en #general</li>
+        <li>Configurar notificaciones: solo menciones y palabras clave (no todo)</li>
+        <li>Conectar Google Drive para compartir archivos directamente</li>
+        <li>Configurar horas de "no molestar" para el equipo</li>
+        <li>Implementar al menos Workflow 1 (Stripe → Slack) si tienes pagos online</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="pdf-footer">
+    <div class="pdf-footer-brand">© 2025 RaxisLab · René Benegas · raxislab.com</div>
+    <div class="pdf-footer-cta">
+      ¿Quiero que configure tu sistema?
+      <a href="contact.html" class="pdf-footer-link">hola@raxislab.com</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

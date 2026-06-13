@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Cliente · RaxisLab</title>
+  <meta name="description" content="Tu espacio privado en RaxisLab. Revisa avances, aprueba contenidos y consulta tus métricas."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/portal.css"/>
+</head>
+<body class="portal-body">
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════
+     PANTALLA DE LOGIN
+══════════════════════════════ -->
+<div class="portal-login" id="portalLogin">
+  <div class="portal-login-card">
+    <div class="portal-login-logo">
+      <img src="images/logo-raxislab.png" alt="RaxisLab" width="48" height="48"/>
+      <div>
+        <div class="portal-login-brand">RAXISLAB</div>
+        <div class="portal-login-sub">Portal de Cliente</div>
+      </div>
+    </div>
+    <h1 class="portal-login-title">Tu espacio<br/><span class="gradient-text">privado</span></h1>
+    <p class="portal-login-desc">
+      Introduce el código de acceso que te envió René para ver 
+      el estado de tu proyecto, revisar contenidos y consultar métricas.
+    </p>
+    <form class="portal-login-form" id="loginForm" autocomplete="off">
+      <label class="portal-login-label">Código de acceso</label>
+      <div class="portal-code-wrap">
+        <input
+          type="text"
+          id="accessCode"
+          class="portal-code-input"
+          placeholder="Ej: DEMO-2025"
+          maxlength="20"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button type="submit" class="portal-code-btn" id="loginBtn">
+          Entrar →
+        </button>
+      </div>
+      <div class="portal-login-error" id="loginError" style="display:none;">
+        ❌ Código incorrecto. Comprueba que lo has escrito bien o contacta con René.
+      </div>
+    </form>
+    <div class="portal-login-demo">
+      <span>¿No tienes código?</span>
+      <button class="portal-demo-btn" id="demoBtn">Probar con demo →</button>
+    </div>
+    <div class="portal-login-footer">
+      <a href="index.html">← Volver a RaxisLab</a>
+      <a href="contact.html">Solicitar acceso</a>
+    </div>
+  </div>
+  <div class="portal-login-bg" aria-hidden="true">
+    <div class="login-orb login-orb-1"></div>
+    <div class="login-orb login-orb-2"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PORTAL DASHBOARD
+══════════════════════════════ -->
+<div class="portal-app" id="portalApp" style="display:none;">
+
+  <!-- Sidebar -->
+  <aside class="portal-sidebar" id="portalSidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        <img src="images/logo-raxislab.png" alt="RaxisLab" width="34" height="34"/>
+        <span>RAXISLAB</span>
+      </a>
+    </div>
+
+    <div class="sidebar-client-info" id="sidebarClientInfo">
+      <!-- JS -->
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="sidebar-nav-item active" data-view="overview">
+        <span class="snav-icon">📊</span>
+        <span class="snav-label">Resumen</span>
+      </button>
+      <button class="sidebar-nav-item" data-view="tasks">
+        <span class="snav-icon">✅</span>
+        <span class="snav-label">Trabajos</span>
+        <span class="snav-badge" id="badgeTasks"></span>
+      </button>
+      <button class="sidebar-nav-item" data-view="content">
+        <span class="snav-icon">🎬</span>
+        <span class="snav-label">Contenidos</span>
+        <span class="snav-badge snav-badge-warn" id="badgeContent"></span>
+      </button>
+      <button class="sidebar-nav-item" data-view="metrics">
+        <span class="snav-icon">📈</span>
+        <span class="snav-label">Métricas</span>
+      </button>
+      <button class="sidebar-nav-item" data-view="messages">
+        <span class="snav-icon">💬</span>
+        <span class="snav-label">Mensajes</span>
+        <span class="snav-badge snav-badge-warn" id="badgeMessages"></span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="contact.html" class="sidebar-contact-btn">
+        📩 Contactar a René
+      </a>
+      <button class="sidebar-admin-btn" id="adminBtn" style="display:none;">
+        ⚙️ Panel Admin
+      </button>
+      <button class="sidebar-logout" id="logoutBtn">
+        ← Cerrar sesión
+      </button>
+    </div>
+  </aside>
+
+  <!-- Mobile top bar -->
+  <div class="portal-topbar">
+    <button class="topbar-menu" id="topbarMenu">☰</button>
+    <div class="topbar-title" id="topbarTitle">Resumen</div>
+    <div class="topbar-logo">
+      <img src="images/logo-raxislab.png" alt="RaxisLab" width="28" height="28"/>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="portal-main" id="portalMain">
+
+    <!-- ── VIEW: OVERVIEW ── -->
+    <div class="portal-view active" id="view-overview">
+      <div class="portal-view-header" id="overviewHeader">
+        <!-- JS inject -->
+      </div>
+
+      <!-- KPI row -->
+      <div class="portal-kpis" id="portalKpis">
+        <!-- JS inject -->
+      </div>
+
+      <!-- Progress + recent tasks -->
+      <div class="portal-overview-grid">
+
+        <!-- Project progress -->
+        <div class="portal-card" id="phaseCard">
+          <!-- JS inject -->
+        </div>
+
+        <!-- Quick messages -->
+        <div class="portal-card">
+          <div class="portal-card-header">
+            <h3 class="portal-card-title">💬 Últimos mensajes</h3>
+            <button class="portal-card-action" data-view="messages">Ver todos →</button>
+          </div>
+          <div class="portal-messages-preview" id="messagesPreview">
+            <!-- JS inject -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent tasks -->
+      <div class="portal-card" style="margin-top:20px;">
+        <div class="portal-card-header">
+          <h3 class="portal-card-title">🔧 Trabajos recientes</h3>
+          <button class="portal-card-action" data-view="tasks">Ver todos →</button>
+        </div>
+        <div id="recentTasks"><!-- JS inject --></div>
+      </div>
+
+      <!-- Content pending -->
+      <div class="portal-card" style="margin-top:20px;" id="pendingContentCard">
+        <div class="portal-card-header">
+          <h3 class="portal-card-title">🎬 Contenidos pendientes de aprobación</h3>
+          <button class="portal-card-action" data-view="content">Ver todos →</button>
+        </div>
+        <div id="pendingContentPreview"><!-- JS inject --></div>
+      </div>
+    </div>
+
+    <!-- ── VIEW: TASKS ── -->
+    <div class="portal-view" id="view-tasks">
+      <div class="portal-view-header">
+        <h2 class="portal-view-title">✅ Trabajos del proyecto</h2>
+        <p class="portal-view-sub">Seguimiento completo de todas las tareas activas, completadas y pendientes.</p>
+      </div>
+
+      <div class="tasks-filter-bar" id="tasksFilterBar">
+        <button class="task-filter active" data-filter="all">Todos</button>
+        <button class="task-filter" data-filter="en_progreso">En progreso</button>
+        <button class="task-filter" data-filter="pendiente">Pendientes</button>
+        <button class="task-filter" data-filter="completada">Completados</button>
+      </div>
+
+      <div class="tasks-board" id="tasksBoard">
+        <!-- JS inject -->
+      </div>
+    </div>
+
+    <!-- ── VIEW: CONTENT ── -->
+    <div class="portal-view" id="view-content">
+      <div class="portal-view-header">
+        <h2 class="portal-view-title">🎬 Contenidos del mes</h2>
+        <p class="portal-view-sub">Revisa, aprueba o solicita cambios en los contenidos antes de publicarlos.</p>
+      </div>
+
+      <div class="content-status-bar" id="contentStatusBar">
+        <button class="content-filter active" data-cfilter="all">Todos</button>
+        <button class="content-filter" data-cfilter="pendiente_aprobacion">⏳ Pendiente aprobación</button>
+        <button class="content-filter" data-cfilter="aprobado">✅ Aprobados</button>
+        <button class="content-filter" data-cfilter="publicado">🚀 Publicados</button>
+        <button class="content-filter" data-cfilter="borrador">📝 Borrador</button>
+      </div>
+
+      <div class="content-grid" id="contentGrid">
+        <!-- JS inject -->
+      </div>
+    </div>
+
+    <!-- ── VIEW: METRICS ── -->
+    <div class="portal-view" id="view-metrics">
+      <div class="portal-view-header">
+        <h2 class="portal-view-title">📈 Métricas del proyecto</h2>
+        <p class="portal-view-sub">Datos clave de tu campaña. Actualizado cada semana.</p>
+      </div>
+      <div id="metricsContent"><!-- JS inject --></div>
+    </div>
+
+    <!-- ── VIEW: MESSAGES ── -->
+    <div class="portal-view" id="view-messages">
+      <div class="portal-view-header">
+        <h2 class="portal-view-title">💬 Mensajes</h2>
+        <p class="portal-view-sub">Canal directo con René. Respuesta garantizada en menos de 24h laborables.</p>
+      </div>
+      <div class="portal-chat" id="portalChat">
+        <div class="chat-messages" id="chatMessages">
+          <!-- JS inject -->
+        </div>
+        <div class="chat-input-area">
+          <textarea class="chat-input" id="chatInput" placeholder="Escribe tu mensaje…" rows="2"></textarea>
+          <button class="chat-send-btn" id="chatSend">Enviar →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── VIEW: ADMIN (René only) ── -->
+    <div class="portal-view" id="view-admin">
+      <div class="portal-view-header">
+        <h2 class="portal-view-title">⚙️ Panel de Administración</h2>
+        <p class="portal-view-sub">Gestión interna de clientes — solo visible para René · RaxisLab</p>
+      </div>
+      <div id="adminContent"><!-- JS inject --></div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ADMIN LOGIN OVERLAY -->
+<div class="admin-login-overlay" id="adminLoginOverlay" style="display:none;">
+  <div class="admin-login-card">
+    <div class="admin-login-icon">🔐</div>
+    <h3 class="admin-login-title">Acceso Admin</h3>
+    <p class="admin-login-desc">Introduce el PIN de administrador</p>
+    <form onsubmit="event.preventDefault();document.getElementById('adminPinConfirm').click();">
+      <input type="password" id="adminPinInput" class="admin-pin-input" placeholder="••••••" maxlength="10" autocomplete="current-password"/>
+    </form>
+    <div class="admin-pin-error" id="adminPinError" style="display:none;">PIN incorrecto</div>
+    <div style="display:flex;gap:10px;margin-top:16px;">
+      <button class="admin-pin-btn" id="adminPinConfirm">Acceder</button>
+      <button class="admin-pin-cancel" id="adminPinCancel">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Content approval modal -->
+<div class="content-modal-overlay" id="contentOverlay" style="display:none;">
+  <div class="content-modal" id="contentModal">
+    <button class="content-modal-close" id="contentModalClose">✕</button>
+    <div id="contentModalBody"><!-- JS inject --></div>
+  </div>
+</div>
+
+<script src="js/portal.js"></script>
+</body>
+</html>

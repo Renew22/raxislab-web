@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora ROI — RaxisLab</title>
+  <meta name="description" content="Calcula el retorno de inversión de tus campañas digitales con la herramienta interactiva de RaxisLab. Obtén proyecciones reales de leads, revenue y ROAS."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/roi.css"/>
+</head>
+<body>
+
+<!-- ── Grid Overlay ── -->
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="index.html" class="nav-logo" aria-label="RaxisLab Home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="nav-glow">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <g filter="url(#nav-glow)">
+              <line x1="16" y1="16" x2="16" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="23" x2="23" y2="88" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="16" y1="16" x2="72" y2="16" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="23" x2="66" y2="23" stroke="#00C8FF" stroke-width="2.2"/>
+              <polyline points="72,16 85,29 85,50 72,63" stroke="#00C8FF" stroke-width="4" stroke-linejoin="miter" fill="none"/>
+              <polyline points="66,23 77,34 77,46 66,56" stroke="#00C8FF" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+              <line x1="23" y1="56" x2="72" y2="56" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="63" x2="66" y2="63" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="16" y1="94" x2="36" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="88" x2="38" y2="88" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="50" y1="63" x2="78" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="44" y1="63" x2="70" y2="94" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="66" y1="94" x2="78" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="32" y1="38" x2="55" y2="62" stroke="#00C8FF" stroke-width="2.8"/>
+              <line x1="55" y1="38" x2="32" y2="62" stroke="#00C8FF" stroke-width="2.8"/>
+              <rect x="38" y="46" width="10" height="8" fill="#000000"/>
+              <line x1="32" y1="38" x2="46" y2="52" stroke="#00C8FF" stroke-width="2.8"/>
+              <line x1="41" y1="51" x2="32" y2="62" stroke="#00C8FF" stroke-width="2.8"/>
+              <line x1="72" y1="16" x2="104" y2="16" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="104" y1="16" x2="104" y2="50" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="85" y1="23" x2="98" y2="23" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="98" y1="23" x2="98" y2="44" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="85" y1="29" x2="103" y2="47" stroke="#00C8FF" stroke-width="2.8"/>
+              <polygon points="104,16 91,16 104,29" fill="#00C8FF"/>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-wordmark">
+          <span class="logo-name">RaxisLab</span>
+          <span class="logo-tagline">Digital Lab</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link"><span class="nav-dot"></span>Home</a></li>
+        <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
+        <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
+        <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
+        <li><a href="blog.html" class="nav-link"><span class="nav-dot"></span>Blog</a></li>
+        <li><a href="pricing.html" class="nav-link"><span class="nav-dot"></span>Precios</a></li>
+        <li><a href="contact.html" class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-btn"><span class="nav-dot"></span>Más ▾</button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="cases.html"  class="nav-link">Casos de Éxito</a></li>
+            <li><a href="about.html"  class="nav-link">Sobre mí</a></li>
+            <li><a href="roi.html"    class="nav-link active">Calculadora ROI</a></li>
+            <li><a href="lab.html"    class="nav-link">The Lab</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="nav-cta-area">
+        <div class="nav-status">
+          <div class="nav-status-dot" aria-hidden="true"></div>
+          <span>Calculando en tiempo real</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Solicitar Estrategia</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menú móvil">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="services.html" class="nav-link">Servicios</a>
+  <a href="cases.html" class="nav-link">Casos</a>
+  <a href="about.html" class="nav-link">Sobre mí</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="pricing.html" class="nav-link">Precios</a>
+  <a href="roi.html" class="nav-link active">ROI</a>
+  <a href="lab.html" class="nav-link">The Lab</a>
+  <a href="contact.html" class="nav-link">Contacto</a>
+  <a href="contact.html" class="btn btn-primary">Solicitar Estrategia</a>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════ -->
+<main class="page-content">
+
+  <!-- ── Hero ── -->
+  <section class="roi-hero">
+    <div class="container">
+      <div class="roi-hero-badge">
+        <span class="dot"></span>
+        ROI Calculator v2.0
+      </div>
+      <h1 class="roi-hero-title">
+        Calcula tu<br/>
+        <span class="gradient-text">Retorno Real</span>
+      </h1>
+      <p class="roi-hero-sub">
+        Introduce tus métricas actuales y descubre en segundos cuánto revenue, leads 
+        y ROAS puede generar tu inversión con RaxisLab.
+      </p>
+      <div class="roi-hero-stats">
+        <div class="roi-stat-item">
+          <span class="roi-stat-num" id="heroAvgRoi">+312%</span>
+          <span class="roi-stat-lbl">ROI Medio Clientes</span>
+        </div>
+        <div class="roi-stat-item">
+          <span class="roi-stat-num">4.8×</span>
+          <span class="roi-stat-lbl">ROAS Promedio</span>
+        </div>
+        <div class="roi-stat-item">
+          <span class="roi-stat-num">90d</span>
+          <span class="roi-stat-lbl">Payback Period</span>
+        </div>
+        <div class="roi-stat-item">
+          <span class="roi-stat-num">+38</span>
+          <span class="roi-stat-lbl">Clientes Activos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Calculator + Results ── -->
+  <section class="roi-main">
+    <div class="container">
+      <div class="roi-layout">
+
+        <!-- ╔══════════════════════╗ -->
+        <!-- ║   CALCULATOR PANEL  ║ -->
+        <!-- ╚══════════════════════╝ -->
+        <div class="roi-calc-panel" data-reveal>
+
+          <div class="roi-panel-header">
+            <div class="roi-panel-title">
+              <span class="icon">⚙</span>
+              Parámetros de Inversión
+            </div>
+            <span class="roi-panel-badge">EN VIVO</span>
+          </div>
+
+          <div class="roi-panel-body">
+
+            <!-- Service Selector -->
+            <p class="roi-presets-label" style="margin-bottom: 14px;">01 / Selecciona tu servicio principal</p>
+            <div class="roi-service-grid" id="serviceGrid">
+              <button class="roi-service-btn active" data-svc="ads">
+                <span class="svc-icon">🎯</span>
+                <span>Meta & Google Ads</span>
+              </button>
+              <button class="roi-service-btn" data-svc="seo">
+                <span class="svc-icon">📈</span>
+                <span>SEO</span>
+              </button>
+              <button class="roi-service-btn" data-svc="crm">
+                <span class="svc-icon">🔄</span>
+                <span>CRM / Auto</span>
+              </button>
+              <button class="roi-service-btn" data-svc="web">
+                <span class="svc-icon">🌐</span>
+                <span>Diseño Web</span>
+              </button>
+              <button class="roi-service-btn" data-svc="film">
+                <span class="svc-icon">🎬</span>
+                <span>Film & Brand</span>
+              </button>
+              <button class="roi-service-btn" data-svc="full">
+                <span class="svc-icon">🚀</span>
+                <span>Full Stack</span>
+              </button>
+            </div>
+
+            <hr class="roi-panel-divider"/>
+
+            <!-- Sliders -->
+            <p class="roi-presets-label" style="margin-bottom: 20px;">02 / Define tu inversión y métricas</p>
+            <div class="roi-sliders" id="roiSliders">
+
+              <!-- Inversión mensual -->
+              <div class="roi-slider-group">
+                <div class="roi-slider-label">
+                  <span class="roi-slider-name">Inversión mensual en Ads</span>
+                  <span class="roi-slider-value" id="valBudget">€2.000</span>
+                </div>
+                <input type="range" class="roi-range" id="sliderBudget"
+                       min="500" max="50000" step="500" value="2000"
+                       aria-label="Inversión mensual en Ads"/>
+                <div class="roi-slider-hints">
+                  <span>€500</span><span>€25.000</span><span>€50.000</span>
+                </div>
+              </div>
+
+              <!-- Ticket Medio -->
+              <div class="roi-slider-group">
+                <div class="roi-slider-label">
+                  <span class="roi-slider-name">Ticket medio por cliente</span>
+                  <span class="roi-slider-value" id="valTicket">€800</span>
+                </div>
+                <input type="range" class="roi-range" id="sliderTicket"
+                       min="100" max="20000" step="100" value="800"
+                       aria-label="Ticket medio por cliente"/>
+                <div class="roi-slider-hints">
+                  <span>€100</span><span>€10.000</span><span>€20.000</span>
+                </div>
+              </div>
+
+              <!-- Tasa de Conversión -->
+              <div class="roi-slider-group">
+                <div class="roi-slider-label">
+                  <span class="roi-slider-name">Tasa de conversión web actual</span>
+                  <span class="roi-slider-value" id="valCvr">1.8%</span>
+                </div>
+                <input type="range" class="roi-range" id="sliderCvr"
+                       min="0.1" max="15" step="0.1" value="1.8"
+                       aria-label="Tasa de conversión actual"/>
+                <div class="roi-slider-hints">
+                  <span>0.1%</span><span>7.5%</span><span>15%</span>
+                </div>
+              </div>
+
+              <!-- Tráfico mensual -->
+              <div class="roi-slider-group">
+                <div class="roi-slider-label">
+                  <span class="roi-slider-name">Visitas web mensuales</span>
+                  <span class="roi-slider-value" id="valTraffic">5.000</span>
+                </div>
+                <input type="range" class="roi-range" id="sliderTraffic"
+                       min="100" max="200000" step="100" value="5000"
+                       aria-label="Visitas web mensuales"/>
+                <div class="roi-slider-hints">
+                  <span>100</span><span>100.000</span><span>200.000</span>
+                </div>
+              </div>
+
+              <!-- Duración del cliente -->
+              <div class="roi-slider-group">
+                <div class="roi-slider-label">
+                  <span class="roi-slider-name">Duración media del cliente (meses)</span>
+                  <span class="roi-slider-value" id="valLtv">6 meses</span>
+                </div>
+                <input type="range" class="roi-range" id="sliderLtv"
+                       min="1" max="36" step="1" value="6"
+                       aria-label="Duración media del cliente en meses"/>
+                <div class="roi-slider-hints">
+                  <span>1</span><span>18</span><span>36 meses</span>
+                </div>
+              </div>
+
+            </div>
+
+            <hr class="roi-panel-divider"/>
+
+            <!-- Presets -->
+            <p class="roi-presets-label">03 / Escenarios rápidos</p>
+            <div class="roi-presets">
+              <button class="roi-preset-btn" data-preset="startup">Startup</button>
+              <button class="roi-preset-btn" data-preset="pyme">PYME</button>
+              <button class="roi-preset-btn" data-preset="ecommerce">E-commerce</button>
+              <button class="roi-preset-btn" data-preset="corporate">Corporativo</button>
+              <button class="roi-preset-btn" data-preset="saas">SaaS</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ╔══════════════════════╗ -->
+        <!-- ║   RESULTS PANEL     ║ -->
+        <!-- ╚══════════════════════╝ -->
+        <div class="roi-results-panel">
+
+          <!-- Main ROI Card -->
+          <div class="roi-main-result" data-reveal data-reveal-delay="1">
+            <p class="roi-result-label">ROI Proyectado — 12 meses</p>
+            <div class="roi-result-big" id="mainRoi">+312%</div>
+            <p class="roi-result-sub">Sobre la inversión total del año</p>
+            <div class="roi-result-trend">
+              ↑ <span id="roiVsIndustry">2.4×</span> sobre la media del sector
+            </div>
+          </div>
+
+          <!-- Metrics Grid -->
+          <div class="roi-metrics-grid" data-reveal data-reveal-delay="2">
+            <div class="roi-metric-card">
+              <div class="roi-metric-lbl">Revenue Proyectado / Año</div>
+              <div class="roi-metric-val accent" id="metricRevenue">€99.840</div>
+              <div class="roi-metric-delta" id="metricRevenueDelta">vs €24.000 actual</div>
+            </div>
+            <div class="roi-metric-card">
+              <div class="roi-metric-lbl">Leads Generados / Año</div>
+              <div class="roi-metric-val positive" id="metricLeads">1.248</div>
+              <div class="roi-metric-delta" id="metricLeadsDelta">+840 sobre situación actual</div>
+            </div>
+            <div class="roi-metric-card">
+              <div class="roi-metric-lbl">ROAS Global</div>
+              <div class="roi-metric-val accent" id="metricRoas">4.7×</div>
+              <div class="roi-metric-delta" id="metricRoasDelta">€4.15 por cada €1 invertido</div>
+            </div>
+            <div class="roi-metric-card">
+              <div class="roi-metric-lbl">LTV por Cliente</div>
+              <div class="roi-metric-val warning" id="metricLtv">€4.800</div>
+              <div class="roi-metric-delta" id="metricLtvDelta">CAC estimado: €482</div>
+            </div>
+            <div class="roi-metric-card">
+              <div class="roi-metric-lbl">CVR con RaxisLab</div>
+              <div class="roi-metric-val positive" id="metricCvr">4.3%</div>
+              <div class="roi-metric-delta" id="metricCvrDelta">+138% sobre tu CVR actual</div>
+            </div>
+            <div class="roi-metric-card">
+              <div class="roi-metric-lbl">Payback Period</div>
+              <div class="roi-metric-val" id="metricPayback">87 días</div>
+              <div class="roi-metric-delta">Recuperación de inversión</div>
+            </div>
+          </div>
+
+          <!-- Proyección Chart -->
+          <div class="roi-chart-wrap" data-reveal data-reveal-delay="3">
+            <div class="roi-chart-header">
+              <span class="roi-chart-title">Proyección de Revenue</span>
+              <div class="roi-chart-tabs">
+                <button class="roi-tab-btn active" data-chart="monthly">Mensual</button>
+                <button class="roi-tab-btn" data-chart="cumulative">Acumulado</button>
+              </div>
+            </div>
+            <div class="roi-chart-body">
+              <canvas id="roiChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Timeline Roadmap -->
+          <div class="roi-timeline-card" data-reveal data-reveal-delay="4">
+            <div class="roi-timeline-title">
+              🗓️ Hoja de ruta — Resultados esperados
+            </div>
+            <div class="roi-timeline-steps" id="roiTimeline">
+              <div class="roi-tl-step">
+                <div class="roi-tl-node">01</div>
+                <div class="roi-tl-info">
+                  <div class="roi-tl-month">Mes 1–2</div>
+                  <div class="roi-tl-desc">Setup, auditoría y arquitectura de campañas</div>
+                  <div class="roi-tl-val" id="tlVal1">Primeros leads cualificados</div>
+                </div>
+              </div>
+              <div class="roi-tl-step">
+                <div class="roi-tl-node">02</div>
+                <div class="roi-tl-info">
+                  <div class="roi-tl-month">Mes 3–4</div>
+                  <div class="roi-tl-desc">Optimización activa + CRO web</div>
+                  <div class="roi-tl-val" id="tlVal2">CVR +60% · ROAS 2.5×</div>
+                </div>
+              </div>
+              <div class="roi-tl-step">
+                <div class="roi-tl-node">03</div>
+                <div class="roi-tl-info">
+                  <div class="roi-tl-month">Mes 5–8</div>
+                  <div class="roi-tl-desc">Escala de campañas + automatización CRM</div>
+                  <div class="roi-tl-val" id="tlVal3">Revenue €0 → meta parcial</div>
+                </div>
+              </div>
+              <div class="roi-tl-step done">
+                <div class="roi-tl-node">✓</div>
+                <div class="roi-tl-info">
+                  <div class="roi-tl-month">Mes 9–12</div>
+                  <div class="roi-tl-desc">Plena velocidad, brand awareness y retención</div>
+                  <div class="roi-tl-val" id="tlVal4">ROI completo alcanzado</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Full Width: Insights + Comparison ── -->
+      <div class="roi-full" data-reveal>
+
+        <!-- Insights -->
+        <div class="roi-insights-row">
+          <div class="roi-insight-card">
+            <div class="roi-insight-icon">📊</div>
+            <div class="roi-insight-title">Por qué estas cifras son alcanzables</div>
+            <div class="roi-insight-text">
+              Basado en datos reales de nuestros clientes activos, con métricas auditadas
+              trimestralmente. No son proyecciones genéricas — son benchmarks de tu sector.
+            </div>
+          </div>
+          <div class="roi-insight-card">
+            <div class="roi-insight-icon">🎯</div>
+            <div class="roi-insight-title">Metodología Data-First</div>
+            <div class="roi-insight-text">
+              Cada peso de tu presupuesto se trackea en tiempo real. Sin black boxes: 
+              tienes acceso a tu dashboard en The Lab con datos live de GA4, Ads y CRM.
+            </div>
+          </div>
+          <div class="roi-insight-card">
+            <div class="roi-insight-icon">🔒</div>
+            <div class="roi-insight-title">Garantía de rendimiento</div>
+            <div class="roi-insight-text">
+              Si en 90 días no alcanzamos las métricas proyectadas, ajustamos la estrategia
+              sin coste adicional hasta que los números cuadren.
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="roi-compare-wrap">
+          <div class="roi-compare-header">
+            <span class="roi-compare-title">RaxisLab vs Alternativas — ¿Qué obtienes?</span>
+            <span class="roi-panel-badge">Comparativa Real</span>
+          </div>
+          <table class="roi-compare-table" aria-label="Comparativa de servicios">
+            <thead>
+              <tr>
+                <th>Servicio / Característica</th>
+                <th class="raxis-col">RaxisLab</th>
+                <th>Agencia Tradicional</th>
+                <th>Freelance</th>
+                <th>In-House</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dashboard en tiempo real (Looker Studio)</td>
+                <td class="raxis-col"><span class="check">✓</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="partial">~</span></td>
+              </tr>
+              <tr>
+                <td>Estrategia full-funnel integrada</td>
+                <td class="raxis-col"><span class="check">✓</span></td>
+                <td><span class="partial">~</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="partial">~</span></td>
+              </tr>
+              <tr>
+                <td>Automatización CRM + IA</td>
+                <td class="raxis-col"><span class="check">✓</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+              </tr>
+              <tr>
+                <td>Producción audiovisual + Brand Film</td>
+                <td class="raxis-col"><span class="check">✓</span></td>
+                <td><span class="partial">~</span></td>
+                <td><span class="partial">~</span></td>
+                <td><span class="cross">✗</span></td>
+              </tr>
+              <tr>
+                <td>Optimización SEO técnica</td>
+                <td class="raxis-col"><span class="check">✓</span></td>
+                <td><span class="partial">~</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="partial">~</span></td>
+              </tr>
+              <tr>
+                <td>ROAS garantizado en 90 días</td>
+                <td class="raxis-col"><span class="check">✓</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+              </tr>
+              <tr>
+                <td>Coste mensual estimado</td>
+                <td class="raxis-col" id="compareRaxisCost">€1.800–€4.500</td>
+                <td>€3.000–€8.000</td>
+                <td>€800–€2.500</td>
+                <td>€4.000–€12.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- CTA -->
+        <div class="roi-cta-section" data-reveal>
+          <div style="position:relative; z-index:1;">
+            <p class="section-label">Próximo paso</p>
+            <h2 class="roi-cta-title">
+              Tu ROI proyectado es<br/>
+              <span class="gradient-text" id="ctaRoiValue">+312%</span>
+            </h2>
+            <p class="roi-cta-sub">
+              Convierte esta proyección en resultados reales. Reserva una llamada de 
+              30 minutos y te entregamos un plan de acción gratuito con métricas garantizadas.
+            </p>
+            <div class="roi-cta-actions">
+              <a href="contact.html" class="btn btn-primary">
+                🚀 Activar mi estrategia
+              </a>
+              <a href="cases.html" class="btn btn-ghost">
+                Ver casos de éxito
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:16px; display:inline-flex;">
+          <div class="logo-icon">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <line x1="16" y1="16" x2="16" y2="94" stroke="#00C8FF" stroke-width="4"/>
+                <line x1="16" y1="16" x2="72" y2="16" stroke="#00C8FF" stroke-width="4"/>
+                <polyline points="72,16 85,29 85,50 72,63" stroke="#00C8FF" stroke-width="4" stroke-linejoin="miter" fill="none"/>
+                <line x1="23" y1="56" x2="72" y2="56" stroke="#00C8FF" stroke-width="4"/>
+                <line x1="16" y1="94" x2="36" y2="94" stroke="#00C8FF" stroke-width="4"/>
+                <line x1="50" y1="63" x2="78" y2="94" stroke="#00C8FF" stroke-width="4"/>
+                <polygon points="104,16 91,16 104,29" fill="#00C8FF"/>
+              </g>
+            </svg>
+          </div>
+          <div class="logo-wordmark">
+            <span class="logo-name">RaxisLab</span>
+            <span class="logo-tagline">Digital Lab</span>
+          </div>
+        </a>
+        <p>Laboratorio estratégico digital. Convertimos inversión en resultados medibles con tecnología, datos y creatividad.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <a href="services.html">Meta & Google Ads</a>
+        <a href="services.html">SEO Técnico</a>
+        <a href="services.html">CRM & Automatización</a>
+        <a href="services.html">Diseño Web</a>
+        <a href="services.html">Brand Film</a>
+      </div>
+      <div class="footer-col">
+        <h5>Agencia</h5>
+        <a href="cases.html">Casos de Éxito</a>
+        <a href="roi.html">Calculadora ROI</a>
+        <a href="lab.html">The Lab</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:hola@raxislab.com">hola@raxislab.com</a>
+        <a href="contact.html">Solicitar propuesta</a>
+        <a href="client-portal.html">🔐 Portal de cliente</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RaxisLab. Todos los derechos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="terms.html">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/roi.js"></script>
+
+</body>
+</html>

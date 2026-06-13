@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# No indexar el portal de cliente ni el lab interno
+Disallow: /client-portal.html
+Disallow: /lab.html
+
+Sitemap: https://raxislab.com/sitemap.xml

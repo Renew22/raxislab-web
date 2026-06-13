@@ -1,0 +1,235 @@
+/* ============================================================
+   RAXISLAB — css/legal.css  (shared: privacy, terms, cookies, faq, help)
+   ============================================================ */
+
+.legal-hero {
+  padding: calc(var(--nav-h) + 60px) 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,200,255,0.07);
+  border: 1px solid rgba(0,200,255,0.2);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.legal-title {
+  font-size: clamp(28px, 4.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+
+.legal-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* Content area */
+.legal-body {
+  padding: 72px 0;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-body h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 44px 0 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.legal-body h2:first-child { border-top: none; margin-top: 0; }
+
+.legal-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-mid);
+  margin: 22px 0 8px;
+}
+
+.legal-body p {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.legal-body ul, .legal-body ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.legal-body ul { list-style: disc; }
+.legal-body ol { list-style: decimal; }
+
+.legal-body li {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 6px;
+}
+
+.legal-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(0,200,255,0.3);
+}
+
+.legal-body a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.legal-highlight {
+  background: rgba(0,200,255,0.06);
+  border: 1px solid rgba(0,200,255,0.18);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: var(--text-mid);
+}
+
+/* TOC */
+.legal-toc {
+  background: #0a0a14;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+
+.legal-toc-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.legal-toc ol {
+  list-style: decimal;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.legal-toc li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.legal-toc a {
+  color: var(--text-mid);
+  text-decoration: none;
+}
+
+.legal-toc a:hover { color: var(--accent); }
+
+/* ─── FAQ specific ─── */
+.faq-grid { display: flex; flex-direction: column; gap: 12px; }
+
+.faq-item {
+  background: #0a0a12;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.faq-question:hover { background: rgba(255,255,255,0.02); }
+
+.faq-arrow {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: rgba(0,200,255,0.08);
+  border: 1px solid rgba(0,200,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.faq-item.open .faq-arrow { transform: rotate(45deg); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s var(--ease);
+}
+
+.faq-answer-inner {
+  padding: 0 22px 20px;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.75;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+/* ─── Help specific ─── */
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.help-card {
+  background: #0a0a12;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+  display: block;
+}
+
+.help-card:hover {
+  border-color: var(--border-mid);
+  transform: translateY(-3px);
+}
+
+.help-card-icon { font-size: 32px; margin-bottom: 12px; }
+.help-card-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.help-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .help-grid { grid-template-columns: 1fr; }
+}

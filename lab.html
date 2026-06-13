@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Lab — Portal CRM · RaxisLab</title>
+  <meta name="description" content="The Lab: Panel de control estratégico de RaxisLab. Datos reales de Google Analytics, Meta Ads, Google Ads y Search Console por cliente."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/lab.css"/>
+</head>
+<body class="lab-body">
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="RaxisLab Home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><filter id="nav-glow"><feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+            <g filter="url(#nav-glow)">
+              <line x1="16" y1="16" x2="16" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="23" x2="23" y2="88" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="16" y1="16" x2="72" y2="16" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="23" x2="66" y2="23" stroke="#00C8FF" stroke-width="2.2"/>
+              <polyline points="72,16 85,29 85,50 72,63" stroke="#00C8FF" stroke-width="4" stroke-linejoin="miter" fill="none"/>
+              <polyline points="66,23 77,34 77,46 66,56" stroke="#00C8FF" stroke-width="2.2" stroke-linejoin="miter" fill="none"/>
+              <line x1="23" y1="56" x2="72" y2="56" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="63" x2="66" y2="63" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="16" y1="94" x2="36" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="23" y1="88" x2="38" y2="88" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="50" y1="63" x2="78" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="44" y1="63" x2="70" y2="94" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="66" y1="94" x2="78" y2="94" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="32" y1="38" x2="55" y2="62" stroke="#00C8FF" stroke-width="2.8"/>
+              <line x1="55" y1="38" x2="32" y2="62" stroke="#00C8FF" stroke-width="2.8"/>
+              <rect x="38" y="46" width="10" height="8" fill="#000000"/>
+              <line x1="32" y1="38" x2="46" y2="52" stroke="#00C8FF" stroke-width="2.8"/>
+              <line x1="41" y1="51" x2="32" y2="62" stroke="#00C8FF" stroke-width="2.8"/>
+              <line x1="72" y1="16" x2="104" y2="16" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="104" y1="16" x2="104" y2="50" stroke="#00C8FF" stroke-width="4"/>
+              <line x1="85" y1="23" x2="98" y2="23" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="98" y1="23" x2="98" y2="44" stroke="#00C8FF" stroke-width="2.2"/>
+              <line x1="85" y1="29" x2="103" y2="47" stroke="#00C8FF" stroke-width="2.8"/>
+              <polygon points="104,16 91,16 104,29" fill="#00C8FF"/>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-wordmark">
+          <span class="logo-name">RAXISLAB</span>
+          <span class="logo-tagline">Digital Laboratory</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"    class="nav-link"><span class="nav-dot"></span>Home</a></li>
+        <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
+        <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
+        <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
+        <li><a href="blog.html"     class="nav-link"><span class="nav-dot"></span>Blog</a></li>
+        <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
+        <li><a href="contact.html"  class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-btn"><span class="nav-dot"></span>Más ▾</button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="cases.html"  class="nav-link">Casos de Éxito</a></li>
+            <li><a href="about.html"  class="nav-link">Sobre mí</a></li>
+            <li><a href="roi.html"    class="nav-link">Calculadora ROI</a></li>
+            <li><a href="lab.html"    class="nav-link active">The Lab</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="nav-cta-area">
+        <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
+        <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
+        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <ul>
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="services.html" class="nav-link">Servicios</a></li>
+    <li><a href="cases.html" class="nav-link">Casos</a></li>
+    <li><a href="about.html" class="nav-link">Sobre mí</a></li>
+    <li><a href="blog.html" class="nav-link">Blog</a></li>
+    <li><a href="pricing.html" class="nav-link">Precios</a></li>
+    <li><a href="roi.html" class="nav-link">ROI</a></li>
+    <li><a href="lab.html" class="nav-link active">The Lab</a></li>
+    <li><a href="contact.html" class="nav-link">Contacto</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
+</div>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<main class="page-content lab-main">
+
+  <!-- ── LAB TOPBAR ── -->
+  <div class="lab-topbar">
+    <div class="lab-topbar-inner">
+
+      <!-- Left: brand + title -->
+      <div class="lab-topbar-left">
+        <div class="lab-topbar-title">
+          <span class="section-label" style="margin:0;">The Lab</span>
+          <span class="lab-version text-mono">v3.0 · Looker Ready</span>
+        </div>
+        <div class="lab-sys-pills">
+          <span class="lab-sys-pill pill-green">
+            <span class="pill-dot green"></span>GA4
+          </span>
+          <span class="lab-sys-pill pill-blue">
+            <span class="pill-dot blue"></span>Google Ads
+          </span>
+          <span class="lab-sys-pill pill-cyan">
+            <span class="pill-dot cyan"></span>Meta Ads
+          </span>
+          <span class="lab-sys-pill pill-yellow">
+            <span class="pill-dot yellow"></span>Search Console
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: clock + role badge + buttons -->
+      <div class="lab-topbar-right">
+        <div class="lab-clock-wrap">
+          <span id="labDate" class="text-mono" style="font-size:10px;color:var(--text-muted);letter-spacing:.08em;"></span>
+          <span id="labTime" class="text-mono lab-time-display"></span>
+        </div>
+
+        <!-- VISITOR badge + login button (visible when NOT admin) -->
+        <div id="visitorBadge" class="lab-role-badge visitor-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span id="labRoleLabel">Visitante</span>
+        </div>
+
+        <!-- ADMIN badge (visible when admin logged in) -->
+        <div id="adminBadge" class="lab-role-badge admin-badge" style="display:none;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Administrador</span>
+        </div>
+
+        <!-- Visitor: Acceso admin button -->
+        <button class="btn btn-ghost lab-login-btn" id="visitorLoginBtn" style="font-size:11px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Acceso Admin
+        </button>
+
+        <!-- Admin: add client + logout -->
+        <button class="btn btn-primary lab-add-client-btn" id="openAddClientModal" data-admin-only>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Nuevo Cliente
+        </button>
+        <button class="btn btn-ghost lab-logout-btn" id="topbarLogoutBtn" data-admin-only style="display:none;font-size:11px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Salir
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       LAYOUT: Sidebar (clientes) + Main panel
+  ════════════════════════════════════════════════════ -->
+  <div class="lab-layout">
+
+    <!-- ── SIDEBAR: Lista de clientes ── -->
+    <aside class="lab-sidebar" id="labSidebar">
+
+      <div class="lab-sidebar-header">
+        <span class="text-mono" style="font-size:10px;letter-spacing:.15em;color:var(--text-muted);">CLIENTES ACTIVOS</span>
+        <span class="badge badge-green badge-dot" id="clientCountBadge" style="font-size:10px;">0</span>
+      </div>
+
+      <!-- Search -->
+      <div class="lab-sidebar-search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" placeholder="Buscar cliente..." id="clientSearch" class="lab-search-input"/>
+      </div>
+
+      <!-- Client list -->
+      <ul class="lab-client-list" id="clientList">
+        <!-- populated by JS -->
+      </ul>
+
+    </aside>
+
+    <!-- ── MAIN PANEL ── -->
+    <div class="lab-panel" id="labPanel">
+
+      <!-- ══ EMPTY STATE (shown when no client selected) ══ -->
+      <div class="lab-empty-state" id="labEmptyState">
+        <div class="lab-empty-icon">
+          <svg viewBox="0 0 80 80" fill="none">
+            <rect x="10" y="10" width="60" height="60" rx="8" stroke="#00C8FF" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <path d="M30 40h20M40 30v20" stroke="#00C8FF" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="40" cy="40" r="8" stroke="#00C8FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+        <h3 class="heading-md" style="margin-top:20px;">Selecciona un cliente</h3>
+        <p class="text-muted" style="margin-top:8px;max-width:340px;text-align:center;font-size:14px;">
+          Elige un cliente del panel izquierdo para ver su dashboard en tiempo real.
+        </p>
+        <button class="btn btn-primary" style="margin-top:24px;" id="emptyAddBtn" data-admin-only>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Añadir primer cliente
+        </button>
+      </div>
+
+      <!-- ══ CLIENT DASHBOARD (shown when client selected) ══ -->
+      <div class="lab-client-dashboard" id="labClientDashboard" style="display:none;">
+
+        <!-- Client header -->
+        <div class="lab-client-header">
+          <div class="lab-client-header-left">
+            <div class="lab-client-avatar" id="dashAvatar">T</div>
+            <div>
+              <h2 class="lab-client-name" id="dashName">Cliente</h2>
+              <div class="lab-client-meta">
+                <span id="dashService" class="badge badge-cyan" style="font-size:10px;"></span>
+                <span id="dashStatus" class="status-pill status-active">Activo</span>
+                <span class="text-mono" style="font-size:10px;color:var(--text-muted);">Desde: <span id="dashSince">—</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="lab-client-header-right">
+            <button class="btn btn-ghost btn-sm" id="editClientBtn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              Editar
+            </button>
+            <button class="btn btn-ghost btn-sm" id="configReportsBtn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+              Configurar reportes
+            </button>
+          </div>
+        </div>
+
+        <!-- Report Channel Tabs -->
+        <div class="lab-report-tabs" id="labReportTabs">
+          <button class="lab-report-tab active" data-channel="ga4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Google Analytics
+          </button>
+          <button class="lab-report-tab" data-channel="gads">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+            Google Ads
+          </button>
+          <button class="lab-report-tab" data-channel="meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Meta Ads
+          </button>
+          <button class="lab-report-tab" data-channel="gsc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Search Console
+          </button>
+          <button class="lab-report-tab" data-channel="custom">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Personalizado
+          </button>
+        </div>
+
+        <!-- Iframe Area -->
+        <div class="lab-iframe-area" id="labIframeArea">
+          <!-- Populated by JS per channel -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     MODAL: Añadir / Editar Cliente
+════════════════════════════════════════════════════ -->
+<div class="lab-modal-overlay" id="clientModal" style="display:none;">
+  <div class="lab-modal">
+
+    <div class="lab-modal-header">
+      <div>
+        <div class="section-label" style="margin:0 0 4px;">Gestión de Clientes</div>
+        <h3 class="heading-md" id="modalTitle">Nuevo Cliente</h3>
+      </div>
+      <button class="lab-modal-close" id="closeModal" aria-label="Cerrar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="lab-modal-body">
+
+      <!-- Basic Info -->
+      <div class="modal-section">
+        <div class="modal-section-title text-mono">01 — DATOS BÁSICOS</div>
+        <div class="modal-row">
+          <div class="modal-field">
+            <label class="form-label">Nombre del cliente <span class="req">*</span></label>
+            <input type="text" class="form-control" id="mClientName" placeholder="Ej: TechVentures SL"/>
+          </div>
+          <div class="modal-field">
+            <label class="form-label">Servicio contratado</label>
+            <input type="text" class="form-control" id="mClientService" placeholder="Ej: SEO + Meta Ads"/>
+          </div>
+        </div>
+        <div class="modal-row">
+          <div class="modal-field">
+            <label class="form-label">Estado</label>
+            <select class="form-control form-select" id="mClientStatus">
+              <option value="Activo">Activo</option>
+              <option value="En Pausa">En Pausa</option>
+              <option value="Completado">Completado</option>
+            </select>
+          </div>
+          <div class="modal-field">
+            <label class="form-label">Fecha inicio</label>
+            <input type="text" class="form-control" id="mClientSince" placeholder="Ej: Enero 2025"/>
+          </div>
+        </div>
+        <div class="modal-field">
+          <label class="form-label">Notas internas</label>
+          <textarea class="form-control" id="mClientNotes" rows="2" placeholder="Notas del equipo sobre este cliente..."></textarea>
+        </div>
+      </div>
+
+      <!-- Looker Studio URLs -->
+      <div class="modal-section">
+        <div class="modal-section-title text-mono">02 — REPORTES LOOKER STUDIO</div>
+
+        <div class="modal-looker-guide">
+          <div class="guide-icon">💡</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;margin-bottom:4px;">¿Cómo obtener la URL de embed?</div>
+            <ol class="guide-steps">
+              <li>Abre tu reporte en <strong>lookerstudio.google.com</strong></li>
+              <li>Haz clic en <strong>Compartir → Incrustar informe</strong></li>
+              <li>Activa <strong>"Habilitar incrustación"</strong></li>
+              <li>Copia la URL del campo <code>src</code> del iframe</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="modal-looker-fields">
+
+          <div class="modal-looker-field">
+            <div class="looker-field-header">
+              <div class="looker-field-icon ga4">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <div class="looker-field-name">Google Analytics 4</div>
+                <div class="looker-field-hint text-muted">Tráfico, usuarios, conversiones, comportamiento</div>
+              </div>
+              <div class="looker-field-status" id="statusGA4">
+                <span class="status-dot inactive"></span><span>Sin configurar</span>
+              </div>
+            </div>
+            <input type="url" class="form-control looker-url-input" id="mUrlGA4"
+              placeholder="https://lookerstudio.google.com/embed/reporting/XXXX/page/XXXX"/>
+          </div>
+
+          <div class="modal-looker-field">
+            <div class="looker-field-header">
+              <div class="looker-field-icon gads">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+              </div>
+              <div>
+                <div class="looker-field-name">Google Ads</div>
+                <div class="looker-field-hint text-muted">Campañas, ROAS, CPC, conversiones, spend</div>
+              </div>
+              <div class="looker-field-status" id="statusGAds">
+                <span class="status-dot inactive"></span><span>Sin configurar</span>
+              </div>
+            </div>
+            <input type="url" class="form-control looker-url-input" id="mUrlGAds"
+              placeholder="https://lookerstudio.google.com/embed/reporting/XXXX/page/XXXX"/>
+          </div>
+
+          <div class="modal-looker-field">
+            <div class="looker-field-header">
+              <div class="looker-field-icon meta">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </div>
+              <div>
+                <div class="looker-field-name">Meta Ads</div>
+                <div class="looker-field-hint text-muted">Facebook + Instagram: alcance, ROAS, leads, CPM</div>
+              </div>
+              <div class="looker-field-status" id="statusMeta">
+                <span class="status-dot inactive"></span><span>Sin configurar</span>
+              </div>
+            </div>
+            <input type="url" class="form-control looker-url-input" id="mUrlMeta"
+              placeholder="https://lookerstudio.google.com/embed/reporting/XXXX/page/XXXX"/>
+          </div>
+
+          <div class="modal-looker-field">
+            <div class="looker-field-header">
+              <div class="looker-field-icon gsc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </div>
+              <div>
+                <div class="looker-field-name">Search Console</div>
+                <div class="looker-field-hint text-muted">Impresiones, clics, CTR, posición media en Google</div>
+              </div>
+              <div class="looker-field-status" id="statusGSC">
+                <span class="status-dot inactive"></span><span>Sin configurar</span>
+              </div>
+            </div>
+            <input type="url" class="form-control looker-url-input" id="mUrlGSC"
+              placeholder="https://lookerstudio.google.com/embed/reporting/XXXX/page/XXXX"/>
+          </div>
+
+          <div class="modal-looker-field">
+            <div class="looker-field-header">
+              <div class="looker-field-icon custom">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <div>
+                <div class="looker-field-name">Dashboard Personalizado</div>
+                <div class="looker-field-hint text-muted">Reporte custom: CRM, email, ecommerce, etc.</div>
+              </div>
+              <div class="looker-field-status" id="statusCustom">
+                <span class="status-dot inactive"></span><span>Sin configurar</span>
+              </div>
+            </div>
+            <input type="url" class="form-control looker-url-input" id="mUrlCustom"
+              placeholder="https://lookerstudio.google.com/embed/reporting/XXXX/page/XXXX"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="lab-modal-footer">
+      <div class="modal-footer-left">
+        <button class="btn btn-ghost btn-sm" id="deleteClientBtn" style="display:none;color:#FF453A;border-color:rgba(255,69,58,0.2);">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6M9 6V4h6v2"/></svg>
+          Eliminar cliente
+        </button>
+      </div>
+      <div class="modal-footer-right">
+        <button class="btn btn-ghost" id="cancelModalBtn">Cancelar</button>
+        <button class="btn btn-primary" id="saveClientBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Guardar Cliente
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     MODAL: Configurar reportes (desde dashboard cliente)
+════════════════════════════════════════════════════ -->
+<div class="lab-modal-overlay" id="configModal" style="display:none;">
+  <div class="lab-modal lab-modal-sm">
+    <div class="lab-modal-header">
+      <div>
+        <div class="section-label" style="margin:0 0 4px;">Looker Studio</div>
+        <h3 class="heading-md">Configurar Reportes</h3>
+      </div>
+      <button class="lab-modal-close" id="closeConfigModal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="lab-modal-body">
+      <p class="text-muted" style="font-size:13px;margin-bottom:20px;">
+        Pega las URLs de embed de Looker Studio para el cliente seleccionado. Se cargarán directamente en el panel.
+      </p>
+      <div class="modal-looker-fields" id="configFields">
+        <!-- Same fields, populated by JS for the active client -->
+      </div>
+    </div>
+    <div class="lab-modal-footer">
+      <div class="modal-footer-right">
+        <button class="btn btn-ghost" id="cancelConfigBtn">Cancelar</button>
+        <button class="btn btn-primary" id="saveConfigBtn">Guardar URLs</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     MODAL: Login Administrador
+════════════════════════════════════════════════════ -->
+<div class="lab-modal-overlay login-modal-overlay" id="loginModal" style="display:none;" role="dialog" aria-modal="true" aria-label="Acceso administrador">
+  <div class="lab-modal login-modal">
+
+    <button class="lab-modal-close" id="loginModalClose" aria-label="Cerrar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div class="login-modal-body">
+      <!-- Icon -->
+      <div class="login-icon-wrap">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+
+      <div class="section-label" style="margin:16px auto 8px;justify-content:center;">Acceso Privado</div>
+      <h3 class="login-modal-title">Panel de Administrador</h3>
+      <p class="login-modal-desc">
+        Introduce tu PIN para gestionar clientes, añadir reportes y configurar el laboratorio.
+      </p>
+
+      <!-- PIN input -->
+      <div class="login-pin-wrap">
+        <form id="loginPinForm" onsubmit="return false;" autocomplete="off">
+        <input type="text" name="username" value="admin" autocomplete="username" style="display:none;" aria-hidden="true"/>
+        <input
+          type="password"
+          inputmode="numeric"
+          maxlength="8"
+          class="login-pin-input"
+          id="loginPinInput"
+          placeholder="••••"
+          autocomplete="current-password"
+          aria-label="PIN de administrador"
+        />
+        </form>
+      </div>
+
+      <!-- Error -->
+      <div class="login-error-msg" id="loginErrorMsg" style="display:none;">
+        ❌ PIN incorrecto. Inténtalo de nuevo.
+      </div>
+
+      <!-- Actions -->
+      <div class="login-actions">
+        <button class="btn btn-primary login-submit-btn" id="loginSubmitBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Entrar
+        </button>
+        <button class="btn btn-ghost" id="loginCancelBtn">Cancelar</button>
+      </div>
+
+      <p class="login-hint">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        Solo el administrador de RaxisLab tiene acceso a la gestión.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/lab.js"></script>
+</body>
+</html>

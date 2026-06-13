@@ -1,0 +1,96 @@
+/* ============================================================
+   RAXISLAB — Shared Page Styles (Cases, About, Blog, ROI)
+   ============================================================ */
+
+/* ── Page Hero genérico ── */
+.page-hero {
+  position: relative;
+  padding: 100px 0 80px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero-orb {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,200,255,0.07) 0%, transparent 65%);
+  top: -200px; right: -200px;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.page-hero-orb-left {
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,132,255,0.05) 0%, transparent 65%);
+  bottom: -100px; left: -100px;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.page-hero-content { position: relative; z-index: 1; }
+
+/* ── CTA Strip reutilizable ── */
+.cta-strip {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(0,200,255,0.04) 0%, transparent 60%);
+}
+
+.cta-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-strip-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  letter-spacing: 0.02em;
+}
+
+.filter-btn:hover {
+  border-color: var(--border-mid);
+  color: var(--text);
+}
+
+.filter-btn.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Grid animado al filtrar ── */
+.grid-item { transition: opacity 0.3s, transform 0.3s var(--ease); }
+.grid-item.hidden { opacity: 0; pointer-events: none; transform: scale(0.96); display: none; }
+
+@media (max-width: 768px) {
+  .cta-strip-inner { flex-direction: column; text-align: center; }
+  .cta-strip-actions { justify-content: center; }
+}
