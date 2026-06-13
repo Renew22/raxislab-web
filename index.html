@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RaxisLab — Digital Strategic Laboratory</title>
-  <meta name="description" content="RaxisLab: Laboratorio estratégico digital. Conversión Web, SEO, Ads, IA y Producción Filmmaker."/>
-  <!-- OG / Social -->
-  <meta property="og:type"        content="website"/>
-  <meta property="og:url"         content="https://raxislab.com/"/>
-  <meta property="og:title"       content="RaxisLab — Digital Strategic Laboratory"/>
-  <meta property="og:description" content="Laboratorio estratégico digital. Conversión Web, SEO, Ads, IA y Producción Filmmaker para negocios que quieren crecer."/>
-  <meta property="og:image"       content="https://raxislab.com/images/og-home.jpg"/>
-  <meta name="twitter:card"       content="summary_large_image"/>
-  <meta name="twitter:title"      content="RaxisLab — Digital Strategic Laboratory"/>
-  <meta name="twitter:description" content="Laboratorio estratégico digital. Conversión Web, SEO, Ads, IA y Filmmaker."/>
-  <meta name="twitter:image"      content="https://raxislab.com/images/og-home.jpg"/>
-  <link rel="canonical"           href="https://raxislab.com/"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/home.css"/>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RaxisLab · Agencia de Marketing Digital · Meta Ads · Google Ads · IA</title>
+  <meta name="description" content="Agencia de marketing digital especializada en Meta Ads, Google Ads y gestión de redes sociales para negocios que quieren crecer. Resultados medibles con IA integrada." />
+  <meta name="keywords" content="agencia marketing digital, Meta Ads, Google Ads, publicidad redes sociales, gestión redes sociales, estrategia digital, IA marketing" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="RaxisLab" />
+  <link rel="canonical" href="https://raxislab.com" />
+
+  <meta property="og:title" content="RaxisLab · Agencia Marketing Digital" />
+  <meta property="og:description" content="Meta Ads, Google Ads y redes sociales para negocios que quieren crecer, con IA integrada en cada proceso." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://raxislab.com" />
+  <meta property="og:image" content="https://raxislab.com/images/og-home.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="RaxisLab" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RaxisLab · Agencia Marketing Digital" />
+  <meta name="twitter:description" content="Meta Ads, Google Ads y redes sociales con IA para negocios que quieren resultados reales." />
+
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGR4RYY1ER"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,497 +30,1735 @@
     gtag('js', new Date());
     gtag('config', 'G-EGR4RYY1ER');
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "RaxisLab",
+    "description": "Agencia de marketing digital especializada en Meta Ads, Google Ads y gestión de redes sociales con IA integrada.",
+    "url": "https://raxislab.com",
+    "email": "hola@raxislab.com",
+    "serviceType": ["Meta Ads", "Google Ads", "Marketing Digital", "Gestión Redes Sociales", "Estrategia Digital"],
+    "priceRange": "€€"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ══════════════════════════════════════
+       TOKENS & RESET
+    ══════════════════════════════════════ */
+    :root {
+      --black:      #0a0a0a;
+      --white:      #ffffff;
+      --gray-50:    #fafafa;
+      --gray-100:   #f5f5f5;
+      --gray-200:   #ebebeb;
+      --gray-400:   #a0a0a0;
+      --gray-600:   #666666;
+      --accent:     #0057ff;
+      --accent-mid: rgba(0,87,255,0.08);
+      --green:      #16a34a;
+      --font:       'DM Sans', sans-serif;
+      --mono:       'DM Mono', monospace;
+      --ease:       cubic-bezier(0.16, 1, 0.3, 1);
+      --radius:     14px;
+      --max:        1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+      overflow-x: hidden;
+      cursor: none;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ::selection { background: var(--accent); color: var(--white); }
+
+    /* ══════════════════════════════════════
+       CURSOR PERSONALIZADO
+    ══════════════════════════════════════ */
+    #cursor {
+      width: 10px; height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s var(--ease), height 0.3s var(--ease), background 0.3s, opacity 0.3s;
+      mix-blend-mode: multiply;
+    }
+    #cursor-ring {
+      width: 38px; height: 38px;
+      border: 1.5px solid rgba(0,87,255,0.25);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s var(--ease), height 0.4s var(--ease), border-color 0.3s;
+    }
+    body:has(a:hover) #cursor,
+    body:has(button:hover) #cursor {
+      width: 48px; height: 48px;
+      background: var(--accent);
+      opacity: 0.15;
+    }
+    body:has(a:hover) #cursor-ring,
+    body:has(button:hover) #cursor-ring {
+      border-color: var(--accent);
+      width: 48px; height: 48px;
+    }
+
+    /* ══════════════════════════════════════
+       REVEAL ANIMATIONS
+    ══════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.75s var(--ease), transform 0.75s var(--ease); }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(28px); transition: opacity 0.75s var(--ease), transform 0.75s var(--ease); }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+
+    /* ══════════════════════════════════════
+       LAYOUT
+    ══════════════════════════════════════ */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+    section { padding: 120px 0; }
+
+    /* ══════════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 900;
+      padding: 0 40px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 1px 0 var(--gray-200);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      width: auto;
+      height: 28px;
+    }
+    .nav-logo-text {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      font-family: var(--font);
+    }
+    .nav-logo-lab {
+      font-weight: 300;
+      color: var(--accent);
+    }
+    @keyframes dot-pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.7; }
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--gray-600);
+      padding: 7px 14px;
+      border-radius: 100px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: var(--black); background: var(--gray-100); }
+    .nav-links .nav-cta {
+      background: var(--black);
+      color: var(--white) !important;
+      padding: 9px 20px;
+      font-weight: 500;
+      font-size: 13px;
+      border-radius: 100px;
+      transition: transform 0.2s var(--ease), opacity 0.2s !important;
+    }
+    .nav-links .nav-cta:hover { opacity: 0.85; transform: scale(0.97); background: var(--black) !important; }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px; height: 1.5px;
+      background: var(--black);
+      transition: transform 0.3s;
+    }
+    /* Mobile nav */
+    .nav-mobile-panel {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 20px 40px 28px;
+      z-index: 899;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav-mobile-panel.open { display: flex; }
+    .nav-mobile-panel a {
+      font-size: 16px;
+      color: var(--gray-600);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-weight: 400;
+    }
+    .nav-mobile-panel a:last-child { border-bottom: none; }
+    .nav-mobile-panel .nav-cta {
+      background: var(--black);
+      color: var(--white) !important;
+      text-align: center;
+      padding: 14px;
+      border-radius: 100px;
+      font-weight: 500;
+      margin-top: 12px;
+      border-bottom: none !important;
+    }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 80px;
+      padding-top: 68px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,87,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,87,255,0.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 20%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 20%, transparent 80%);
+      pointer-events: none;
+    }
+    /* Gradiente de color suave en hero */
+    .hero-glow {
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 600px;
+      background: radial-gradient(ellipse at center, rgba(0,87,255,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-600);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      border: 1px solid var(--gray-200);
+      padding: 6px 14px 6px 10px;
+      border-radius: 100px;
+      width: fit-content;
+      background: var(--white);
+    }
+    .hero-tag-dot {
+      width: 6px; height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse-green 2s infinite;
+    }
+    @keyframes pulse-green {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+      50% { opacity: 0.7; box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+    }
+    h1.hero-title {
+      font-size: clamp(52px, 7.5vw, 100px);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.045em;
+      color: var(--black);
+    }
+    h1.hero-title em { font-style: italic; color: var(--accent); }
+    h1.hero-title strong { font-weight: 600; }
+    .hero-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 64px;
+      gap: 40px;
+    }
+    .hero-desc {
+      max-width: 440px;
+      font-size: 17px;
+      color: var(--gray-600);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: var(--font);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.25s var(--ease), opacity 0.2s, box-shadow 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .btn-primary.accent {
+      background: var(--accent);
+      box-shadow: 0 2px 20px rgba(0,87,255,0.25);
+    }
+    .btn-primary.accent:hover { box-shadow: 0 8px 32px rgba(0,87,255,0.35); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--black);
+      padding: 14px 24px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: var(--font);
+      border: 1px solid var(--gray-200);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.25s var(--ease);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-secondary:hover { border-color: var(--black); background: var(--gray-50); transform: translateY(-2px); }
+    .hero-scroll {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-scroll span {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .scroll-line {
+      width: 1px; height: 44px;
+      background: linear-gradient(to bottom, var(--gray-400), transparent);
+      animation: scroll-anim 2s ease-in-out infinite;
+    }
+    @keyframes scroll-anim {
+      0% { transform: scaleY(0); transform-origin: top; opacity: 1; }
+      50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ══════════════════════════════════════
+       MARQUEE
+    ══════════════════════════════════════ */
+    .marquee-wrap {
+      background: var(--black);
+      color: var(--white);
+      padding: 16px 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 28px;
+      padding-right: 56px;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+    }
+    .marquee-item strong { color: var(--white); font-weight: 500; }
+    .marquee-sep { width: 3px; height: 3px; background: rgba(255,255,255,0.3); border-radius: 50%; flex-shrink: 0; }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ══════════════════════════════════════
+       STATS
+    ══════════════════════════════════════ */
+    #stats { padding: 72px 0; border-bottom: 1px solid var(--gray-200); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item {
+      padding: 32px 0;
+      text-align: center;
+      border-right: 1px solid var(--gray-200);
+      position: relative;
+    }
+    .stat-item:first-child { border-left: 1px solid var(--gray-200); }
+    .stat-num {
+      font-size: 52px;
+      font-weight: 300;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--black);
+      display: block;
+    }
+    .stat-num.blue { color: var(--accent); }
+    .stat-label {
+      font-size: 13px;
+      color: var(--gray-400);
+      margin-top: 8px;
+      display: block;
+      font-weight: 400;
+    }
+
+    /* ══════════════════════════════════════
+       SECCIÓN GENÉRICA
+    ══════════════════════════════════════ */
+    .section-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-400);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+    h2.section-title {
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 300;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      max-width: 640px;
+      margin-bottom: 64px;
+    }
+    h2.section-title em { font-style: italic; color: var(--accent); }
+    h2.section-title strong { font-weight: 600; }
+
+    /* ══════════════════════════════════════
+       SERVICIOS
+    ══════════════════════════════════════ */
+    #servicios { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--gray-200);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .service-card {
+      background: var(--white);
+      padding: 48px 40px;
+      transition: background 0.3s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card:hover { background: var(--gray-50); }
+    /* Línea azul animada al hover */
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-400);
+      margin-bottom: 28px;
+      display: block;
+    }
+    .service-icon {
+      width: 44px; height: 44px;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .service-card:hover .service-icon {
+      border-color: rgba(0,87,255,0.2);
+      background: var(--accent-mid);
+    }
+    .service-icon svg { width: 20px; height: 20px; stroke: var(--gray-600); transition: stroke 0.3s; }
+    .service-card:hover .service-icon svg { stroke: var(--accent); }
+    h3.service-title {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .service-desc {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      font-size: 11px;
+      font-family: var(--mono);
+      color: var(--gray-600);
+      background: var(--gray-100);
+      padding: 4px 10px;
+      border-radius: 100px;
+      border: 1px solid var(--gray-200);
+    }
+
+    /* ══════════════════════════════════════
+       CASOS DE ÉXITO
+    ══════════════════════════════════════ */
+    #casos { background: var(--gray-50); }
+    .cases-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 64px;
+      gap: 40px;
+    }
+    .cases-subtitle {
+      font-size: 15px;
+      color: var(--gray-600);
+      max-width: 300px;
+      font-weight: 300;
+      line-height: 1.65;
+    }
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .case-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    }
+    .case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.07);
+    }
+    .case-header { padding: 36px 36px 28px; }
+    .case-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .case-avatar {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .case-avatar.blue  { background: var(--accent); }
+    .case-avatar.dark  { background: var(--black); }
+    .case-brand-info h4 { font-size: 15px; font-weight: 500; letter-spacing: -0.01em; }
+    .case-brand-info p  { font-size: 12px; color: var(--gray-400); font-family: var(--mono); margin-top: 2px; }
+    .case-quote {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      font-style: italic;
+      font-weight: 300;
+    }
+    .case-metrics {
+      padding: 28px 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      border-top: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .metric-value {
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--black);
+    }
+    .metric-value.green { color: var(--green); }
+    .metric-value.blue  { color: var(--accent); }
+    .metric-label {
+      font-size: 12px;
+      color: var(--gray-400);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .case-footer {
+      padding: 18px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .case-services { display: flex; gap: 6px; flex-wrap: wrap; }
+    .case-link {
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--accent);
+      transition: gap 0.2s;
+      flex-shrink: 0;
+    }
+    .case-link:hover { gap: 9px; }
+    .case-link svg { width: 13px; height: 13px; }
+
+    /* ══════════════════════════════════════
+       PROCESO
+    ══════════════════════════════════════ */
+    #proceso { background: var(--white); }
+    .proceso-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .proceso-steps { display: flex; flex-direction: column; }
+    .step {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--gray-200);
+      transition: padding-left 0.35s var(--ease);
+      cursor: default;
+    }
+    .step:hover { padding-left: 10px; }
+    .step:first-child { padding-top: 0; }
+    .step-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      padding-top: 3px;
+      flex-shrink: 0;
+      width: 24px;
+    }
+    .step-content h4 { font-size: 17px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 6px; }
+    .step-content p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+    .proceso-aside { position: sticky; top: 88px; }
+    .proceso-card {
+      background: var(--black);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Glow azul decorativo en card negra */
+    .proceso-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(0,87,255,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .proceso-card h3 {
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1.35;
+      margin-bottom: 28px;
+    }
+    .proceso-card h3 em { font-style: italic; color: rgba(0,150,255,0.9); }
+    .stack-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+    .stack-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: background 0.2s;
+    }
+    .stack-item:hover { background: rgba(255,255,255,0.09); }
+    .stack-item-name { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.88); }
+    .stack-item-role { font-size: 11px; color: rgba(255,255,255,0.35); font-family: var(--mono); }
+
+    /* ══════════════════════════════════════
+       DIFERENCIAL IA
+    ══════════════════════════════════════ */
+    #ia { background: var(--black); color: var(--white); }
+    #ia .section-eyebrow { color: rgba(255,255,255,0.3); }
+    #ia h2.section-title { color: var(--white); max-width: 100%; }
+    #ia h2.section-title em { color: rgba(0,150,255,0.85); }
+    .ia-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 64px;
+    }
+    .ia-card {
+      background: var(--black);
+      padding: 36px 30px;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .ia-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,87,255,0.4), transparent);
+      transform: scaleX(0);
+      transition: transform 0.4s var(--ease);
+    }
+    .ia-card:hover { background: rgba(255,255,255,0.025); }
+    .ia-card:hover::before { transform: scaleX(1); }
+    .ia-card-num { font-family: var(--mono); font-size: 11px; color: var(--accent); opacity: 0.7; margin-bottom: 20px; }
+    .ia-card h4 { font-size: 17px; font-weight: 500; color: var(--white); margin-bottom: 10px; letter-spacing: -0.02em; }
+    .ia-card p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+    .ia-tools {
+      margin-top: 56px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      flex-wrap: wrap;
+    }
+    .ia-tools-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+    .tool-pill {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 5px 12px;
+      border-radius: 100px;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .tool-pill:hover { border-color: rgba(0,87,255,0.5); color: rgba(0,150,255,0.9); background: rgba(0,87,255,0.08); }
+
+    /* ══════════════════════════════════════
+       CONTACTO
+    ══════════════════════════════════════ */
+    #contacto { background: var(--white); }
+    .cta-wrap {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .cta-wrap h2 {
+      font-size: clamp(38px, 5vw, 68px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .cta-wrap h2 em { font-style: italic; color: var(--accent); }
+    .cta-wrap h2 strong { font-weight: 600; }
+    .cta-wrap p {
+      font-size: 17px;
+      color: var(--gray-600);
+      font-weight: 300;
+      margin-bottom: 40px;
+      line-height: 1.75;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .contact-form {
+      max-width: 560px;
+      margin: 64px auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 12px; font-weight: 500; color: var(--gray-600); letter-spacing: 0.02em; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-family: var(--font);
+      font-size: 14px;
+      color: var(--black);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      resize: vertical;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--gray-400); }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,87,255,0.08);
+    }
+    .form-submit {
+      grid-column: 1 / -1;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      border-radius: 100px;
+      padding: 16px;
+      font-family: var(--font);
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.25s var(--ease), box-shadow 0.25s;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    }
+    .form-submit:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 60px 0 36px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      margin-top: 14px;
+      max-width: 260px;
+    }
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-logo-dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
+    .footer-col h5 {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: var(--mono);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col a { font-size: 14px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.2); font-family: var(--mono); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.2); font-family: var(--mono); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.55); }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .proceso-grid { grid-template-columns: 1fr; gap: 48px; }
+      .proceso-aside { position: static; }
+      .ia-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      section { padding: 80px 0; }
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      h1.hero-title { font-size: 46px; }
+      .hero-bottom { flex-direction: column; align-items: flex-start; gap: 28px; }
+      .hero-actions { flex-wrap: wrap; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(3) { border-left: 1px solid var(--gray-200); }
+      .services-grid { grid-template-columns: 1fr; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .cases-header { flex-direction: column; align-items: flex-start; }
+      .ia-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+      body { cursor: auto; }
+      #cursor, #cursor-ring { display: none; }
+    }
+    @media (max-width: 480px) {
+      h1.hero-title { font-size: 36px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- CURSOR PERSONALIZADO -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
 
-<!-- ── Grid Overlay ── -->
-<div class="grid-overlay" aria-hidden="true"></div>
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo" aria-label="RaxisLab inicio">
+      <img src="images/logo-mark-light.svg" alt="" height="30" style="display:block; flex-shrink:0;" />
+      <span class="nav-logo-text">RAXIS<span class="nav-logo-lab">LAB</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#casos">Resultados</a></li>
+      <li><a href="#logistica">Logística</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#contacto" class="nav-cta">Hablemos →</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
 
-<!-- ══════════════════════════════════════════
-     NAVBAR
-══════════════════════════════════════════ -->
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <div class="nav-inner">
+  <!-- Menú móvil -->
+  <div class="nav-mobile-panel" id="navMobile" role="navigation" aria-label="Menú móvil">
+    <a href="#servicios">Servicios</a>
+    <a href="#casos">Resultados</a>
+    <a href="#logistica">Logística</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto" class="nav-cta">Hablemos →</a>
+  </div>
 
-      <a href="index.html" class="nav-logo" aria-label="RaxisLab Home">
-        <div class="logo-icon">
-          <img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/>
-        </div>
-        <div class="logo-wordmark">
-          <span class="logo-name">RAXISLAB</span>
-          <span class="logo-tagline">Digital Laboratory</span>
-        </div>
-      </a>
-
-      <ul class="nav-links" role="list">
-        <li><a href="index.html"    class="nav-link active"><span class="nav-dot"></span>Home</a></li>
-        <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
-        <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
-        <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
-        <li><a href="blog.html"     class="nav-link"><span class="nav-dot"></span>Blog</a></li>
-        <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
-        <li><a href="contact.html"  class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
-        <li class="nav-dropdown">
-          <button class="nav-link nav-dropdown-btn"><span class="nav-dot"></span>Más ▾</button>
-          <ul class="nav-dropdown-menu">
-            <li><a href="cases.html"  class="nav-link">Casos de Éxito</a></li>
-            <li><a href="about.html"  class="nav-link">Sobre mí</a></li>
-            <li><a href="roi.html"    class="nav-link">Calculadora ROI</a></li>
-            <li><a href="lab.html"    class="nav-link">The Lab</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <div class="nav-cta-area">
-        <div class="nav-status">
-          <span class="nav-status-dot"></span>
-          <span>Sistema Activo</span>
-        </div>
-        <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="hero" aria-label="Presentación principal">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-tag reveal" aria-label="Estado: activo">
+        <span class="hero-tag-dot" aria-hidden="true"></span>
+        Agencia digital · Activo ahora
       </div>
+      <h1 class="hero-title reveal delay-1">
+        Marketing que<br>
+        <em>convierte</em><br>
+        <strong>de verdad.</strong>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-desc reveal delay-2">
+          Gestionamos Meta Ads, Google Ads y redes sociales para negocios que quieren más clientes, más reservas y resultados medibles — con inteligencia artificial integrada en cada proceso.
+        </p>
+        <div class="hero-actions reveal delay-3">
+          <a href="#contacto" class="btn-primary accent">
+            Auditoría gratuita
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#casos" class="btn-secondary">Ver resultados</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
+  <!-- ═══════════════ MARQUEE ═══════════════ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item"><strong>Meta Ads</strong><div class="marquee-sep"></div>Campañas Facebook e Instagram<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Google Ads</strong><div class="marquee-sep"></div>Search · Display · Performance Max<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Redes Sociales</strong><div class="marquee-sep"></div>Contenido + Comunidad + Crecimiento<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>IA Integrada</strong><div class="marquee-sep"></div>Claude · Windsor.ai · n8n · Perplexity<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Reporting</strong><div class="marquee-sep"></div>Datos reales, decisiones claras<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Recursos Gratis</strong><div class="marquee-sep"></div>Guías, plantillas y herramientas<div class="marquee-sep"></div></div>
+      <!-- Duplicado para loop continuo -->
+      <div class="marquee-item"><strong>Meta Ads</strong><div class="marquee-sep"></div>Campañas Facebook e Instagram<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Google Ads</strong><div class="marquee-sep"></div>Search · Display · Performance Max<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Redes Sociales</strong><div class="marquee-sep"></div>Contenido + Comunidad + Crecimiento<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>IA Integrada</strong><div class="marquee-sep"></div>Claude · Windsor.ai · n8n · Perplexity<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Reporting</strong><div class="marquee-sep"></div>Datos reales, decisiones claras<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>Recursos Gratis</strong><div class="marquee-sep"></div>Guías, plantillas y herramientas<div class="marquee-sep"></div></div>
     </div>
   </div>
-</nav>
 
-<!-- Mobile Menu -->
-<div class="nav-mobile" id="navMobile">
-  <ul>
-    <li><a href="index.html"     class="nav-link active">Home</a></li>
-    <li><a href="services.html"  class="nav-link">Servicios</a></li>
-    <li><a href="ai.html"        class="nav-link">✨ IA Studio</a></li>
-    <li><a href="resources.html" class="nav-link">🎁 Recursos Gratis</a></li>
-    <li><a href="blog.html"      class="nav-link">Blog</a></li>
-    <li><a href="pricing.html"   class="nav-link">Precios</a></li>
-    <li><a href="cases.html"     class="nav-link">Casos de Éxito</a></li>
-    <li><a href="about.html"     class="nav-link">Sobre mí</a></li>
-    <li><a href="roi.html"       class="nav-link">Calculadora ROI</a></li>
-    <li><a href="lab.html"       class="nav-link">The Lab</a></li>
-    <li><a href="contact.html"   class="nav-link">Contacto</a></li>
-  </ul>
-  <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-</div>
-
-<!-- ══════════════════════════════════════════
-     PAGE CONTENT
-══════════════════════════════════════════ -->
-<main class="page-content">
-
-  <!-- ══ HERO ══ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-effects" aria-hidden="true">
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-scan-line"></div>
-    </div>
-
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge" data-reveal>
-          <span class="badge badge-cyan badge-dot">Laboratorio Estratégico Digital</span>
-          <span class="hero-version text-mono">v2.0_LIVE</span>
-        </div>
-
-        <h1 class="heading-xl hero-title" data-reveal data-reveal-delay="1">
-          Building the<br/>
-          <span class="gradient-text">Future</span> of<br/>
-          Digital Architecture
-        </h1>
-
-        <p class="hero-desc text-mid" data-reveal data-reveal-delay="2">
-          Diseñamos, escalamos y automatizamos ecosistemas digitales de alta precisión.<br/>
-          Donde la estrategia se convierte en arquitectura y la arquitectura en resultados.
-        </p>
-
-        <div class="hero-actions" data-reveal data-reveal-delay="3">
-          <a href="services.html" class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            Explorar Servicios
-          </a>
-          <a href="lab.html" class="btn btn-ghost">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            Acceder al Lab
-          </a>
-        </div>
-
-        <div class="hero-stats" data-reveal data-reveal-delay="4">
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-count="127">0</span>
-            <span class="hero-stat-label">Proyectos Activos</span>
-          </div>
-          <div class="hero-stat-sep"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num" data-count="98">0</span><span class="hero-stat-suffix">%</span>
-            <span class="hero-stat-label">Tasa de Retención</span>
-          </div>
-          <div class="hero-stat-sep"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">4.8x</span>
-            <span class="hero-stat-label">ROI Promedio</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero Right: Live Terminal -->
-      <div class="hero-terminal" data-reveal data-reveal-delay="2">
-        <div class="terminal-header">
-          <div class="terminal-dots">
-            <span style="background:#FF5F56"></span>
-            <span style="background:#FFBD2E"></span>
-            <span style="background:#27C93F"></span>
-          </div>
-          <span class="terminal-title text-mono">raxislab.sys — live_feed</span>
-          <span class="badge badge-green badge-dot">LIVE</span>
-        </div>
-        <div class="terminal-body" id="terminalBody">
-          <div class="terminal-line"><span class="t-prompt">RL $</span> <span class="t-cmd">initialize system_core</span></div>
-          <div class="terminal-line t-success">✓ Neural engine online</div>
-          <div class="terminal-line"><span class="t-prompt">RL $</span> <span class="t-cmd">scan active_campaigns</span></div>
-          <div class="terminal-line t-info">→ Loading 12 Meta campaigns...</div>
-          <div class="terminal-line t-success">✓ ROAS avg: 4.8x | Spend: €18,420</div>
-          <div class="terminal-line"><span class="t-prompt">RL $</span> <span class="t-cmd">check seo_rankings</span></div>
-          <div class="terminal-line t-info">→ Indexing 847 keywords...</div>
-          <div class="terminal-line t-success">✓ Pos #1: 34 keywords | Δ+12 this week</div>
-          <div class="terminal-line"><span class="t-prompt">RL $</span> <span class="t-cmd">run automation_pipeline</span></div>
-          <div class="terminal-line t-warn">⚡ 3 workflows executing in parallel</div>
-          <div class="terminal-line t-success">✓ Lead velocity: 2.3/min — all systems nominal</div>
-          <div class="terminal-line terminal-cursor"><span class="t-prompt">RL $</span> <span class="t-blink">▌</span></div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="hero-scroll" aria-label="Scroll down">
-      <div class="hero-scroll-line"></div>
-      <span class="text-mono" style="font-size:10px;letter-spacing:.15em;color:var(--text-muted);">SCROLL</span>
-    </div>
-  </section>
-
-  <!-- ══ TRUSTED BY ══ -->
-  <section class="trusted section" style="padding: 48px 0;">
+  <!-- ═══════════════ STATS ═══════════════ -->
+  <div id="stats" aria-label="Resultados en números">
     <div class="container">
-      <div class="trusted-row">
-        <span class="text-mono" style="font-size:11px;letter-spacing:.15em;color:var(--text-muted);white-space:nowrap;">TRUSTED BY</span>
-        <div class="trusted-logos">
-          <span class="trusted-name">TechVentures</span>
-          <span class="trusted-name">ScaleUp Pro</span>
-          <span class="trusted-name">NeoRetail</span>
-          <span class="trusted-name">AuraMediaGroup</span>
-          <span class="trusted-name">FuturaBrands</span>
-          <span class="trusted-name">Axion Digital</span>
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-num blue" data-target="107" data-prefix="€">€0</span>
+          <span class="stat-label">Ticket medio conseguido por cliente</span>
+        </div>
+        <div class="stat-item reveal delay-1">
+          <span class="stat-num" data-target="2" data-suffix=" plataformas">0</span>
+          <span class="stat-label">Meta Ads + Google Ads integrados</span>
+        </div>
+        <div class="stat-item reveal delay-2">
+          <span class="stat-num blue" data-target="100" data-suffix="%">0%</span>
+          <span class="stat-label">Transparencia en resultados y datos</span>
+        </div>
+        <div class="stat-item reveal delay-3">
+          <span class="stat-num" data-target="6" data-suffix=" herramientas IA">0</span>
+          <span class="stat-label">Stack de IA activo en cada proyecto</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ══ SERVICES ══ -->
-  <section class="section services-section" id="services">
+  <!-- ═══════════════ SERVICIOS ═══════════════ -->
+  <section id="servicios" aria-labelledby="servicios-title">
     <div class="container">
-      <div class="section-header" data-reveal>
-        <div class="section-label">Nuestros Servicios</div>
-        <h2 class="heading-lg">Arquitectura digital<br/><span class="gradient-text">de alto rendimiento</span></h2>
-        <p class="text-mid" style="margin-top:16px;max-width:520px;">Cada servicio es un sistema preciso, construido para escalar y generar resultados medibles desde el primer ciclo.</p>
-      </div>
-
+      <span class="section-eyebrow reveal">— Servicios</span>
+      <h2 class="section-title reveal delay-1" id="servicios-title">
+        Todo lo que necesitas<br>para <em>crecer online</em>
+      </h2>
       <div class="services-grid">
 
-        <a href="services.html#conversion" class="service-card card" data-reveal data-reveal-delay="1">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="3" stroke="#00C8FF" stroke-width="2"/><path d="M4 16h40" stroke="#00C8FF" stroke-width="2"/><path d="M14 28l6 6 14-14" stroke="#00C8FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="service-card reveal">
+          <span class="service-num">01</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z" stroke-width="1.2" stroke-linejoin="round"/></svg>
           </div>
-          <div class="service-num text-mono">01</div>
-          <h3 class="heading-md" style="margin-top:12px;">Conversión Web</h3>
-          <p class="text-muted" style="margin-top:10px;font-size:14px;line-height:1.7;">Landing pages y webs diseñadas para convertir. Arquitectura CRO, A/B testing y velocidad de carga máxima.</p>
-          <div class="service-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <h3 class="service-title">Meta Ads que generan reservas</h3>
+          <p class="service-desc">Campañas en Facebook e Instagram diseñadas para convertir — no para acumular impresiones. Creativos A/B, segmentación precisa y optimización semanal con datos reales.</p>
+          <div class="service-tags">
+            <span class="tag">Facebook Ads</span><span class="tag">Instagram Ads</span>
+            <span class="tag">Retargeting</span><span class="tag">Creativos</span><span class="tag">A/B Testing</span>
           </div>
-        </a>
+        </div>
 
-        <a href="services.html#seo" class="service-card card" data-reveal data-reveal-delay="2">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="22" cy="22" r="14" stroke="#00C8FF" stroke-width="2"/><path d="M32 32l8 8" stroke="#00C8FF" stroke-width="2.5" stroke-linecap="round"/><path d="M18 17v10M22 14v13M26 19v8" stroke="#00C8FF" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="service-card reveal delay-1">
+          <span class="service-num">02</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke-width="1.2"/><path d="M10 6V10L13 12" stroke-width="1.2" stroke-linecap="round"/></svg>
           </div>
-          <div class="service-num text-mono">02</div>
-          <h3 class="heading-md" style="margin-top:12px;">SEO Estratégico</h3>
-          <p class="text-muted" style="margin-top:10px;font-size:14px;line-height:1.7;">Posicionamiento orgánico de largo alcance. Arquitectura técnica, contenido semántico y link building de autoridad.</p>
-          <div class="service-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <h3 class="service-title">Google Ads orientado a resultados</h3>
+          <p class="service-desc">Aparecer cuando alguien busca exactamente lo que ofreces. Search, Display y Performance Max configurados para maximizar el ROI con cada euro invertido.</p>
+          <div class="service-tags">
+            <span class="tag">Search</span><span class="tag">Display</span>
+            <span class="tag">Performance Max</span><span class="tag">Google Shopping</span>
           </div>
-        </a>
+        </div>
 
-        <a href="services.html#ads" class="service-card card" data-reveal data-reveal-delay="3">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M8 36V12l16 12L8 36z" stroke="#00C8FF" stroke-width="2" stroke-linejoin="round"/><path d="M24 24l8-8M24 24l8 8" stroke="#00C8FF" stroke-width="2" stroke-linecap="round"/><circle cx="38" cy="16" r="4" stroke="#00C8FF" stroke-width="2"/><circle cx="38" cy="32" r="4" stroke="#00C8FF" stroke-width="2"/></svg>
+        <div class="service-card reveal delay-2">
+          <span class="service-num">03</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M2 14L6 10L9 13L13 8L18 13" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <div class="service-num text-mono">03</div>
-          <h3 class="heading-md" style="margin-top:12px;">Meta / Google Ads</h3>
-          <p class="text-muted" style="margin-top:10px;font-size:14px;line-height:1.7;">Campañas de paid media con ROAS garantizado. Segmentación láser, creatividades dinámicas y optimización IA.</p>
-          <div class="service-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <h3 class="service-title">Gestión de redes con estrategia</h3>
+          <p class="service-desc">No publicamos por publicar. Creamos contenido orientado a captar clientes: reels, carruseles, historias y comunidad. Plan mensual + producción + análisis.</p>
+          <div class="service-tags">
+            <span class="tag">Instagram</span><span class="tag">Reels</span>
+            <span class="tag">Contenido</span><span class="tag">GMB</span><span class="tag">Comunidad</span>
           </div>
-        </a>
+        </div>
 
-        <a href="services.html#ai" class="service-card card" data-reveal data-reveal-delay="1">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="6" stroke="#00C8FF" stroke-width="2"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6" stroke="#00C8FF" stroke-width="2" stroke-linecap="round"/><path d="M11.5 11.5l4.2 4.2M32.3 32.3l4.2 4.2M11.5 36.5l4.2-4.2M32.3 15.7l4.2-4.2" stroke="#00C8FF" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="12" stroke="#00C8FF" stroke-width="1.5" stroke-dasharray="3 4"/></svg>
+        <div class="service-card reveal delay-3">
+          <span class="service-num">04</span>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="10" width="4" height="8" stroke-width="1.2"/><rect x="8" y="6" width="4" height="12" stroke-width="1.2"/><rect x="14" y="2" width="4" height="16" stroke-width="1.2"/></svg>
           </div>
-          <div class="service-num text-mono">04</div>
-          <h3 class="heading-md" style="margin-top:12px;">Automatización con IA</h3>
-          <p class="text-muted" style="margin-top:10px;font-size:14px;line-height:1.7;">Flujos inteligentes que trabajan 24/7. CRM automation, chatbots, scoring de leads y pipelines sin fricción.</p>
-          <div class="service-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <h3 class="service-title">Estrategia digital + Reporting</h3>
+          <p class="service-desc">Informes mensuales con datos reales de Meta y Google — sin humo. Qué funciona, qué ajustamos y qué hacemos el próximo mes para seguir mejorando.</p>
+          <div class="service-tags">
+            <span class="tag">Análisis</span><span class="tag">Estrategia</span>
+            <span class="tag">Informes</span><span class="tag">Windsor.ai</span>
           </div>
-        </a>
-
-        <a href="services.html#film" class="service-card card service-card-wide" data-reveal data-reveal-delay="2">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="12" width="32" height="24" rx="2" stroke="#00C8FF" stroke-width="2"/><path d="M36 18l8-4v20l-8-4V18z" stroke="#00C8FF" stroke-width="2" stroke-linejoin="round"/><circle cx="18" cy="24" r="5" stroke="#00C8FF" stroke-width="2"/><path d="M4 12h32" stroke="#00C8FF" stroke-width="1.5"/></svg>
-          </div>
-          <div class="service-num text-mono">05</div>
-          <h3 class="heading-md" style="margin-top:12px;">Producción Filmmaker</h3>
-          <p class="text-muted" style="margin-top:10px;font-size:14px;line-height:1.7;">Contenido audiovisual cinematográfico para marcas que quieren impactar. Spots publicitarios, reels, brand films y content strategy visual de alto nivel.</p>
-          <div class="service-tags" style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
-            <span class="badge badge-cyan">Brand Films</span>
-            <span class="badge badge-cyan">Reels</span>
-            <span class="badge badge-cyan">Spots Ads</span>
-            <span class="badge badge-cyan">Motion Graphics</span>
-          </div>
-          <div class="service-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-        </a>
+        </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ══ REAL-TIME DATA PANEL ══ -->
-  <section class="section rtd-section" id="realtime">
+  <!-- ═══════════════ CASOS DE ÉXITO ═══════════════ -->
+  <section id="casos" aria-labelledby="casos-title">
     <div class="container">
-      <div class="section-header" data-reveal>
-        <div class="section-label">Live Intelligence</div>
-        <h2 class="heading-lg">Panel de <span class="gradient-text">Datos en Tiempo Real</span></h2>
-        <p class="text-mid" style="margin-top:16px;">Monitoreo continuo de todos los ecosistemas digitales activos. Métricas en vivo, alertas predictivas y dashboards interactivos.</p>
+      <div class="cases-header">
+        <div>
+          <span class="section-eyebrow reveal">— Casos de éxito</span>
+          <h2 class="section-title reveal delay-1" style="margin-bottom:0;" id="casos-title">
+            Resultados reales<br>de <em>clientes reales.</em>
+          </h2>
+        </div>
+        <p class="cases-subtitle reveal delay-2">
+          No vendemos promesas. Aquí están los números de los negocios con los que trabajamos cada mes.
+        </p>
       </div>
 
-      <div class="rtd-grid">
+      <div class="cases-grid">
 
-        <!-- KPI Row -->
-        <div class="rtd-kpis" data-reveal>
-          <div class="rtd-kpi">
-            <div class="rtd-kpi-label text-mono">LEADS HOY</div>
-            <div class="rtd-kpi-value" id="kpiLeads">—</div>
-            <div class="rtd-kpi-delta positive">↑ 23% vs ayer</div>
+        <!-- CASO 1: Identity Peluqueros -->
+        <div class="case-card reveal">
+          <div class="case-header">
+            <div class="case-brand">
+              <div class="case-avatar blue" aria-label="Identity Peluqueros">IP</div>
+              <div class="case-brand-info">
+                <h4>Identity Peluqueros</h4>
+                <p>Sector belleza · Especialistas en coloración técnica</p>
+              </div>
+            </div>
+            <p class="case-quote">
+              Especialistas en técnicas avanzadas de coloración, bodas y tratamientos premium. Campañas en Meta Ads con Booksy integrado para maximizar reservas online.
+            </p>
           </div>
-          <div class="rtd-kpi">
-            <div class="rtd-kpi-label text-mono">ROAS GLOBAL</div>
-            <div class="rtd-kpi-value" id="kpiRoas">—</div>
-            <div class="rtd-kpi-delta positive">↑ Target: 4.0x</div>
+          <div class="case-metrics">
+            <div class="metric-item">
+              <div class="metric-value green">↑ ROAS</div>
+              <div class="metric-label">Retorno sobre inversión en Meta Ads</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value blue">Booksy</div>
+              <div class="metric-label">Reservas online integradas en campaña</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value green">+Citas</div>
+              <div class="metric-label">Incremento de reservas tras activar ads</div>
+            </div>
           </div>
-          <div class="rtd-kpi">
-            <div class="rtd-kpi-label text-mono">TRÁFICO ORGÁNICO</div>
-            <div class="rtd-kpi-value" id="kpiTraffic">—</div>
-            <div class="rtd-kpi-delta positive">↑ +1,240 esta semana</div>
-          </div>
-          <div class="rtd-kpi">
-            <div class="rtd-kpi-label text-mono">AUTOMATIZACIONES</div>
-            <div class="rtd-kpi-value" id="kpiAuto">—</div>
-            <div class="rtd-kpi-delta neutral">→ 3 en ejecución</div>
+          <div class="case-footer">
+            <div class="case-services">
+              <span class="tag">Meta Ads</span>
+              <span class="tag">Redes Sociales</span>
+              <span class="tag">Contenido</span>
+            </div>
+            <a href="https://identitypeluqueros.com" target="_blank" rel="noopener noreferrer" class="case-link">
+              Ver web
+              <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11L11 2M11 2H6M11 2v5"/></svg>
+            </a>
           </div>
         </div>
 
-        <!-- Chart Panel -->
-        <div class="rtd-chart-panel card" data-reveal data-reveal-delay="1">
-          <div class="rtd-chart-header">
-            <div>
-              <div class="rtd-chart-title">Rendimiento de Campañas</div>
-              <div class="text-muted" style="font-size:12px;margin-top:4px;">Últimos 7 días — Meta + Google Ads</div>
+        <!-- CASO 2: Desancho Estilistas -->
+        <div class="case-card reveal delay-1">
+          <div class="case-header">
+            <div class="case-brand">
+              <div class="case-avatar dark" aria-label="Desancho Estilistas">DS</div>
+              <div class="case-brand-info">
+                <h4>Desancho Estilistas</h4>
+                <p>Salón premium · 2 locales · Meta Ads + Google Ads</p>
+              </div>
             </div>
-            <div class="rtd-chart-controls">
-              <button class="rtd-tab active" data-period="7d">7D</button>
-              <button class="rtd-tab" data-period="30d">30D</button>
-              <button class="rtd-tab" data-period="90d">90D</button>
+            <p class="case-quote">
+              Especialistas en Air Touch, Balayage y extensiones adhesivas. Dos locales con campañas diferenciadas y coordinadas en Meta y Google simultáneamente.
+            </p>
+          </div>
+          <div class="case-metrics">
+            <div class="metric-item">
+              <div class="metric-value blue">€107</div>
+              <div class="metric-label">Ticket medio por cliente conseguido</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">2 locales</div>
+              <div class="metric-label">Campañas gestionadas simultáneamente</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value green">Meta<br>+Google</div>
+              <div class="metric-label">Doble plataforma activada y optimizada</div>
             </div>
           </div>
-          <div class="rtd-chart-wrap" style="height:200px;">
-            <canvas id="campaignChart"></canvas>
+          <div class="case-footer">
+            <div class="case-services">
+              <span class="tag">Meta Ads</span>
+              <span class="tag">Google Ads</span>
+              <span class="tag">Estrategia</span>
+            </div>
+            <a href="https://desancho.com" target="_blank" rel="noopener noreferrer" class="case-link">
+              Ver web
+              <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11L11 2M11 2H6M11 2v5"/></svg>
+            </a>
           </div>
         </div>
 
-        <!-- Activity Feed -->
-        <div class="rtd-feed card" data-reveal data-reveal-delay="2">
-          <div class="rtd-feed-header">
-            <span class="badge badge-green badge-dot">Live Feed</span>
-            <span class="text-mono" style="font-size:10px;color:var(--text-muted);" id="feedTime">00:00:00</span>
+        <!-- CASO 3: Marca Personal Tatuador -->
+        <div class="case-card reveal delay-2">
+          <div class="case-header">
+            <div class="case-brand">
+              <div class="case-avatar blue" style="background:linear-gradient(135deg,#1a1a2e,#16213e);" aria-label="Tatuador">MT</div>
+              <div class="case-brand-info">
+                <h4>Marca Personal — Tatuador</h4>
+                <p>Arte corporal · Branding + Web + Meta Ads</p>
+              </div>
+            </div>
+            <p class="case-quote">
+              Construcción completa de marca personal: identidad visual, web portfolio y campañas en Meta Ads para posicionar el trabajo artístico y multiplicar las citas.
+            </p>
           </div>
-          <ul class="rtd-feed-list" id="feedList">
-            <!-- populated by JS -->
+          <div class="case-metrics">
+            <div class="metric-item">
+              <div class="metric-value green">Marca</div>
+              <div class="metric-label">Identidad visual y posicionamiento creados desde cero</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value blue">Meta Ads</div>
+              <div class="metric-label">Campañas activas con creativos personalizados</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value green">+Citas</div>
+              <div class="metric-label">Incremento de reservas mensuales</div>
+            </div>
+          </div>
+          <div class="case-footer">
+            <div class="case-services">
+              <span class="tag">Branding</span>
+              <span class="tag">Web Portfolio</span>
+              <span class="tag">Meta Ads</span>
+            </div>
+            <a href="https://www.instagram.com/matiasbenegastattoo" target="_blank" rel="noopener noreferrer" class="case-link">
+              Ver Instagram
+              <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11L11 2M11 2H6M11 2v5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CASO 4: Last Mile Dist -->
+        <div class="case-card reveal delay-3">
+          <div class="case-header">
+            <div class="case-brand">
+              <div class="case-avatar dark" style="background:#0a0a0a;" aria-label="Last Mile Dist">LM</div>
+              <div class="case-brand-info">
+                <h4>Last Mile Dist</h4>
+                <p>Distribución · Branding · Web · SEO · Ads · Leads B2B</p>
+              </div>
+            </div>
+            <p class="case-quote">
+              Proyecto 360°: creación de marca, desarrollo web, posicionamiento SEO y campañas en Meta Ads y Google Ads orientadas a captación de leads B2B en el sector de distribución.
+            </p>
+          </div>
+          <div class="case-metrics">
+            <div class="metric-item">
+              <div class="metric-value green">360°</div>
+              <div class="metric-label">Branding, web, SEO y paid media integrados</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value blue">B2B</div>
+              <div class="metric-label">Leads cualificados generados mediante ads</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">Meta<br>+Google</div>
+              <div class="metric-label">Doble plataforma activada simultáneamente</div>
+            </div>
+          </div>
+          <div class="case-footer">
+            <div class="case-services">
+              <span class="tag">Branding</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Meta Ads</span>
+              <span class="tag">Google Ads</span>
+            </div>
+            <a href="https://lastmiledist.com" target="_blank" rel="noopener noreferrer" class="case-link">
+              Ver web
+              <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11L11 2M11 2H6M11 2v5"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:56px;" class="reveal">
+        <p style="font-size:15px; color:var(--gray-600); margin-bottom:20px; font-weight:300;">
+          ¿Tu negocio podría ser el próximo caso de éxito?
+        </p>
+        <a href="#contacto" class="btn-primary">Empieza ahora →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ LOGÍSTICA ═══════════════ -->
+  <section id="logistica" aria-labelledby="logistica-title" style="background:var(--black); color:var(--white);">
+    <div class="container">
+      <div class="proceso-grid">
+        <div>
+          <span class="section-eyebrow reveal" style="color:rgba(255,255,255,0.3);">— Caso especial</span>
+          <h2 class="section-title reveal delay-1" id="logistica-title" style="color:var(--white); max-width:100%;">
+            Software a medida para<br><em style="color:rgba(0,150,255,0.85);">logística de obra.</em>
+          </h2>
+          <p class="reveal delay-2" style="font-size:16px; color:rgba(255,255,255,0.5); line-height:1.75; max-width:480px; margin-bottom:40px; font-weight:300;">
+            Desarrollamos un sistema de gestión logística personalizado para el sector de la construcción: control de material en tiempo real, seguimiento multi-obra y generación automática de informes.
+          </p>
+          <div class="ia-grid reveal delay-3" style="grid-template-columns:1fr 1fr; margin-top:0; border-radius:10px;">
+            <div class="ia-card" style="padding:28px 24px;">
+              <div class="ia-card-num">01</div>
+              <h4 style="font-size:15px;">Control en tiempo real</h4>
+              <p style="font-size:13px;">Inventario y movimientos de material actualizados al instante en cada obra.</p>
+            </div>
+            <div class="ia-card" style="padding:28px 24px;">
+              <div class="ia-card-num">02</div>
+              <h4 style="font-size:15px;">Gestión multi-obra</h4>
+              <p style="font-size:13px;">Centraliza la logística de múltiples proyectos desde un solo panel.</p>
+            </div>
+            <div class="ia-card" style="padding:28px 24px;">
+              <div class="ia-card-num">03</div>
+              <h4 style="font-size:15px;">Informes automáticos</h4>
+              <p style="font-size:13px;">Reportes de stock, costes y movimientos generados sin intervención manual.</p>
+            </div>
+            <div class="ia-card" style="padding:28px 24px;">
+              <div class="ia-card-num">04</div>
+              <h4 style="font-size:15px;">Desarrollo 100% personalizado</h4>
+              <p style="font-size:13px;">Solución construida desde cero adaptada a los flujos del cliente, no una plantilla.</p>
+            </div>
+          </div>
+        </div>
+        <div class="proceso-aside reveal delay-2">
+          <div class="proceso-card">
+            <h3>Métricas del<br><em>sistema desplegado.</em></h3>
+            <div class="stack-list">
+              <div class="stack-item">
+                <span class="stack-item-name">Real-time</span>
+                <span class="stack-item-role">Datos de inventario en vivo</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Multi-obra</span>
+                <span class="stack-item-role">Gestión centralizada de proyectos</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Auto reports</span>
+                <span class="stack-item-role">Informes generados automáticamente</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Software a medida</span>
+                <span class="stack-item-role">Desarrollo específico para el sector</span>
+              </div>
+            </div>
+            <a href="#contacto" class="btn-primary" style="width:100%; justify-content:center;">
+              ¿Necesitas algo similar? →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROCESO ═══════════════ -->
+  <section id="proceso" aria-labelledby="proceso-title">
+    <div class="container">
+      <div class="proceso-grid">
+        <div>
+          <span class="section-eyebrow reveal">— Cómo trabajamos</span>
+          <h2 class="section-title reveal delay-1" id="proceso-title">
+            Un proceso claro<br>desde el <em>día uno.</em>
+          </h2>
+          <div class="proceso-steps">
+            <div class="step reveal delay-1">
+              <span class="step-num">01</span>
+              <div class="step-content">
+                <h4>Auditoría inicial gratuita</h4>
+                <p>Analizamos tu situación actual: cuentas publicitarias, presencia digital, competencia y oportunidades. Sin compromisos.</p>
+              </div>
+            </div>
+            <div class="step reveal delay-2">
+              <span class="step-num">02</span>
+              <div class="step-content">
+                <h4>Estrategia personalizada</h4>
+                <p>Diseñamos un plan específico para tu negocio, sector y objetivos. No hay plantillas — cada cliente tiene su propia hoja de ruta.</p>
+              </div>
+            </div>
+            <div class="step reveal delay-3">
+              <span class="step-num">03</span>
+              <div class="step-content">
+                <h4>Ejecución y optimización continua</h4>
+                <p>Lanzamos, medimos y ajustamos cada semana. Las campañas mejoran constantemente gracias al análisis de datos y la IA integrada.</p>
+              </div>
+            </div>
+            <div class="step reveal delay-4">
+              <span class="step-num">04</span>
+              <div class="step-content">
+                <h4>Reporting transparente mensual</h4>
+                <p>Cada mes recibes un informe completo con todos los datos reales: inversión, resultados, conclusiones y plan para el mes siguiente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proceso-aside reveal delay-2">
+          <div class="proceso-card">
+            <h3>Stack tecnológico<br>para <em>mejores resultados.</em></h3>
+            <div class="stack-list">
+              <div class="stack-item">
+                <span class="stack-item-name">Claude AI</span>
+                <span class="stack-item-role">Estrategia + Contenido</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Windsor.ai</span>
+                <span class="stack-item-role">Datos Meta + Google</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">n8n</span>
+                <span class="stack-item-role">Automatizaciones</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Perplexity</span>
+                <span class="stack-item-role">Tendencias + Research</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Meta Ads API</span>
+                <span class="stack-item-role">Gestión de Campañas</span>
+              </div>
+              <div class="stack-item">
+                <span class="stack-item-name">Google Ads</span>
+                <span class="stack-item-role">Search + Display</span>
+              </div>
+            </div>
+            <a href="#contacto" class="btn-primary" style="width:100%; justify-content:center;">
+              Empezar ahora →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ DIFERENCIAL IA ═══════════════ -->
+  <section id="ia" aria-labelledby="ia-title">
+    <div class="container">
+      <span class="section-eyebrow reveal">— Por qué RaxisLab</span>
+      <h2 class="section-title reveal delay-1" id="ia-title">
+        Trabajamos con <em>IA<br>en cada proceso.</em>
+      </h2>
+      <div class="ia-grid">
+        <div class="ia-card reveal">
+          <div class="ia-card-num">01</div>
+          <h4>Decisiones basadas en datos</h4>
+          <p>Windsor.ai conecta todas tus plataformas en tiempo real. Vemos exactamente qué funciona y ajustamos antes de que tu presupuesto se desperdicie.</p>
+        </div>
+        <div class="ia-card reveal delay-1">
+          <div class="ia-card-num">02</div>
+          <h4>Contenido más rápido y relevante</h4>
+          <p>Claude AI analiza tendencias de tu sector cada semana para generar ideas de contenido que conectan con tu audiencia en el momento exacto.</p>
+        </div>
+        <div class="ia-card reveal delay-2">
+          <div class="ia-card-num">03</div>
+          <h4>Automatizaciones que ahorran tiempo</h4>
+          <p>n8n automatiza procesos repetitivos: reportes, alertas de rendimiento, publicaciones en GMB. Más eficiencia, mismo coste para ti.</p>
+        </div>
+        <div class="ia-card reveal delay-3">
+          <div class="ia-card-num">04</div>
+          <h4>Estrategia siempre actualizada</h4>
+          <p>Perplexity monitoriza en tiempo real las tendencias de tu sector y de los competidores. Nunca llegarás tarde a una oportunidad.</p>
+        </div>
+        <div class="ia-card reveal delay-4">
+          <div class="ia-card-num">05</div>
+          <h4>Reporting automatizado</h4>
+          <p>Los informes mensuales se generan con datos reales de Meta y Google. Sin editar números a mano — sin margen de error humano.</p>
+        </div>
+        <div class="ia-card reveal delay-5">
+          <div class="ia-card-num">06</div>
+          <h4>Una agencia que no para de mejorar</h4>
+          <p>Cada semana evaluamos los resultados, aprendemos y mejoramos el siguiente ciclo. El sistema mejora contigo.</p>
+        </div>
+      </div>
+      <div class="ia-tools reveal">
+        <span class="ia-tools-label">Con tecnología de</span>
+        <span class="tool-pill">Claude AI</span>
+        <span class="tool-pill">Windsor.ai</span>
+        <span class="tool-pill">n8n</span>
+        <span class="tool-pill">Perplexity</span>
+        <span class="tool-pill">Meta Ads API</span>
+        <span class="tool-pill">Google Ads</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACTO ═══════════════ -->
+  <section id="contacto" aria-labelledby="contacto-title">
+    <div class="container">
+      <div class="cta-wrap">
+        <h2 id="contacto-title">
+          ¿Listo para<br><em>crecer</em> de<br><strong>verdad?</strong>
+        </h2>
+        <p>Empieza con una auditoría gratuita de tu situación actual. Sin compromiso, sin letra pequeña — solo datos reales sobre cómo podemos ayudarte.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/34654835593" target="_blank" rel="noopener noreferrer" class="btn-primary accent">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-6.93 11.97L0 16l4.17-1.05A8 8 0 1 0 8 0Zm4.12 10.73c-.18.5-1.04.94-1.43 1-.37.05-.84.08-1.34-.08-.31-.1-.7-.23-1.2-.44-2.12-.91-3.5-3.05-3.6-3.19-.11-.14-.87-1.16-.87-2.2 0-1.04.54-1.55.74-1.76.19-.2.43-.25.57-.25h.42c.13 0 .3-.01.47.36.18.39.62 1.5.67 1.61.06.11.09.25.02.4-.07.14-.11.22-.22.34-.11.12-.23.27-.33.36-.11.1-.22.2-.1.41.13.2.56.94 1.2 1.52.83.73 1.52.96 1.74 1.07.22.11.34.09.47-.04.13-.13.54-.63.69-.85.14-.22.28-.18.47-.11.19.07 1.2.57 1.41.68.2.11.34.16.39.25.05.09.05.53-.13 1.02Z"/></svg>
+            WhatsApp directo
+          </a>
+          <a href="mailto:hola@raxislab.com" class="btn-secondary">hola@raxislab.com</a>
+        </div>
+      </div>
+
+      <!-- FORMULARIO -->
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label for="negocio">Tipo de negocio</label>
+          <input type="text" id="negocio" name="negocio" placeholder="Ej: Peluquería, restaurante, tienda..." />
+        </div>
+        <div class="form-group">
+          <label for="servicio">¿Qué necesitas?</label>
+          <select id="servicio" name="servicio">
+            <option value="">Seleccionar...</option>
+            <option>Meta Ads (Facebook/Instagram)</option>
+            <option>Google Ads</option>
+            <option>Gestión de redes sociales</option>
+            <option>Todo lo anterior</option>
+            <option>No sé, quiero asesoramiento</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="mensaje">Cuéntanos más (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Describe tu negocio, situación actual o qué quieres conseguir..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Quiero mi auditoría gratuita →
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo-mark-white.svg" alt="" height="28" style="display:block; flex-shrink:0;" />
+            <span style="color:var(--white);">RAXIS<span style="color:rgba(0,150,255,0.85); font-weight:300;">LAB</span></span>
+          </div>
+          <p>Agencia de marketing digital. Meta Ads, Google Ads y redes sociales con inteligencia artificial integrada para negocios que quieren crecer.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="#servicios">Meta Ads</a></li>
+            <li><a href="#servicios">Google Ads</a></li>
+            <li><a href="#servicios">Redes sociales</a></li>
+            <li><a href="#servicios">Estrategia digital</a></li>
           </ul>
         </div>
-
-        <!-- Pipeline Gauges -->
-        <div class="rtd-gauges card" data-reveal data-reveal-delay="3">
-          <div class="rtd-gauge-title">Pipeline de Conversión</div>
-          <div class="rtd-gauge-list" id="gaugeList">
-            <div class="rtd-gauge-item">
-              <div class="rtd-gauge-label"><span>Tráfico → Lead</span><span class="text-accent text-mono">34%</span></div>
-              <div class="rtd-gauge-bar"><div class="rtd-gauge-fill" style="width:34%"></div></div>
-            </div>
-            <div class="rtd-gauge-item">
-              <div class="rtd-gauge-label"><span>Lead → Calificado</span><span class="text-accent text-mono">61%</span></div>
-              <div class="rtd-gauge-bar"><div class="rtd-gauge-fill" style="width:61%"></div></div>
-            </div>
-            <div class="rtd-gauge-item">
-              <div class="rtd-gauge-label"><span>Calificado → Cierre</span><span class="text-accent text-mono">48%</span></div>
-              <div class="rtd-gauge-bar"><div class="rtd-gauge-fill" style="width:48%"></div></div>
-            </div>
-            <div class="rtd-gauge-item">
-              <div class="rtd-gauge-label"><span>Retención 90 días</span><span class="text-accent text-mono">92%</span></div>
-              <div class="rtd-gauge-bar"><div class="rtd-gauge-fill" style="width:92%"></div></div>
-            </div>
-          </div>
+        <div class="footer-col">
+          <h5>Recursos</h5>
+          <ul>
+            <li><a href="resources.html">Guías gratuitas</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pricing.html">Precios</a></li>
+            <li><a href="#casos">Casos de éxito</a></li>
+          </ul>
         </div>
-
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <ul>
+            <li><a href="mailto:hola@raxislab.com">hola@raxislab.com</a></li>
+            <li><a href="https://wa.me/34654835593" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://instagram.com/rene.pyo" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ══ METHODOLOGY ══ -->
-  <section class="section methodology-section" id="methodology">
-    <div class="container">
-      <div class="section-header" data-reveal>
-        <div class="section-label">Metodología</div>
-        <h2 class="heading-lg">El Proceso <span class="gradient-text">RaxisLab</span></h2>
-      </div>
-
-      <div class="method-steps">
-        <div class="method-step" data-reveal data-reveal-delay="1">
-          <div class="method-num">01</div>
-          <div class="method-connector"></div>
-          <h4>Diagnóstico Estratégico</h4>
-          <p class="text-muted">Auditoría completa del ecosistema digital. Identificamos brechas, oportunidades y el punto de máximo impacto.</p>
-        </div>
-        <div class="method-step" data-reveal data-reveal-delay="2">
-          <div class="method-num">02</div>
-          <div class="method-connector"></div>
-          <h4>Arquitectura del Sistema</h4>
-          <p class="text-muted">Diseñamos la estructura técnica y estratégica óptima. Cada componente tiene un propósito medible.</p>
-        </div>
-        <div class="method-step" data-reveal data-reveal-delay="3">
-          <div class="method-num">03</div>
-          <div class="method-connector"></div>
-          <h4>Ejecución de Alta Precisión</h4>
-          <p class="text-muted">Implementación con estándares de ingeniería. Ciclos de sprint, testing continuo y optimización en tiempo real.</p>
-        </div>
-        <div class="method-step" data-reveal data-reveal-delay="4">
-          <div class="method-num">04</div>
-          <div class="method-connector" style="display:none"></div>
-          <h4>Escala & Automatización</h4>
-          <p class="text-muted">Una vez validado el sistema, lo escalamos con IA y automatizaciones para multiplicar resultados sin escalar costes.</p>
+      <div class="footer-bottom">
+        <p>© 2025 RaxisLab · Agencia de marketing digital</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacidad</a>
+          <a href="terms.html">Aviso legal</a>
+          <a href="cookies.html">Cookies</a>
         </div>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- ══ CTA STRIP ══ -->
-  <section class="cta-strip" data-reveal>
-    <div class="container">
-      <div class="cta-strip-inner">
-        <div>
-          <div class="section-label" style="margin-bottom:12px;">¿Listo para escalar?</div>
-          <h2 class="heading-md">Convierte tu presencia digital en una<br/><span class="gradient-text">máquina de resultados</span></h2>
-        </div>
-        <div class="cta-strip-actions">
-          <a href="contact.html" class="btn btn-primary">
-            Comenzar Ahora
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="lab.html" class="btn btn-ghost">Ver el Lab</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script>
+    // ── Cursor personalizado ──────────────────────
+    const cursor = document.getElementById('cursor');
+    const ring   = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function animCursor() {
+      if (cursor) { cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; }
+      rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13;
+      if (ring) { ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; }
+      requestAnimationFrame(animCursor);
+    })();
 
-</main>
+    // ── Navbar scroll ─────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
 
-<!-- ══════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="text-decoration:none;">
-          <div class="logo-icon">
-            <img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/>
-          </div>
-          <div class="logo-wordmark">
-            <span class="logo-name" style="font-size:15px;">RAXISLAB</span>
-            <span class="logo-tagline">Digital Laboratory</span>
-          </div>
-        </a>
-        <p>Laboratorio estratégico digital. Construimos arquitecturas digitales de alto rendimiento que escalan.</p>
-        <div style="display:flex;gap:12px;margin-top:20px;">
-          <a href="#" class="footer-social" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="#" class="footer-social" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-          </a>
-          <a href="#" class="footer-social" aria-label="X / Twitter">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M4 20L20 4"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h5>Servicios</h5>
-        <a href="services.html#conversion">Conversión Web</a>
-        <a href="services.html#seo">SEO Estratégico</a>
-        <a href="services.html#ads">Meta / Google Ads</a>
-        <a href="services.html#ai">Automatización IA</a>
-        <a href="services.html#film">Producción Filmmaker</a>
-      </div>
-      <div class="footer-col">
-        <h5>Compañía</h5>
-        <a href="index.html">Home</a>
-        <a href="cases.html">Casos de Éxito</a>
-        <a href="roi.html">Calculadora ROI</a>
-        <a href="lab.html">The Lab</a>
-        <a href="contact.html">Contacto</a>
-      </div>
-      <div class="footer-col">
-        <h5>Soporte</h5>
-        <a href="help.html">Centro de ayuda</a>
-        <a href="faq.html">FAQ</a>
-        <a href="resources.html">Recursos gratis</a>
-        <a href="client-portal.html">🔐 Portal de cliente</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contacto</h5>
-        <a href="mailto:hola@raxislab.com">hola@raxislab.com</a>
-        <a href="contact.html">Agenda una llamada</a>
-        <div style="margin-top:16px;" class="badge badge-green badge-dot">Aceptando proyectos</div>
-      </div>
-    </div>
+    // ── Menú móvil ────────────────────────────────
+    const navToggle  = document.getElementById('navToggle');
+    const navMobile  = document.getElementById('navMobile');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMobile.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    navMobile.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
 
-    <div class="footer-bottom">
-      <p>© 2025 RaxisLab. All rights reserved. — <span class="text-mono">PRECISION . INNOVATION . SCALABILITY</span></p>
-      <div class="footer-bottom-links">
-        <a href="privacy.html">Privacidad</a>
-        <a href="terms.html">Términos</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </div>
-  </div>
-</footer>
+    // ── Scroll reveal ─────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+    revealEls.forEach(el => io.observe(el));
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/home.js"></script>
+    // ── Contador animado de números ───────────────
+    function countUp(el) {
+      const target = parseInt(el.dataset.target);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const dur    = 1600;
+      const start  = performance.now();
+      function tick(now) {
+        const p    = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = prefix + Math.round(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const statsIo = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { countUp(e.target); statsIo.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => statsIo.observe(el));
+
+    // ── Formulario con Formspree ──────────────────
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn  = this.querySelector('.form-submit');
+      const orig = btn.textContent;
+      btn.textContent = 'Enviando...';
+      btn.disabled    = true;
+
+      const data = {
+        _subject:  '🚀 Nuevo contacto desde RaxisLab.com',
+        _replyto:  this.email?.value || '',
+        nombre:    this.nombre?.value || '',
+        email:     this.email?.value  || '',
+        negocio:   this.negocio?.value || '',
+        servicio:  this.servicio?.value || '',
+        mensaje:   this.mensaje?.value || '',
+      };
+
+      try {
+        await fetch('https://formspree.io/f/xaqdzdge', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      } catch(err) { console.warn('Formspree:', err); }
+
+      btn.textContent      = '¡Enviado! Te contactamos pronto ✓';
+      btn.style.background = '#16a34a';
+    });
+  </script>
 </body>
 </html>

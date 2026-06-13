@@ -3,579 +3,599 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Recursos Gratuitos — Guías, Plantillas y Herramientas · RaxisLab</title>
-  <meta name="description" content="Descarga gratis guías prácticas: cómo grabar ante la cámara, estructura de contenido para Slack, técnicas de venta, plantillas para Reels y más."/>
-  <meta property="og:type"        content="website"/>
-  <meta property="og:url"         content="https://raxislab.com/resources.html"/>
-  <meta property="og:title"       content="Recursos Gratuitos — Guías PDF y Plantillas · RaxisLab"/>
-  <meta property="og:description" content="8 guías descargables gratis: cámara, reels, Slack, contenido, ventas, DMs, prompts IA y el Método Raxisla."/>
-  <meta property="og:image"       content="https://raxislab.com/images/og-home.jpg"/>
-  <meta name="twitter:card"       content="summary_large_image"/>
-  <link rel="canonical"           href="https://raxislab.com/resources.html"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/resources.css"/>
-  <!-- Google Analytics 4 -->
+  <title>Recursos Gratuitos — RaxisLab</title>
+  <meta name="description" content="Guías, plantillas y recursos gratuitos de marketing digital, IA y contenido para hacer crecer tu negocio."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://raxislab.com/resources.html"/>
+  <meta property="og:title" content="Recursos Gratuitos — RaxisLab"/>
+  <meta property="og:description" content="Guías gratuitas de marketing digital, IA y contenido para negocios."/>
+  <meta property="og:image" content="https://raxislab.com/images/og-home.jpg"/>
+  <link rel="canonical" href="https://raxislab.com/resources.html"/>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGR4RYY1ER"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EGR4RYY1ER');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/shared.css"/>
+
+  <style>
+    /* ── Hero ── */
+    .res-hero {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 96px 0 80px;
+    }
+    .res-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--green);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      border: 1px solid rgba(22,163,74,0.2);
+      background: rgba(22,163,74,0.06);
+      padding: 5px 14px;
+      border-radius: 100px;
+    }
+    .res-hero h1 {
+      font-size: clamp(40px, 5.5vw, 72px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .res-hero h1 em { font-style: italic; color: var(--accent); }
+    .res-hero-desc {
+      font-size: 18px;
+      color: var(--gray-600);
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .res-hero-stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .res-stat-num {
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: -0.05em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .res-stat-num span { color: var(--green); }
+    .res-stat-label {
+      font-size: 12px;
+      color: var(--gray-400);
+      margin-top: 4px;
+      font-family: var(--mono);
+    }
+
+    /* ── Filtros ── */
+    .res-filters {
+      padding: 40px 0 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .res-filters-inner {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-bottom: 0;
+    }
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-family: var(--font);
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover { border-color: var(--black); color: var(--black); }
+    .filter-btn.active {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
+
+    /* ── Grid de recursos ── */
+    .res-grid-section {
+      padding: 72px 0 96px;
+    }
+    .res-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .res-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .res-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.07);
+      border-color: var(--accent);
+    }
+    .res-card-top {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 32px 28px 24px;
+    }
+    .res-card-cat {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
+    }
+    .res-card-title {
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+    .res-card-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .res-card-meta span {
+      font-size: 11px;
+      font-family: var(--mono);
+      color: var(--gray-400);
+    }
+    .res-card-body {
+      padding: 24px 28px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .res-card-desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+    .res-card-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+    .res-card-includes li {
+      font-size: 12px;
+      color: var(--gray-600);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .res-card-includes li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .res-card-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--black);
+      color: var(--white);
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: opacity 0.2s, transform 0.2s var(--ease);
+      text-decoration: none;
+    }
+    .res-card-btn:hover { opacity: 0.85; transform: scale(0.98); }
+    .res-card-free {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--green);
+      background: rgba(22,163,74,0.08);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    /* ── CTA ── */
+    .res-cta {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .res-cta h2 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .res-cta h2 em { font-style: italic; color: var(--accent); }
+    .res-cta p {
+      font-size: 16px;
+      color: var(--gray-600);
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) { .res-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) {
+      .res-grid { grid-template-columns: 1fr; }
+      .res-hero-stats { gap: 28px; }
+    }
+  </style>
 </head>
 <body>
-<div class="grid-overlay" aria-hidden="true"></div>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
 
-<nav class="navbar" id="navbar">
-  <div class="container"><div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-      <div class="logo-wordmark"><span class="logo-name">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
+  <!-- NAV -->
+  <nav class="sitenav" aria-label="Navegación principal">
+    <a href="index.html" class="sitenav-logo" aria-label="RaxisLab inicio">
+      <img src="images/logo-mark-light.svg" alt="" height="30" style="display:block;flex-shrink:0;" />
+      <span class="sitenav-logo-text">RAXIS<span class="sitenav-logo-lab">LAB</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html"     class="nav-link"><span class="nav-dot"></span>Home</a></li>
-      <li><a href="services.html"  class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
-      <li><a href="ai.html"        class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
-      <li><a href="resources.html" class="nav-link nav-link-highlight active"><span class="nav-dot"></span>🎁 Recursos</a></li>
-      <li><a href="blog.html"      class="nav-link"><span class="nav-dot"></span>Blog</a></li>
-      <li><a href="pricing.html"   class="nav-link"><span class="nav-dot"></span>Precios</a></li>
-      <li><a href="contact.html"   class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
-      <li class="nav-dropdown">
-        <button class="nav-link nav-dropdown-btn"><span class="nav-dot"></span>Más ▾</button>
-        <ul class="nav-dropdown-menu">
-          <li><a href="cases.html"  class="nav-link">Casos de Éxito</a></li>
-          <li><a href="about.html"  class="nav-link">Sobre mí</a></li>
-          <li><a href="roi.html"    class="nav-link">Calculadora ROI</a></li>
-          <li><a href="lab.html"    class="nav-link">The Lab</a></li>
-        </ul>
-      </li>
+    <ul class="sitenav-links" role="list">
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="ai.html">IA Studio</a></li>
+      <li><a href="resources.html" class="active">Recursos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="pricing.html">Precios</a></li>
+      <li><a href="contact.html" class="sitenav-cta">Hablemos →</a></li>
     </ul>
-    <div class="nav-cta-area">
-      <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
-      <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-    </div>
-  </div></div>
-</nav>
-<div class="nav-mobile" id="navMobile">
-  <a href="index.html"     class="nav-link">Home</a>
-  <a href="services.html"  class="nav-link">Servicios</a>
-  <a href="ai.html"        class="nav-link">✨ IA Studio</a>
-  <a href="resources.html" class="nav-link active">🎁 Recursos Gratis</a>
-  <a href="blog.html"      class="nav-link">Blog</a>
-  <a href="pricing.html"   class="nav-link">Precios</a>
-  <a href="cases.html"     class="nav-link">Casos de Éxito</a>
-  <a href="about.html"     class="nav-link">Sobre mí</a>
-  <a href="roi.html"       class="nav-link">Calculadora ROI</a>
-  <a href="lab.html"       class="nav-link">The Lab</a>
-  <a href="contact.html"   class="nav-link">Contacto</a>
-  <a href="contact.html"   class="btn btn-primary">Iniciar Proyecto</a>
-</div>
+    <button class="sitenav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="sitenav-mobile">
+    <a href="services.html">Servicios</a>
+    <a href="ai.html">IA Studio</a>
+    <a href="resources.html" class="active">Recursos</a>
+    <a href="blog.html">Blog</a>
+    <a href="pricing.html">Precios</a>
+    <a href="cases.html">Casos de éxito</a>
+    <a href="about.html">Quiénes somos</a>
+    <a href="contact.html" class="sitenav-cta">Hablemos →</a>
+  </div>
 
-<main class="page-content">
+  <main class="page-content">
 
-  <!-- HERO -->
-  <section class="res-hero">
-    <div class="container">
-      <div class="res-hero-inner">
-        <div data-reveal>
-          <div class="res-hero-badge">
-            <span>📦</span>
-            <span class="font-mono">RECURSOS GRATUITOS · RAXISLAB</span>
+    <!-- HERO -->
+    <section class="res-hero">
+      <div class="container">
+        <div class="res-hero-tag reveal">🎁 Recursos gratuitos</div>
+        <h1 class="reveal delay-1">Guías que te ayudan<br/>a crecer <em>desde hoy.</em></h1>
+        <p class="res-hero-desc reveal delay-2">Sin registro, sin trampa. Descarga guías prácticas de marketing, contenido, sistemas e IA elaboradas con casos reales.</p>
+        <div class="res-hero-stats reveal delay-3">
+          <div>
+            <div class="res-stat-num"><span>8</span></div>
+            <div class="res-stat-label">recursos disponibles</div>
           </div>
-          <h1 class="res-hero-title">
-            Herramientas, guías y<br/>
-            <span class="gradient-text">plantillas que realmente usamos</span>
-          </h1>
-          <p class="res-hero-sub">
-            Todo lo que necesitas para grabar ante cámara, crear contenido, 
-            vender mejor y gestionar tu negocio — en documentos descargables 
-            y listos para usar desde hoy.
-          </p>
-          <div class="res-hero-meta">
-            <div class="res-meta-item">
-              <span class="res-meta-num">8</span>
-              <span class="res-meta-lbl">Recursos disponibles</span>
-            </div>
-            <div class="res-meta-div"></div>
-            <div class="res-meta-item">
-              <span class="res-meta-num">100%</span>
-              <span class="res-meta-lbl">Gratuitos</span>
-            </div>
-            <div class="res-meta-div"></div>
-            <div class="res-meta-item">
-              <span class="res-meta-num">PDF</span>
-              <span class="res-meta-lbl">Listos para usar</span>
-            </div>
+          <div>
+            <div class="res-stat-num"><span>100</span>%</div>
+            <div class="res-stat-label">gratuitos</div>
+          </div>
+          <div>
+            <div class="res-stat-num"><span>PDF</span></div>
+            <div class="res-stat-label">formato descargable</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FILTER BAR -->
-  <section class="res-filters">
-    <div class="container">
-      <div class="res-filter-bar" data-reveal>
-        <button class="res-filter active" data-filter="all">Todos</button>
-        <button class="res-filter" data-filter="camara">📹 Cámara & Vídeo</button>
-        <button class="res-filter" data-filter="contenido">✍️ Contenido</button>
-        <button class="res-filter" data-filter="ventas">💰 Ventas</button>
-        <button class="res-filter" data-filter="sistemas">⚙️ Sistemas</button>
-        <button class="res-filter" data-filter="ia">🤖 IA</button>
+    <!-- FILTROS -->
+    <div class="res-filters">
+      <div class="container">
+        <div class="res-filters-inner">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="camara">Cámara & Vídeo</button>
+          <button class="filter-btn" data-filter="contenido">Contenido</button>
+          <button class="filter-btn" data-filter="ventas">Ventas</button>
+          <button class="filter-btn" data-filter="sistemas">Sistemas</button>
+          <button class="filter-btn" data-filter="ia">IA</button>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- RESOURCES GRID -->
-  <section class="res-grid-section">
-    <div class="container">
-      <div class="res-grid" id="resourcesGrid">
+    <!-- GRID -->
+    <section class="res-grid-section">
+      <div class="container">
+        <div class="res-grid" id="res-grid">
 
-        <!-- 1 — Cámara -->
-        <div class="res-card" data-cat="camara" data-reveal>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#0a0014,#16002a);">
-            <div class="res-card-icon">📹</div>
-            <div class="res-card-badge">Cámara & Vídeo</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">Cómo desenvolverte ante la cámara sin bloquearte</h3>
-            <p class="res-card-desc">
-              Guía práctica para perder el miedo a grabar: postura, respiración, 
-              qué hacer con las manos, cómo hablar con naturalidad y cómo estructurar 
-              lo que dices en menos de 30 segundos.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>Checklist pre-grabación de 10 puntos</li>
-                <li>Los 5 ejercicios de calentamiento vocal</li>
-                <li>Posiciones corporales que transmiten autoridad</li>
-                <li>Cómo mantener contacto visual con la cámara</li>
+          <article class="res-card reveal" data-cat="camara">
+            <div class="res-card-top">
+              <div class="res-card-cat">Cámara & Vídeo</div>
+              <h2 class="res-card-title">Cómo desenvolverte ante la cámara sin bloquearte</h2>
+              <div class="res-card-meta">
+                <span>PDF · 12 pág.</span>
+                <span>Nivel: Principiante</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Método paso a paso para superar el bloqueo frente a la cámara y empezar a grabar con confianza desde el primer día.</p>
+              <ul class="res-card-includes">
+                <li>Checklist de pre-grabación (10 puntos)</li>
+                <li>5 ejercicios de calentamiento vocal</li>
+                <li>Posturas corporales y contacto visual</li>
                 <li>Plantilla de teleprompter mental</li>
               </ul>
+              <a href="guia-camara.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📄 PDF · 12 páginas</span>
-              <span class="res-meta-tag">🎯 Nivel: Principiante</span>
-            </div>
-            <a href="guia-camara.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
-        </div>
+          </article>
 
-        <!-- 2 — Estructura de Reels -->
-        <div class="res-card" data-cat="camara" data-reveal>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#001a0a,#002a14);">
-            <div class="res-card-icon">🎬</div>
-            <div class="res-card-badge res-badge-green">Cámara & Vídeo</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">Estructura de Reels que retienen y convierten</h3>
-            <p class="res-card-desc">
-              El framework de 4 partes que uso con todos mis clientes: 
-              cómo construir un hook irresistible, desarrollar el contenido 
-              con ritmo y terminar con un CTA que convierte.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>Fórmula HOOK-VALOR-PRUEBA-CTA explicada</li>
+          <article class="res-card reveal delay-1" data-cat="camara">
+            <div class="res-card-top">
+              <div class="res-card-cat">Cámara & Vídeo</div>
+              <h2 class="res-card-title">Estructura de Reels que retienen y convierten</h2>
+              <div class="res-card-meta">
+                <span>PDF · 18 pág.</span>
+                <span>Nivel: Intermedio</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Fórmula HOOK–VALOR–PRUEBA–CTA para crear Reels que la gente ve completos y que generan acción real.</p>
+              <ul class="res-card-includes">
                 <li>20 hooks probados por sector</li>
-                <li>Guía de edición: ritmo, cortes, texto en pantalla</li>
-                <li>Checklist de publicación para máximo alcance</li>
+                <li>Guía de edición: ritmo, cortes y texto</li>
+                <li>Checklist de publicación</li>
+                <li>Fórmula de estructura en 4 actos</li>
               </ul>
+              <a href="guia-reels.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📄 PDF · 18 páginas</span>
-              <span class="res-meta-tag">🎯 Nivel: Intermedio</span>
-            </div>
-            <a href="guia-reels.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
-        </div>
+          </article>
 
-        <!-- 3 — Slack para negocios -->
-        <div class="res-card" data-cat="sistemas" data-reveal>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#0a0800,#1a1400);">
-            <div class="res-card-icon">💬</div>
-            <div class="res-card-badge res-badge-yellow">Sistemas</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">Slack para negocios: estructura y flujos de trabajo</h3>
-            <p class="res-card-desc">
-              Cómo organizar tu empresa en Slack para que la comunicación 
-              sea eficiente, no caótica. Incluye plantillas de canales, 
-              reglas de uso y cómo conectarlo con n8n para automatizar notificaciones.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>Estructura de canales recomendada por tamaño de equipo</li>
-                <li>Convenciones de nomenclatura y uso</li>
-                <li>Plantilla de onboarding de empleados en Slack</li>
-                <li>5 workflows de automatización con n8n</li>
+          <article class="res-card reveal delay-2" data-cat="sistemas">
+            <div class="res-card-top">
+              <div class="res-card-cat">Sistemas</div>
+              <h2 class="res-card-title">Slack para negocios: estructura y flujos de trabajo</h2>
+              <div class="res-card-meta">
+                <span>PDF · 22 pág.</span>
+                <span>Nivel: Intermedio</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Configura Slack como el centro de operaciones de tu negocio con canales bien definidos y automatizaciones reales.</p>
+              <ul class="res-card-includes">
+                <li>Estructura de canales recomendada</li>
+                <li>Naming conventions y onboarding</li>
+                <li>5 flujos de automatización con n8n</li>
                 <li>Integración con Google Sheets y Stripe</li>
               </ul>
+              <a href="guia-slack.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📄 PDF · 22 páginas</span>
-              <span class="res-meta-tag">🎯 Nivel: Avanzado</span>
-            </div>
-            <a href="guia-slack.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
-        </div>
+          </article>
 
-        <!-- 4 — Contenido 30 días -->
-        <div class="res-card" data-cat="contenido" data-reveal>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#001420,#002040);">
-            <div class="res-card-icon">📅</div>
-            <div class="res-card-badge res-badge-blue">Contenido</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">Calendario de contenido de 30 días — Plantilla completa</h3>
-            <p class="res-card-desc">
-              La plantilla exacta que uso con mis clientes: 30 días de 
-              contenido planificado con temas, formatos, horarios y métricas 
-              de seguimiento. Funciona para cualquier sector.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>Hoja de Google Sheets lista para duplicar</li>
-                <li>30 temas de contenido evergreen por sector</li>
-                <li>Guía de pilares de contenido (4 categorías)</li>
-                <li>Horarios óptimos por plataforma</li>
-                <li>Tracker de métricas semanales</li>
+          <article class="res-card reveal" data-cat="sistemas">
+            <div class="res-card-top">
+              <div class="res-card-cat">Sistemas</div>
+              <h2 class="res-card-title">Gestión de calendario y planificación semanal</h2>
+              <div class="res-card-meta">
+                <span>PDF · 16 pág.</span>
+                <span>Nivel: Principiante</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Sistema de planificación semanal para dueños de negocio que quieren recuperar el control de su tiempo y energía.</p>
+              <ul class="res-card-includes">
+                <li>Plantilla de bloqueo de tiempo</li>
+                <li>Sistema de priorización por impacto</li>
+                <li>Ritual de revisión semanal</li>
+                <li>Integración con Google Calendar</li>
               </ul>
+              <a href="guia-calendario.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📊 Google Sheets</span>
-              <span class="res-meta-tag">🎯 Nivel: Principiante</span>
-            </div>
-            <a href="guia-calendario.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
-        </div>
+          </article>
 
-        <!-- 5 — Ventas sin vender -->
-        <div class="res-card" data-cat="ventas" data-reveal>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#150010,#250020);">
-            <div class="res-card-icon">💰</div>
-            <div class="res-card-badge res-badge-purple">Ventas</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">Vender sin vender: el sistema de contenido que genera clientes</h3>
-            <p class="res-card-desc">
-              Cómo usar el contenido para que los clientes lleguen a ti 
-              ya convencidos — sin presión, sin descuentos, sin perseguir 
-              a nadie. El método que aplico en todos mis proyectos.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>El embudo de contenido en 3 fases</li>
-                <li>Tipos de contenido por fase del cliente</li>
-                <li>Los 7 tipos de posts que generan más DMs</li>
-                <li>Guión de primera conversación de venta</li>
-                <li>Cómo cerrar sin descuentos</li>
+          <article class="res-card reveal delay-1" data-cat="ventas">
+            <div class="res-card-top">
+              <div class="res-card-cat">Ventas</div>
+              <h2 class="res-card-title">Guía de ventas por redes sociales</h2>
+              <div class="res-card-meta">
+                <span>PDF · 20 pág.</span>
+                <span>Nivel: Intermedio</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Sistema completo para convertir seguidores en clientes sin ser invasivo, usando contenido y conversaciones naturales.</p>
+              <ul class="res-card-includes">
+                <li>Embudo de ventas orgánico</li>
+                <li>Secuencia de DMs que funcionan</li>
+                <li>Objeciones más comunes + respuestas</li>
+                <li>Plantilla de seguimiento de prospectos</li>
               </ul>
+              <a href="guia-ventas.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📄 PDF · 16 páginas</span>
-              <span class="res-meta-tag">🎯 Nivel: Intermedio</span>
-            </div>
-            <a href="guia-ventas.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
-        </div>
+          </article>
 
-        <!-- 6 — Script de DMs -->
-        <div class="res-card" data-cat="ventas" data-reveal>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#001818,#003030);">
-            <div class="res-card-icon">💬</div>
-            <div class="res-card-badge res-badge-teal">Ventas</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">Scripts de DMs para Instagram y WhatsApp que cierran</h3>
-            <p class="res-card-desc">
-              Los guiones exactos para responder a interesados, hacer 
-              seguimiento sin ser pesado y cerrar ventas por mensaje. 
-              Incluye variantes para cada tipo de objeción.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>Respuesta a "¿cuánto cuesta?" sin asustar</li>
-                <li>Follow-up en 24h, 3 días y 7 días</li>
-                <li>Manejo de "lo tengo que pensar"</li>
-                <li>Cierre por urgencia sin presión</li>
-                <li>Plantillas para WhatsApp Business</li>
+          <article class="res-card reveal delay-2" data-cat="ventas">
+            <div class="res-card-top">
+              <div class="res-card-cat">Ventas</div>
+              <h2 class="res-card-title">Scripts de DMs que convierten sin presionar</h2>
+              <div class="res-card-meta">
+                <span>PDF · 14 pág.</span>
+                <span>Nivel: Principiante</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Plantillas de mensajes directos para iniciar conversaciones, generar interés y cerrar ventas de forma natural.</p>
+              <ul class="res-card-includes">
+                <li>12 scripts para diferentes situaciones</li>
+                <li>Cómo responder a "ya lo pensaré"</li>
+                <li>Seguimiento sin ser pesado</li>
+                <li>Scripts adaptados por sector</li>
               </ul>
+              <a href="guia-scripts-dms.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📄 PDF · 14 páginas</span>
-              <span class="res-meta-tag">🎯 Nivel: Principiante</span>
-            </div>
-            <a href="guia-scripts-dms.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
-        </div>
+          </article>
 
-        <!-- 7 — IA Prompts -->
-        <div class="res-card" data-cat="ia" data-reveal>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#080020,#120040);">
-            <div class="res-card-icon">🤖</div>
-            <div class="res-card-badge res-badge-violet">IA</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">100 Prompts de IA para marketing y contenido</h3>
-            <p class="res-card-desc">
-              La colección de prompts para ChatGPT y Claude que uso 
-              con mis clientes: ideas de contenido, copies de anuncios, 
-              emails, scripts y análisis de métricas.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>20 prompts para ideas de contenido por sector</li>
-                <li>15 prompts para Meta Ads y Google Ads</li>
-                <li>10 prompts para emails de seguimiento</li>
-                <li>25 prompts para scripts de vídeo</li>
-                <li>30 prompts para análisis y estrategia</li>
+          <article class="res-card reveal" data-cat="ia">
+            <div class="res-card-top">
+              <div class="res-card-cat">IA</div>
+              <h2 class="res-card-title">Prompts de IA para marketing y contenido</h2>
+              <div class="res-card-meta">
+                <span>PDF · 28 pág.</span>
+                <span>Nivel: Todos los niveles</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Biblioteca de más de 80 prompts listos para usar con Claude AI, ChatGPT y Gemini aplicados al marketing digital.</p>
+              <ul class="res-card-includes">
+                <li>Prompts para generación de contenido</li>
+                <li>Prompts para copywriting y anuncios</li>
+                <li>Prompts para análisis de competencia</li>
+                <li>Prompts para estrategia digital</li>
               </ul>
+              <a href="guia-prompts-ia.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📄 PDF · 28 páginas</span>
-              <span class="res-meta-tag">🎯 Nivel: Todos</span>
-            </div>
-            <a href="guia-prompts-ia.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
-        </div>
+          </article>
 
-        <!-- 8 — Método Raxisla PDF -->
-        <div class="res-card res-card-featured" data-cat="sistemas" data-reveal>
-          <div class="res-card-featured-badge">⭐ Más descargado</div>
-          <div class="res-card-top" style="background:linear-gradient(135deg,#001420,#002840);">
-            <div class="res-card-icon">🧩</div>
-            <div class="res-card-badge res-badge-blue">Método Raxisla</div>
-          </div>
-          <div class="res-card-body">
-            <h3 class="res-card-title">El Método Raxisla: sistema completo de crecimiento digital</h3>
-            <p class="res-card-desc">
-              La metodología completa que aplico con todos mis clientes, 
-              adaptada a cualquier sector. Incluye las 4 fases, las herramientas 
-              de cada fase y los KPIs que monitorizo.
-            </p>
-            <div class="res-card-includes">
-              <div class="res-includes-label">Incluye:</div>
-              <ul>
-                <li>Las 4 fases del método explicadas</li>
-                <li>Stack de herramientas por fase</li>
-                <li>Checklist de implementación semana a semana</li>
-                <li>KPIs y métricas de seguimiento</li>
-                <li>Plantilla de diagnóstico inicial</li>
+          <article class="res-card reveal delay-1" data-cat="contenido">
+            <div class="res-card-top">
+              <div class="res-card-cat">Contenido</div>
+              <h2 class="res-card-title">El método de contenido: de cero a consistente</h2>
+              <div class="res-card-meta">
+                <span>PDF · 35 pág.</span>
+                <span>Nivel: Avanzado</span>
+              </div>
+            </div>
+            <div class="res-card-body">
+              <p class="res-card-desc">Sistema completo para crear y publicar contenido de forma sostenible sin depender de la inspiración del momento.</p>
+              <ul class="res-card-includes">
+                <li>Método de baterías de contenido</li>
+                <li>Calendario editorial trimestral</li>
+                <li>Sistema de reciclaje y repropósito</li>
+                <li>Métricas que realmente importan</li>
               </ul>
+              <a href="guia-metodo-raxisla.html" class="res-card-btn">
+                <span>Descargar guía</span>
+                <span class="res-card-free">Gratis</span>
+              </a>
             </div>
-            <div class="res-card-meta">
-              <span class="res-meta-tag">📄 PDF · 35 páginas</span>
-              <span class="res-meta-tag">🎯 Nivel: Todos</span>
-            </div>
-            <a href="guia-metodo-raxisla.html" class="btn btn-primary res-download-btn" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
-              ⬇ Descargar PDF gratis
-            </a>
-          </div>
+          </article>
+
         </div>
+      </div>
+    </section>
 
-      </div><!-- /res-grid -->
-    </div>
-  </section>
+    <!-- CTA -->
+    <section class="res-cta">
+      <div class="container">
+        <h2 class="reveal">¿Quieres ayuda<br/><em>personalizada?</em></h2>
+        <p class="reveal delay-1">Las guías son el punto de partida. Nosotros nos encargamos de implementarlo en tu negocio.</p>
+        <a href="contact.html" class="btn-primary reveal delay-2">Solicitar auditoría gratuita →</a>
+      </div>
+    </section>
 
-  <!-- QUICK ACCESS LINKS -->
-  <section style="padding:40px 0 20px;">
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="sitefooter">
     <div class="container">
-      <div data-reveal style="background:rgba(0,200,255,0.04);border:1px solid rgba(0,200,255,0.14);border-radius:16px;padding:32px 40px;">
-        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:24px;">
-          <div>
-            <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#00C8FF;text-transform:uppercase;margin-bottom:6px;">ACCESO RÁPIDO · TODOS LOS RECURSOS</div>
-            <h3 style="font-size:18px;font-weight:700;">Comparte estos enlaces directamente por email</h3>
-          </div>
-          <div style="font-size:13px;color:#A0A8B4;">Clic → abre la guía → botón Descargar PDF</div>
+      <div class="sitefooter-grid">
+        <div class="sitefooter-brand">
+          <a href="index.html" class="sitefooter-logo">
+  <img src="images/logo-mark-white.svg" alt="" height="26" style="display:block;flex-shrink:0;" />
+  <span>RAXIS<span style="font-weight:300;color:rgba(0,150,255,0.85);">LAB</span></span>
+</a>
+          <p>Agencia de marketing digital con IA integrada. Resultados medibles, transparencia total.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;">
-          <a href="guia-camara.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-            <span style="font-size:20px;">📹</span>
-            <span><strong>Guía #1</strong><br/><span style="color:#A0A8B4;font-size:12px;">Cómo desenvolverte ante la cámara</span></span>
-          </a>
-          <a href="guia-reels.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-            <span style="font-size:20px;">🎬</span>
-            <span><strong>Guía #2</strong><br/><span style="color:#A0A8B4;font-size:12px;">Estructura de Reels que retienen y convierten</span></span>
-          </a>
-          <a href="guia-slack.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-            <span style="font-size:20px;">💬</span>
-            <span><strong>Guía #3</strong><br/><span style="color:#A0A8B4;font-size:12px;">Slack para negocios: estructura y flujos</span></span>
-          </a>
-          <a href="guia-calendario.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-            <span style="font-size:20px;">📅</span>
-            <span><strong>Guía #4</strong><br/><span style="color:#A0A8B4;font-size:12px;">Calendario de contenido 30 días</span></span>
-          </a>
-          <a href="guia-ventas.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-            <span style="font-size:20px;">💰</span>
-            <span><strong>Guía #5</strong><br/><span style="color:#A0A8B4;font-size:12px;">Vender sin vender: el sistema de contenido</span></span>
-          </a>
-          <a href="guia-scripts-dms.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-            <span style="font-size:20px;">📲</span>
-            <span><strong>Guía #6</strong><br/><span style="color:#A0A8B4;font-size:12px;">Scripts de DMs para Instagram y WhatsApp</span></span>
-          </a>
-          <a href="guia-prompts-ia.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-            <span style="font-size:20px;">🤖</span>
-            <span><strong>Guía #7</strong><br/><span style="color:#A0A8B4;font-size:12px;">100 Prompts de IA para marketing y contenido</span></span>
-          </a>
-          <a href="guia-metodo-raxisla.html" style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(0,200,255,0.06);border:1px solid rgba(0,200,255,0.25);border-radius:10px;text-decoration:none;color:#F0F0F8;font-size:13px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(0,200,255,0.6)'" onmouseout="this.style.borderColor='rgba(0,200,255,0.25)'">
-            <span style="font-size:20px;">🧩</span>
-            <span><strong>Guía #8 ⭐</strong><br/><span style="color:#A0A8B4;font-size:12px;">El Método Raxisla: sistema completo</span></span>
-          </a>
+        <div class="sitefooter-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="services.html">Meta Ads</a></li>
+            <li><a href="services.html">Google Ads</a></li>
+            <li><a href="services.html">Redes sociales</a></li>
+            <li><a href="ai.html">IA Studio</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="about.html">Quiénes somos</a></li>
+            <li><a href="cases.html">Casos de éxito</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Recursos</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER STRIP -->
-  <section class="res-newsletter">
-    <div class="container">
-      <div class="res-nl-inner" data-reveal>
-        <div class="res-nl-left">
-          <div class="manifesto-label">Biblioteca completa</div>
-          <h2 class="heading-md" style="margin-bottom:10px;">
-            Accede a todos los recursos<br/><span class="gradient-text">nuevos antes que nadie</span>
-          </h2>
-          <p class="text-muted" style="font-size:14px;">
-            Cada mes publico 1-2 recursos nuevos. Suscríbete y los recibes 
-            directo en tu correo, sin necesidad de volver a esta página.
-          </p>
-        </div>
-        <div class="res-nl-right">
-          <form class="res-nl-form" id="nlForm">
-            <input type="email" class="res-nl-input" placeholder="tu@email.com" required id="nlEmail"/>
-            <button type="submit" class="btn btn-primary">Suscribirme →</button>
-          </form>
-          <div class="res-nl-ok" id="nlOk" style="display:none;">
-            <span>✅ ¡Listo! Revisa tu correo para confirmar la suscripción.</span>
-          </div>
-          <p style="font-size:11px;color:var(--text-muted);margin-top:10px;">
-            Sin spam. Un email mensual. Baja cuando quieras.
-          </p>
+      <div class="sitefooter-bottom">
+        <p>© 2026 RaxisLab · <a href="https://raxislab.com" style="color:inherit;">raxislab.com</a></p>
+        <div class="sitefooter-bottom-links">
+          <a href="privacy.html">Privacidad</a>
+          <a href="terms.html">Términos</a>
+          <a href="cookies.html">Cookies</a>
         </div>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- CTA FINAL -->
-  <section class="res-cta">
-    <div class="container">
-      <div data-reveal style="text-align:center;">
-        <h2 class="heading-md" style="margin-bottom:16px;">
-          ¿Prefieres que lo implemente<br/><span class="gradient-text">yo directamente para ti?</span>
-        </h2>
-        <p class="text-muted" style="margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">
-          Los recursos son el punto de partida. Si quieres los resultados 
-          sin perder tiempo aprendiendo, hablemos.
-        </p>
-        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn-primary">Agendar llamada estratégica →</a>
-          <a href="pricing.html" class="btn btn-ghost">Ver precios</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="text-decoration:none;">
-          <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-          <div class="logo-wordmark">
-            <span class="logo-name" style="font-size:15px;">RAXISLAB</span>
-            <span class="logo-tagline">Digital Laboratory</span>
-          </div>
-        </a>
-        <p>Laboratorio estratégico digital. Construimos arquitecturas digitales de alto rendimiento que escalan.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Servicios</h5>
-        <a href="services.html">Conversión Web</a>
-        <a href="services.html">SEO Estratégico</a>
-        <a href="services.html">Meta / Google Ads</a>
-        <a href="ai.html">IA Studio</a>
-      </div>
-      <div class="footer-col">
-        <h5>Recursos</h5>
-        <a href="resources.html">Guías gratuitas</a>
-        <a href="faq.html">Preguntas frecuentes</a>
-        <a href="help.html">Centro de ayuda</a>
-        <a href="blog.html">Blog</a>
-        <a href="client-portal.html">🔐 Portal de cliente</a>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <a href="privacy.html">Privacidad</a>
-        <a href="terms.html">Términos</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 RaxisLab. Todos los derechos reservados. — <span class="text-mono">PRECISION · INNOVATION · SCALABILITY</span></p>
-      <div class="footer-bottom-links">
-        <a href="privacy.html">Privacidad</a>
-        <a href="terms.html">Términos</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-<script>
-'use strict';
-
-/* Filter */
-document.querySelectorAll('.res-filter').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.res-filter').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.res-card').forEach(card => {
-      card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+  <script src="js/shared.js"></script>
+  <script>
+    /* ── Filtro de recursos ── */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.res-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        cards.forEach(card => {
+          const show = f === 'all' || card.dataset.cat === f;
+          card.style.display = show ? '' : 'none';
+        });
+      });
     });
-  });
-});
-
-/* Newsletter */
-document.getElementById('nlForm')?.addEventListener('submit', e => {
-  e.preventDefault();
-  document.getElementById('nlForm').style.display = 'none';
-  document.getElementById('nlOk').style.display = 'block';
-});
-
-/* Reveal */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
-}, { threshold: 0.07 });
-document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
-</script>
+  </script>
 </body>
 </html>

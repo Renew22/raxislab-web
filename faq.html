@@ -1,326 +1,568 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Preguntas Frecuentes (FAQ) · RaxisLab</title>
-  <meta name="description" content="Preguntas frecuentes sobre los servicios de RaxisLab: precios, plazos, sectores, procesos y garantías."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/legal.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas Frecuentes · RaxisLab</title>
+  <meta name="description" content="Preguntas frecuentes sobre los servicios de RaxisLab: precios, plazos, sectores, procesos y garantías." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://raxislab.com/faq.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    .faq-hero {
+      padding: 140px 0 80px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .faq-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-400);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .faq-hero h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .faq-hero h1 em { font-style: italic; color: var(--accent); }
+    .faq-hero p {
+      font-size: 17px;
+      color: var(--gray-600);
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.75;
+    }
+    .faq-hero p a { color: var(--accent); }
+
+    /* Layout */
+    .faq-body {
+      padding: 80px 0 120px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* Categoría */
+    .faq-category {
+      margin-bottom: 64px;
+    }
+    .faq-category-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--gray-400);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .faq-category-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-200);
+    }
+
+    /* Item acordeón */
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .faq-item:first-of-type {
+      border-top: 1px solid var(--gray-200);
+    }
+    .faq-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+    .faq-btn:hover { color: var(--accent); }
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--gray-200);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.25s, border-color 0.25s, transform 0.35s;
+    }
+    .faq-icon svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--gray-400);
+      transition: stroke 0.2s, transform 0.35s;
+    }
+    .faq-item.open .faq-icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: rotate(45deg);
+    }
+    .faq-item.open .faq-icon svg { stroke: #fff; }
+    .faq-item.open .faq-btn { color: var(--accent); }
+
+    .faq-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1);
+    }
+    .faq-panel-inner {
+      padding: 0 0 24px;
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      font-weight: 300;
+      max-width: 640px;
+    }
+    .faq-panel-inner a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .faq-panel-inner strong { color: var(--black); font-weight: 500; }
+
+    /* CTA final */
+    .faq-cta {
+      background: var(--black);
+      border-radius: var(--radius);
+      padding: 52px 48px;
+      text-align: center;
+      margin-top: 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .faq-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(0,87,255,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .faq-cta h3 {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .faq-cta h3 em { font-style: italic; color: rgba(0,150,255,0.85); }
+    .faq-cta p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+    .faq-cta-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--black);
+      padding: 13px 26px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: opacity 0.2s, transform 0.25s;
+      font-family: var(--font);
+    }
+    .btn-white:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-ghost-white {
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      padding: 13px 26px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 400;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: border-color 0.2s, color 0.2s;
+      font-family: var(--font);
+    }
+    .btn-ghost-white:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+
+    @media (max-width: 768px) {
+      .faq-body { padding: 60px 0 80px; }
+      .faq-cta { padding: 36px 24px; }
+    }
+  </style>
 </head>
 <body>
-<div class="grid-overlay" aria-hidden="true"></div>
-<nav class="navbar" id="navbar">
-  <div class="container"><div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-      <div class="logo-wordmark"><span class="logo-name">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
+
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <nav class="sitenav" id="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="sitenav-logo" aria-label="RaxisLab inicio">
+      <img src="images/logo-mark-light.svg" alt="" height="30" style="display:block;flex-shrink:0;" />
+      <span class="sitenav-logo-text">RAXIS<span class="sitenav-logo-lab">LAB</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html"    class="nav-link"><span class="nav-dot"></span>Home</a></li>
-      <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
-      <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
-      <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
-      <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
-      <li><a href="contact.html"  class="nav-link active"><span class="nav-dot"></span>Contacto</a></li>
+    <ul class="sitenav-links" role="list">
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="cases.html">Resultados</a></li>
+      <li><a href="pricing.html">Precios</a></li>
+      <li><a href="contact.html" class="sitenav-cta">Hablemos →</a></li>
     </ul>
-    <div class="nav-cta-area">
-      <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
-      <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-    </div>
-  </div></div>
-</nav>
-<div class="nav-mobile" id="navMobile">
-  <a href="index.html"    class="nav-link">Home</a>
-  <a href="services.html" class="nav-link">Servicios</a>
-  <a href="ai.html"       class="nav-link">IA Studio</a>
-  <a href="resources.html"class="nav-link">Recursos</a>
-  <a href="pricing.html"  class="nav-link">Precios</a>
-  <a href="contact.html"  class="nav-link">Contacto</a>
-  <a href="contact.html"  class="btn btn-primary">Iniciar Proyecto</a>
-</div>
-<main class="page-content">
-  <section class="legal-hero">
+    <button class="sitenav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
+  <div class="sitenav-mobile" id="navMobile">
+    <a href="services.html">Servicios</a>
+    <a href="cases.html">Resultados</a>
+    <a href="pricing.html">Precios</a>
+    <a href="contact.html" class="sitenav-cta">Hablemos →</a>
+  </div>
+
+  <main>
+    <section class="faq-hero">
+      <div class="container">
+        <span class="faq-eyebrow">— Soporte · FAQ</span>
+        <h1>Preguntas <em>frecuentes</em></h1>
+        <p>Las preguntas que más recibo antes de empezar a trabajar juntos. Si no encuentras la tuya, escríbeme a <a href="mailto:hola@raxislab.com">hola@raxislab.com</a>.</p>
+      </div>
+    </section>
+
     <div class="container">
-      <div class="legal-badge">❓ Soporte</div>
-      <h1 class="legal-title">Preguntas <span class="gradient-text">Frecuentes</span></h1>
-      <p style="color:var(--text-mid);max-width:520px;margin-top:12px;font-size:16px;line-height:1.7;">
-        Las preguntas que más recibo antes de empezar a trabajar juntos. 
-        Si no encuentras la tuya, escríbeme a <a href="mailto:hola@raxislab.com" style="color:var(--accent);">hola@raxislab.com</a>.
-      </p>
-    </div>
-  </section>
+      <div class="faq-body">
 
-  <div class="container">
-    <div style="max-width:760px;margin:72px auto;">
-
-      <!-- CATEGORÍA: Servicios -->
-      <div style="margin-bottom:48px;">
-        <div class="manifesto-label" style="margin-bottom:20px;">Sobre los servicios</div>
-        <div class="faq-grid">
+        <!-- ── SERVICIOS ── -->
+        <div class="faq-category">
+          <div class="faq-category-label">Sobre los servicios</div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Para qué tipo de negocios trabajas?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Trabajo con cualquier negocio que quiera crecer digitalmente: peluquerías, barberías, restaurantes, constructoras, tiendas online, clínicas, logística, consultores y marcas personales. El denominador común es que el dueño quiere resultados medibles, no solo "presencia online".
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Trabajo con cualquier negocio que quiera crecer digitalmente: peluquerías, barberías, restaurantes, constructoras, tiendas online, clínicas, logística, consultores y marcas personales. El denominador común es que el dueño quiere <strong>resultados medibles</strong>, no solo "presencia online".
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Qué diferencia a RaxisLab de otras agencias?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Tres cosas: (1) trabajo con un número reducido de clientes para conocer tu negocio en profundidad, (2) construyo sistemas que funcionan solos en lugar de crear dependencia de mi trabajo continuo, y (3) cada decisión está respaldada por datos, no por intuición o tendencias del momento.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Tres cosas: (1) trabajo con un número reducido de clientes para conocer tu negocio en profundidad, (2) construyo sistemas que funcionan solos en lugar de crear dependencia de mi trabajo continuo, y (3) cada decisión está respaldada por <strong>datos reales</strong>, no por intuición o tendencias del momento.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Haces proyectos puntuales o solo retención mensual?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Hago ambos. Un proyecto de diseño web o SEO inicial puede ser puntual. La gestión de Meta Ads, contenido o automatizaciones funciona mejor como retención mensual porque requiere optimización continua. En la primera llamada evaluamos qué modelo se adapta mejor a tu situación.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Hago ambos. Un proyecto de diseño web, branding o software puede ser puntual. La gestión de Meta Ads, contenido o automatizaciones funciona mejor como retención mensual porque requiere optimización continua. En la primera llamada evaluamos qué modelo se adapta mejor a tu situación.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Qué servicios de IA ofreces exactamente?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Integro IA en los flujos de trabajo de tus clientes: generación de contenido con prompts personalizados para tu negocio, automatizaciones con n8n que conectan tus herramientas, análisis de datos con IA, chatbots y asistentes virtuales, y sistemas de generación de ideas y copies adaptados a tu sector.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Integro IA en los flujos de trabajo: generación de contenido con prompts personalizados para tu sector, automatizaciones con <strong>n8n</strong> que conectan tus herramientas, análisis de datos con IA, y sistemas de reporting automatizado. También desarrollo software a medida con IA integrada cuando el proyecto lo requiere.
               </div>
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- CATEGORÍA: Precios -->
-      <div style="margin-bottom:48px;">
-        <div class="manifesto-label" style="margin-bottom:20px;">Precios y contratación</div>
-        <div class="faq-grid">
+        <!-- ── PRECIOS ── -->
+        <div class="faq-category">
+          <div class="faq-category-label">Precios y contratación</div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Cuánto cuesta trabajar con RaxisLab?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Los precios dependen del alcance del proyecto. En <a href="pricing.html" style="color:var(--accent);">pricing.html</a> puedes ver los combos orientativos (Básico desde ~450€/mes, Estándar ~850€/mes, Premium ~1.450€/mes). La mayoría de los proyectos personalizados se presupuestan en la primera llamada. No hay letra pequeña ni costes ocultos.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Los precios dependen del alcance del proyecto. En <a href="pricing.html">la página de precios</a> puedes ver los planes orientativos (desde ~450 €/mes). La mayoría de los proyectos personalizados se presupuestan en la primera llamada. <strong>No hay letra pequeña ni costes ocultos</strong>.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Hay permanencia mínima?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Para servicios mensuales, recomiendo un mínimo de 3 meses para ver resultados reales. No exijo contratos de larga duración, pero el marketing digital necesita tiempo para optimizarse. Los proyectos puntuales (web, SEO inicial) no tienen permanencia.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Para servicios mensuales, recomiendo un mínimo de <strong>3 meses</strong> para ver resultados reales. No exijo contratos de larga duración, pero el marketing digital necesita tiempo para optimizarse. Los proyectos puntuales (web, branding, software) no tienen permanencia.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Cómo se gestiona el presupuesto de publicidad?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                El presupuesto de publicidad (Meta Ads, Google Ads) va directamente a las plataformas y lo controla el cliente. Mi tarifa es por gestión y estrategia, separada del gasto en medios. Así tienes visibilidad total de a dónde va cada euro.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                El presupuesto de publicidad (Meta Ads, Google Ads) va <strong>directamente a las plataformas</strong> y lo controla el cliente. Mi tarifa es por gestión y estrategia, separada del gasto en medios. Así tienes visibilidad total de a dónde va cada euro.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Cuándo puedo empezar a ver resultados?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Depende del servicio: Meta Ads puede generar leads desde la primera semana. SEO requiere 3-6 meses para resultados significativos. El contenido orgánico suele verse en 4-8 semanas. En la propuesta siempre indico expectativas realistas de plazos para cada caso.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Depende del servicio: <strong>Meta Ads</strong> puede generar reservas o leads desde la primera semana. <strong>SEO</strong> requiere 3–6 meses para resultados significativos. El contenido orgánico suele verse en 4–8 semanas. En la propuesta siempre indico expectativas realistas para cada caso.
               </div>
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- CATEGORÍA: Proceso -->
-      <div style="margin-bottom:48px;">
-        <div class="manifesto-label" style="margin-bottom:20px;">Proceso y comunicación</div>
-        <div class="faq-grid">
+        <!-- ── PROCESO ── -->
+        <div class="faq-category">
+          <div class="faq-category-label">Proceso y comunicación</div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Cómo es el proceso de inicio de un proyecto?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                1️⃣ Rellenas el formulario de contacto. 2️⃣ Agendamos una llamada de 30 min (gratuita) donde analizo tu situación. 3️⃣ Te envío una propuesta detallada en 48h. 4️⃣ Si la aceptas, firmamos y empezamos. El primer mes siempre incluye un diagnóstico exhaustivo de tu situación actual.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                <strong>1.</strong> Rellenas el formulario de contacto.<br>
+                <strong>2.</strong> Agendamos una llamada de 30 min gratuita donde analizo tu situación.<br>
+                <strong>3.</strong> Te envío una propuesta detallada en 48h.<br>
+                <strong>4.</strong> Si la aceptas, empezamos. El primer mes siempre incluye un diagnóstico exhaustivo de tu situación actual.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Cómo nos comunicamos durante el proyecto?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                La comunicación principal es por Slack (creamos un canal exclusivo para tu proyecto) y reuniones de revisión mensuales por videollamada. Para urgencias también uso WhatsApp. Mi horario de respuesta es de lunes a viernes en horario comercial.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                La comunicación principal es por <strong>WhatsApp o email</strong>, con reuniones de revisión mensuales por videollamada. Mi horario de respuesta es de lunes a viernes en horario comercial.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Tendré acceso a los datos y métricas?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Sí, siempre. Configuro los accesos para que tú seas el dueño de todos los datos: Google Analytics, Meta Business, Google Ads, Search Console. Nunca trabajas a ciegas. Además, cada mes recibes un informe de resultados con los KPIs acordados.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Sí, siempre. Configuro los accesos para que <strong>tú seas el dueño de todos los datos</strong>: Google Analytics, Meta Business, Google Ads, Search Console. Nunca trabajas a ciegas. Además, cada mes recibes un informe de resultados con los KPIs acordados.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Necesito tener conocimientos técnicos?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
                 No. Me encargo de toda la parte técnica. Solo necesito que me expliques tu negocio, tus clientes y tus objetivos. El resto lo construyo yo: configuraciones, integraciones, automatizaciones y análisis.
               </div>
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- CATEGORÍA: Garantías -->
-      <div style="margin-bottom:48px;">
-        <div class="manifesto-label" style="margin-bottom:20px;">Garantías y resultados</div>
-        <div class="faq-grid">
+        <!-- ── GARANTÍAS ── -->
+        <div class="faq-category">
+          <div class="faq-category-label">Garantías y resultados</div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Garantizas resultados?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                No prometo números específicos porque el marketing depende de muchas variables (mercado, producto, presupuesto, competencia). Lo que sí garantizo es transparencia total, optimización constante basada en datos y comunicación honesta si algo no está funcionando. Los resultados de mis casos de éxito son reales y representativos de lo que es posible.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                No prometo números específicos porque el marketing depende de muchas variables (mercado, producto, presupuesto, competencia). Lo que sí garantizo es <strong>transparencia total</strong>, optimización constante basada en datos y comunicación honesta si algo no está funcionando. Los resultados de mis casos de éxito son reales y representativos.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-btn" aria-expanded="false">
               ¿Qué pasa si no estoy satisfecho con el trabajo?
-              <span class="faq-arrow">+</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+              </span>
             </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Si en algún momento no estás satisfecho, lo hablamos directamente. Tengo una política de comunicación abierta: prefiero ajustar el enfoque que perder un cliente por falta de diálogo. Para los servicios mensuales puedes cancelar con 15 días de preaviso sin penalización.
+            <div class="faq-panel" role="region">
+              <div class="faq-panel-inner">
+                Si en algún momento no estás satisfecho, lo hablamos directamente. Tengo una política de <strong>comunicación abierta</strong>: prefiero ajustar el enfoque que perder un cliente por falta de diálogo. Para los servicios mensuales puedes cancelar con 15 días de preaviso sin penalización.
               </div>
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- CTA -->
-      <div style="text-align:center;padding:48px;background:#0a0a12;border:1px solid var(--border);border-radius:14px;">
-        <div style="font-size:36px;margin-bottom:16px;">💬</div>
-        <h3 style="font-size:20px;margin-bottom:10px;">¿No encuentras tu pregunta?</h3>
-        <p style="color:var(--text-muted);font-size:14px;margin-bottom:24px;">Escríbeme directamente y te respondo en menos de 24h.</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn-primary">Enviar mi pregunta →</a>
-          <a href="help.html"    class="btn btn-ghost">Centro de ayuda</a>
+        <!-- CTA -->
+        <div class="faq-cta">
+          <h3>¿No encuentras tu <em>pregunta?</em></h3>
+          <p>Escríbeme directamente y te respondo en menos de 24h.</p>
+          <div class="faq-cta-btns">
+            <a href="https://wa.me/34654835593" target="_blank" rel="noopener noreferrer" class="btn-white">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-6.93 11.97L0 16l4.17-1.05A8 8 0 1 0 8 0Zm4.12 10.73c-.18.5-1.04.94-1.43 1-.37.05-.84.08-1.34-.08-.31-.1-.7-.23-1.2-.44-2.12-.91-3.5-3.05-3.6-3.19-.11-.14-.87-1.16-.87-2.2 0-1.04.54-1.55.74-1.76.19-.2.43-.25.57-.25h.42c.13 0 .3-.01.47.36.18.39.62 1.5.67 1.61.06.11.09.25.02.4-.07.14-.11.22-.22.34-.11.12-.23.27-.33.36-.11.1-.22.2-.1.41.13.2.56.94 1.2 1.52.83.73 1.52.96 1.74 1.07.22.11.34.09.47-.04.13-.13.54-.63.69-.85.14-.22.28-.18.47-.11.19.07 1.2.57 1.41.68.2.11.34.16.39.25.05.09.05.53-.13 1.02Z"/></svg>
+              WhatsApp directo
+            </a>
+            <a href="contact.html" class="btn-ghost-white">Formulario de contacto →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo" style="background:var(--black);color:var(--white);padding:60px 0 36px;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07);">
+        <div>
+          <a href="index.html" style="display:flex;align-items:center;gap:9px;margin-bottom:14px;text-decoration:none;">
+            <img src="images/logo-mark-white.svg" alt="" height="26" style="display:block;flex-shrink:0;" />
+            <span style="font-size:16px;font-weight:700;letter-spacing:-0.04em;color:var(--white);">RAXIS<span style="font-weight:300;color:rgba(0,150,255,0.85);">LAB</span></span>
+          </a>
+          <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:260px;">Agencia de marketing digital. Meta Ads, Google Ads y redes sociales con IA integrada.</p>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Servicios</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Meta Ads</a></li>
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Google Ads</a></li>
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Redes sociales</a></li>
+            <li><a href="pricing.html"  style="font-size:14px;color:rgba(255,255,255,0.55);">Precios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Legal</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="privacy.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Privacidad</a></li>
+            <li><a href="terms.html"   style="font-size:14px;color:rgba(255,255,255,0.55);">Aviso legal</a></li>
+            <li><a href="cookies.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Cookies</a></li>
+            <li><a href="faq.html"     style="font-size:14px;color:rgba(255,255,255,0.55);">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Contacto</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="mailto:hola@raxislab.com" style="font-size:14px;color:rgba(255,255,255,0.55);">hola@raxislab.com</a></li>
+            <li><a href="https://wa.me/34654835593" target="_blank" rel="noopener" style="font-size:14px;color:rgba(255,255,255,0.55);">WhatsApp</a></li>
+          </ul>
         </div>
       </div>
-
-    </div>
-  </div>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="text-decoration:none;">
-          <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-          <div class="logo-wordmark"><span class="logo-name" style="font-size:15px;">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
-        </a>
-        <p>Laboratorio estratégico digital.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:28px;flex-wrap:wrap;gap:12px;">
+        <p style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">© 2026 RaxisLab · Agencia de marketing digital</p>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Privacidad</a>
+          <a href="terms.html"   style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Aviso legal</a>
+          <a href="cookies.html" style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Cookies</a>
+        </div>
       </div>
-      <div class="footer-col"><h5>Recursos</h5><a href="resources.html">Guías gratuitas</a><a href="faq.html">FAQ</a><a href="help.html">Ayuda</a><a href="client-portal.html">🔐 Portal cliente</a></div>
-      <div class="footer-col"><h5>Legal</h5><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-      <div class="footer-col"><h5>Contacto</h5><a href="mailto:hola@raxislab.com">hola@raxislab.com</a><a href="contact.html">Formulario</a></div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 RaxisLab. Todos los derechos reservados.</p>
-      <div class="footer-bottom-links"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-    </div>
-  </div>
-</footer>
-<script src="js/main.js"></script>
-<script>
-'use strict';
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item');
-    const answer = item.querySelector('.faq-answer');
-    const isOpen = item.classList.contains('open');
+  </footer>
 
-    // Close all
-    document.querySelectorAll('.faq-item.open').forEach(openItem => {
-      openItem.classList.remove('open');
-      openItem.querySelector('.faq-answer').style.maxHeight = '0';
-      openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+  <script src="js/shared.js"></script>
+  <script>
+    // Acordeón FAQ
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item   = btn.closest('.faq-item');
+        const panel  = item.querySelector('.faq-panel');
+        const isOpen = item.classList.contains('open');
+
+        // Cerrar todos
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-panel').style.maxHeight = '0';
+          openItem.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+        });
+
+        // Abrir el clicado si estaba cerrado
+        if (!isOpen) {
+          item.classList.add('open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
-
-    // Open clicked if was closed
-    if (!isOpen) {
-      item.classList.add('open');
-      answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
-}, { threshold: 0.07 });
-document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
-</script>
+  </script>
 </body>
 </html>

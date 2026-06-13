@@ -4,496 +4,724 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Casos de Éxito — RaxisLab</title>
-  <meta name="description" content="Resultados reales de clientes reales. Descubre cómo RaxisLab ha transformado negocios con estrategia digital de alta precisión."/>
-  <meta property="og:type"        content="website"/>
-  <meta property="og:url"         content="https://raxislab.com/cases.html"/>
-  <meta property="og:title"       content="Casos de Éxito — Resultados Reales · RaxisLab"/>
-  <meta property="og:description" content="6 casos de éxito con métricas reales: ROI, leads, conversión y crecimiento digital demostrado."/>
-  <meta property="og:image"       content="https://raxislab.com/images/og-home.jpg"/>
-  <meta name="twitter:card"       content="summary_large_image"/>
-  <link rel="canonical"           href="https://raxislab.com/cases.html"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/pages.css"/>
-  <link rel="stylesheet" href="css/cases.css"/>
-  <!-- Google Analytics 4 -->
+  <meta name="description" content="Resultados reales de clientes reales. ROI, leads, conversión y crecimiento digital demostrado con métricas verificables."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://raxislab.com/cases.html"/>
+  <meta property="og:title" content="Casos de Éxito — RaxisLab"/>
+  <meta property="og:description" content="Resultados reales con métricas verificables: ROAS, leads, conversión y crecimiento digital."/>
+  <meta property="og:image" content="https://raxislab.com/images/og-home.jpg"/>
+  <link rel="canonical" href="https://raxislab.com/cases.html"/>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGR4RYY1ER"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EGR4RYY1ER');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/shared.css"/>
+
+  <style>
+    /* ── Hero ── */
+    .cases-hero {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 96px 0 80px;
+    }
+    .cases-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--green);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      border: 1px solid rgba(22,163,74,0.2);
+      background: rgba(22,163,74,0.06);
+      padding: 5px 14px;
+      border-radius: 100px;
+    }
+    .cases-hero h1 {
+      font-size: clamp(40px, 5.5vw, 72px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .cases-hero h1 em { font-style: italic; color: var(--accent); }
+    .cases-hero-desc {
+      font-size: 18px;
+      color: var(--gray-600);
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+    .cases-hero-stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .cases-stat-num {
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: -0.05em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .cases-stat-num span { color: var(--accent); }
+    .cases-stat-label {
+      font-size: 12px;
+      color: var(--gray-400);
+      margin-top: 4px;
+      font-family: var(--mono);
+    }
+
+    /* ── Caso destacado ── */
+    .cases-featured {
+      padding: 96px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .case-featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .case-tag-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .case-sector-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    .case-featured-badge {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      background: var(--accent-mid);
+      border: 1px solid rgba(0,87,255,0.15);
+      padding: 4px 12px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    h2.case-title {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    h2.case-title em { font-style: italic; color: var(--accent); }
+    .case-desc {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.75;
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+    .case-results-panel {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .case-results-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+    }
+    .case-metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .case-metric-box {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 20px 18px;
+    }
+    .case-metric-val {
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .case-metric-val.green { color: var(--green); }
+    .case-metric-val.accent { color: var(--accent); }
+    .case-metric-label {
+      font-size: 11px;
+      color: var(--gray-400);
+      font-family: var(--mono);
+    }
+    .case-timeline {
+      border-top: 1px solid var(--gray-200);
+      padding-top: 20px;
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+    .case-timeline strong { color: var(--black); }
+
+    /* ── Grid de casos ── */
+    .cases-grid-section {
+      padding: 96px 0;
+    }
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .case-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s, border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .case-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.07);
+      border-color: var(--accent);
+    }
+    .case-card-header {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 32px 32px 24px;
+    }
+    .case-card-sector {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .case-card h3 {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+    .case-card-challenge {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .case-card-body {
+      padding: 28px 32px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .case-mini-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .case-mini-m {
+      text-align: center;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 14px 8px;
+    }
+    .case-mini-val {
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      color: var(--black);
+      line-height: 1;
+    }
+    .case-mini-val.green { color: var(--green); }
+    .case-mini-val.accent { color: var(--accent); }
+    .case-mini-lbl {
+      font-size: 10px;
+      color: var(--gray-400);
+      font-family: var(--mono);
+      margin-top: 4px;
+    }
+    .case-tags-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+
+    /* ── Proceso ── */
+    .cases-process {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 96px 0;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 56px;
+    }
+    .process-step {}
+    .process-step-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .process-step h3 {
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .process-step p {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+
+    /* ── CTA ── */
+    .cases-cta {
+      background: var(--black);
+      color: var(--white);
+      padding: 96px 0;
+      text-align: center;
+    }
+    .cases-cta h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+    }
+    .cases-cta h2 em { font-style: italic; color: rgba(0,87,255,0.9); }
+    .cases-cta p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .case-featured-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .process-steps { grid-template-columns: 1fr; }
+      .cases-hero-stats { gap: 28px; }
+      .case-metrics-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
-<div class="grid-overlay" aria-hidden="true"></div>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="container"><div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-      <div class="logo-wordmark"><span class="logo-name">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
+  <!-- NAV -->
+  <nav class="sitenav" aria-label="Navegación principal">
+    <a href="index.html" class="sitenav-logo" aria-label="RaxisLab inicio">
+      <img src="images/logo-mark-light.svg" alt="" height="30" style="display:block;flex-shrink:0;" />
+      <span class="sitenav-logo-text">RAXIS<span class="sitenav-logo-lab">LAB</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html"    class="nav-link"><span class="nav-dot"></span>Home</a></li>
-      <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
-      <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
-      <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
-      <li><a href="blog.html"     class="nav-link"><span class="nav-dot"></span>Blog</a></li>
-      <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
-      <li><a href="contact.html"  class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
-      <li class="nav-dropdown">
-        <button class="nav-link nav-dropdown-btn"><span class="nav-dot"></span>Más ▾</button>
-        <ul class="nav-dropdown-menu">
-          <li><a href="cases.html"  class="nav-link active">Casos de Éxito</a></li>
-          <li><a href="about.html"  class="nav-link">Sobre mí</a></li>
-          <li><a href="roi.html"    class="nav-link">Calculadora ROI</a></li>
-          <li><a href="lab.html"    class="nav-link">The Lab</a></li>
-        </ul>
-      </li>
+    <ul class="sitenav-links" role="list">
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="ai.html">IA Studio</a></li>
+      <li><a href="resources.html">Recursos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="pricing.html">Precios</a></li>
+      <li><a href="contact.html" class="sitenav-cta">Hablemos →</a></li>
     </ul>
-    <div class="nav-cta-area">
-      <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
-      <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-    </div>
-  </div></div>
-</nav>
-<div class="nav-mobile" id="navMobile">
-  <a href="index.html" class="nav-link">Home</a>
-  <a href="services.html" class="nav-link">Servicios</a>
-  <a href="cases.html" class="nav-link active">Casos</a>
-  <a href="about.html" class="nav-link">Sobre mí</a>
-  <a href="blog.html" class="nav-link">Blog</a>
-  <a href="pricing.html" class="nav-link">Precios</a>
-  <a href="roi.html" class="nav-link">ROI</a>
-  <a href="lab.html" class="nav-link">The Lab</a>
-  <a href="contact.html" class="nav-link">Contacto</a>
-  <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-</div>
-
-<main class="page-content">
-
-  <!-- ── HERO ── -->
-  <section class="page-hero">
-    <div class="page-hero-orb" aria-hidden="true"></div>
-    <div class="container">
-      <div class="page-hero-content" data-reveal>
-        <div class="section-label">Prueba Social</div>
-        <h1 class="heading-xl">Resultados que<br/><span class="gradient-text">hablan solos</span></h1>
-        <p class="text-mid" style="font-size:18px;margin-top:20px;max-width:580px;line-height:1.7;">
-          No prometemos resultados. Los demostramos con datos reales, timelines auditables y clientes que avalan cada cifra. Haz clic en cualquier caso para ver el detalle completo.
-        </p>
-        <div class="cases-hero-stats">
-          <div class="cases-hero-stat" data-reveal data-reveal-delay="1">
-            <div class="cases-hero-stat-val" data-count="47">0</div>
-            <div class="cases-hero-stat-label">Proyectos completados</div>
-          </div>
-          <div class="cases-hero-stat" data-reveal data-reveal-delay="2">
-            <div class="cases-hero-stat-val"><span data-count="4">0</span>.8×</div>
-            <div class="cases-hero-stat-label">ROAS promedio</div>
-          </div>
-          <div class="cases-hero-stat" data-reveal data-reveal-delay="3">
-            <div class="cases-hero-stat-val">+<span data-count="340">0</span>%</div>
-            <div class="cases-hero-stat-label">Mejora media CVR</div>
-          </div>
-          <div class="cases-hero-stat" data-reveal data-reveal-delay="4">
-            <div class="cases-hero-stat-val"><span data-count="98">0</span>%</div>
-            <div class="cases-hero-stat-label">Tasa de retención</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CASES SECTION ── -->
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-
-      <!-- Filter bar -->
-      <div class="filter-bar" data-reveal>
-        <button class="filter-btn active" data-cat="all">Todos</button>
-        <button class="filter-btn" data-cat="ads">Meta / Google Ads</button>
-        <button class="filter-btn" data-cat="seo">SEO</button>
-        <button class="filter-btn" data-cat="web">Web &amp; Ecommerce</button>
-        <button class="filter-btn" data-cat="ai">Automatización IA</button>
-      </div>
-
-      <!-- Cases Grid -->
-      <div class="cases-grid" id="casesGrid">
-
-        <!-- ═══════════════════════════════════
-             CASO 1 — FEATURED: Salón Belleza · Cliente A
-             ═══════════════════════════════════ -->
-        <div class="case-card case-card-featured grid-item" data-cat="ads seo" data-case="identity" data-reveal>
-          <div class="case-card-banner" style="min-height:280px;">
-            <div class="case-card-banner-bg" style="background:linear-gradient(135deg,#000a10 0%,#001520 50%,#000810 100%);"></div>
-            <div class="case-card-banner-overlay"></div>
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.4;">
-              <svg width="300" height="180" viewBox="0 0 300 180" fill="none">
-                <circle cx="150" cy="90" r="65" stroke="rgba(0,200,255,0.15)" stroke-width="1" stroke-dasharray="6 4"/>
-                <circle cx="150" cy="90" r="40" stroke="rgba(0,200,255,0.25)" stroke-width="1.5"/>
-                <circle cx="150" cy="90" r="16" fill="rgba(0,200,255,0.12)" stroke="#00C8FF" stroke-width="1.5"/>
-                <line x1="150" y1="25" x2="150" y2="50" stroke="#00C8FF" stroke-width="2"/>
-                <line x1="215" y1="90" x2="240" y2="90" stroke="#00C8FF" stroke-width="2"/>
-                <line x1="150" y1="130" x2="150" y2="155" stroke="#00C8FF" stroke-width="2"/>
-                <line x1="85"  y1="90" x2="60"  y2="90" stroke="#00C8FF" stroke-width="2"/>
-                <polyline points="60,50 100,30 160,55 200,40 240,60" stroke="#00C8FF" stroke-width="2" fill="none"/>
-                <circle cx="240" cy="60" r="5" fill="#00C8FF"/>
-              </svg>
-            </div>
-            <div class="case-card-logo">
-              <div class="case-logo-icon" style="background:#00C8FF;">S</div>
-              <div>
-                <div class="case-logo-name">Salón de Belleza · Cliente A</div>
-                <div class="case-logo-sector">Peluquería · Negocio local</div>
-              </div>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div class="case-tags">
-              <span class="badge badge-cyan">GA4 + GTM</span>
-              <span class="badge badge-cyan">Google Ads</span>
-              <span class="badge badge-cyan">Producción Reels</span>
-              <span class="badge badge-cyan">SEO Local</span>
-            </div>
-            <h3 class="case-card-title">De publicar sin estructura a construir un sistema de captación medible desde cero</h3>
-            <p class="case-card-desc">Salón con buena actividad local pero sin medición real, sin estrategia de contenido y sin campañas activas. Construimos la base técnica completa (GA4, GTM, GSC, GMB), produjimos contenido presencial y estructuramos el sistema para escalar con Google Ads.</p>
-            <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-val">GTM</div><div class="case-metric-label">Tracking</div></div>
-              <div class="case-metric"><div class="case-metric-val">GMB</div><div class="case-metric-label">Optimizado</div></div>
-              <div class="case-metric"><div class="case-metric-val">Reels</div><div class="case-metric-label">Contenido propio</div></div>
-              <div class="case-metric"><div class="case-metric-val">Día 0</div><div class="case-metric-label">Punto cero doc.</div></div>
-            </div>
-            <div class="case-testimonial">
-              <blockquote>"Antes publicábamos cuando teníamos tiempo. Ahora tenemos un sistema: sabemos de dónde vienen los clientes, qué contenido funciona y qué campañas lanzar."</blockquote>
-              <div class="case-testimonial-author">
-                <div class="testimonial-avatar" style="background:#00C8FF;">S</div>
-                <div><div class="testimonial-name">Dirección del Salón</div><div class="testimonial-role">Peluquería · Negocio local</div></div>
-              </div>
-            </div>
-            <div class="case-card-arrow case-card-link"><span>Ver caso completo</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          </div>
-        </div>
-
-        <!-- ═══════════════════════════════════
-             CASO 2 — Salón Belleza · Cliente B
-             ═══════════════════════════════════ -->
-        <div class="case-card grid-item" data-cat="ads seo" data-case="desancho" data-reveal data-reveal-delay="1">
-          <div class="case-card-banner">
-            <div class="case-card-banner-bg" style="background:linear-gradient(135deg,#000e06 0%,#001a0c 50%,#000a04 100%);"></div>
-            <div class="case-card-banner-overlay"></div>
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.5;">
-              <svg width="160" height="120" viewBox="0 0 160 120" fill="none">
-                <circle cx="80" cy="60" r="55" stroke="rgba(0,255,130,0.1)" stroke-width="30" fill="none"/>
-                <circle cx="80" cy="60" r="32" stroke="rgba(0,255,130,0.2)" stroke-width="1.5" fill="none"/>
-                <circle cx="80" cy="60" r="10" fill="rgba(0,255,130,0.15)" stroke="#00FF82" stroke-width="1.5"/>
-                <path d="M30 60 Q55 35 80 60 Q105 85 130 60" stroke="#00FF82" stroke-width="2" fill="none"/>
-                <circle cx="30"  cy="60" r="4" fill="#00FF82" opacity="0.7"/>
-                <circle cx="130" cy="60" r="4" fill="#00FF82"/>
-              </svg>
-            </div>
-            <div class="case-card-logo">
-              <div class="case-logo-icon" style="background:#00FF82;color:#000;">S</div>
-              <div>
-                <div class="case-logo-name">Salón de Belleza · Cliente B</div>
-                <div class="case-logo-sector">Peluquería premium · Zona centro</div>
-              </div>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div class="case-tags">
-              <span class="badge badge-cyan">Meta Ads</span>
-              <span class="badge badge-cyan">Google Ads</span>
-              <span class="badge badge-cyan">SEO Local</span>
-              <span class="badge badge-cyan">Stripe Reservas</span>
-            </div>
-            <h3 class="case-card-title">Transformación digital 360°: de 0 sistema a ecosistema completo activo</h3>
-            <p class="case-card-desc">Web sin optimizar, redes por inercia, sin medición real. Implementamos SEO técnico, Google Ads local, Meta Ads en 3 campañas, reservas con pago anticipado Stripe y producción de contenido presencial.</p>
-            <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-val">3</div><div class="case-metric-label">Campañas Meta</div></div>
-              <div class="case-metric"><div class="case-metric-val">10€</div><div class="case-metric-label">Pago anticipado</div></div>
-              <div class="case-metric"><div class="case-metric-val">360°</div><div class="case-metric-label">Ecosistema</div></div>
-            </div>
-            <div class="case-card-arrow case-card-link"><span>Ver caso completo</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          </div>
-        </div>
-
-        <!-- ═══════════════════════════════════
-             CASO 3 — Distribuidora B2B · Horeca
-             ═══════════════════════════════════ -->
-        <div class="case-card grid-item" data-cat="seo web" data-case="vinos" data-reveal data-reveal-delay="2">
-          <div class="case-card-banner">
-            <div class="case-card-banner-bg" style="background:linear-gradient(135deg,#0d0015 0%,#18002a 50%,#0a0010 100%);"></div>
-            <div class="case-card-banner-overlay"></div>
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.5;">
-              <svg width="140" height="100" viewBox="0 0 140 100" fill="none">
-                <path d="M55 10 Q70 5 85 10 L90 55 Q70 68 50 55 Z" stroke="rgba(191,90,242,0.6)" stroke-width="1.5" fill="rgba(191,90,242,0.06)"/>
-                <line x1="70" y1="55" x2="70" y2="82" stroke="rgba(191,90,242,0.5)" stroke-width="2"/>
-                <ellipse cx="70" cy="82" rx="18" ry="5" stroke="rgba(191,90,242,0.4)" stroke-width="1.5" fill="none"/>
-                <circle cx="30" cy="45" r="14" stroke="rgba(191,90,242,0.3)" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
-                <circle cx="110" cy="40" r="11" stroke="rgba(191,90,242,0.3)" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
-                <ellipse cx="70" cy="88" rx="60" ry="8" fill="rgba(191,90,242,0.04)"/>
-              </svg>
-            </div>
-            <div class="case-card-logo">
-              <div class="case-logo-icon" style="background:#BF5AF2;">D</div>
-              <div>
-                <div class="case-logo-name">Distribuidora B2B · Horeca</div>
-                <div class="case-logo-sector">Sector alimentación · B2B</div>
-              </div>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div class="case-tags">
-              <span class="badge badge-cyan">Diseño Web</span>
-              <span class="badge badge-cyan">SEO Técnico</span>
-              <span class="badge badge-cyan">SEO Local</span>
-              <span class="badge badge-cyan">Copywriting B2B</span>
-            </div>
-            <h3 class="case-card-title">Lanzamiento web y posicionamiento B2B para distribuidora de producto premium en el canal horeca</h3>
-            <p class="case-card-desc">Sin presencia digital, sin catálogo online, sin estrategia SEO. Construimos la base completa desde cero: web profesional, catálogo con fichas de producto, SEO técnico + local geolocalizado y arquitectura preparada para Google Ads.</p>
-            <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-val">0→1</div><div class="case-metric-label">Web profesional</div></div>
-              <div class="case-metric"><div class="case-metric-val">4 D.O.</div><div class="case-metric-label">En catálogo</div></div>
-              <div class="case-metric"><div class="case-metric-val">GSC</div><div class="case-metric-label">Indexación activa</div></div>
-            </div>
-            <div class="case-card-arrow case-card-link"><span>Ver caso completo</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          </div>
-        </div>
-
-        <!-- ═══════════════════════════════════
-             CASO 4 — Empresa de Reformas (ERP)
-             ═══════════════════════════════════ -->
-        <div class="case-card grid-item" data-cat="ai" data-case="reformas" data-reveal data-reveal-delay="1">
-          <div class="case-card-banner">
-            <div class="case-card-banner-bg" style="background:linear-gradient(135deg,#100d00 0%,#1e1800 50%,#0d0a00 100%);"></div>
-            <div class="case-card-banner-overlay"></div>
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.5;">
-              <svg width="160" height="110" viewBox="0 0 160 110" fill="none">
-                <rect x="10"  y="50" width="30" height="50" rx="3" fill="rgba(255,214,10,0.08)" stroke="rgba(255,214,10,0.3)" stroke-width="1.5"/>
-                <rect x="50"  y="25" width="30" height="75" rx="3" fill="rgba(255,214,10,0.12)" stroke="rgba(255,214,10,0.4)" stroke-width="1.5"/>
-                <rect x="90"  y="38" width="30" height="62" rx="3" fill="rgba(255,214,10,0.08)" stroke="rgba(255,214,10,0.3)" stroke-width="1.5"/>
-                <rect x="130" y="15" width="20" height="85" rx="3" fill="rgba(255,214,10,0.15)" stroke="#FFD60A" stroke-width="1.5"/>
-                <line x1="10" y1="100" x2="150" y2="100" stroke="rgba(255,214,10,0.2)" stroke-width="1"/>
-                <polyline points="25,50 65,25 105,38 140,15" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="5 3" fill="none"/>
-              </svg>
-            </div>
-            <div class="case-card-logo">
-              <div class="case-logo-icon" style="background:#FFD60A;color:#000;">R</div>
-              <div>
-                <div class="case-logo-name">Empresa de Reformas</div>
-                <div class="case-logo-sector">Construcción · Gestión operativa</div>
-              </div>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div class="case-tags">
-              <span class="badge badge-cyan">Google Sheets ERP</span>
-              <span class="badge badge-cyan">Automatización</span>
-              <span class="badge badge-cyan">Dashboard</span>
-            </div>
-            <h3 class="case-card-title">Sistema ERP de control de obras: margen real, rentabilidad y alertas automáticas</h3>
-            <p class="case-card-desc">Múltiples obras simultáneas con control manual, sin visión de márgenes ni productividad por trabajador. Desarrollamos un ERP ligero en Google Sheets con 5 módulos integrados, alertas de impago y conexión directa a Power BI.</p>
-            <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-val">100%</div><div class="case-metric-label">Margen visible</div></div>
-              <div class="case-metric"><div class="case-metric-val">5</div><div class="case-metric-label">Módulos ERP</div></div>
-              <div class="case-metric"><div class="case-metric-val">Auto</div><div class="case-metric-label">Alertas impago</div></div>
-            </div>
-            <div class="case-card-arrow case-card-link"><span>Ver caso completo</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          </div>
-        </div>
-
-        <!-- ═══════════════════════════════════
-             CASO 5 — Artista de Tatuaje
-             ═══════════════════════════════════ -->
-        <div class="case-card grid-item" data-cat="ads" data-case="tatuaje" data-reveal data-reveal-delay="2">
-          <div class="case-card-banner">
-            <div class="case-card-banner-bg" style="background:linear-gradient(135deg,#100505 0%,#1e0a0a 50%,#0d0303 100%);"></div>
-            <div class="case-card-banner-overlay"></div>
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.5;">
-              <svg width="160" height="110" viewBox="0 0 160 110" fill="none">
-                <circle cx="40"  cy="55" r="25" stroke="rgba(255,107,107,0.3)" stroke-width="1.5" fill="none"/>
-                <circle cx="80"  cy="55" r="38" stroke="rgba(255,107,107,0.5)" stroke-width="2"   fill="none"/>
-                <circle cx="120" cy="55" r="25" stroke="rgba(255,107,107,0.3)" stroke-width="1.5" fill="none"/>
-                <path d="M20 55 L140 55" stroke="rgba(255,107,107,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
-                <circle cx="80" cy="55" r="7" fill="rgba(255,107,107,0.2)" stroke="#FF6B6B" stroke-width="1.5"/>
-                <text x="60" y="95" font-family="monospace" font-size="9" fill="rgba(255,107,107,0.5)">LA 2025</text>
-              </svg>
-            </div>
-            <div class="case-card-logo">
-              <div class="case-logo-icon" style="background:#FF6B6B;">A</div>
-              <div>
-                <div class="case-logo-name">Artista de Tatuaje</div>
-                <div class="case-logo-sector">Marca personal · Internacional</div>
-              </div>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div class="case-tags">
-              <span class="badge badge-cyan">Marca Personal</span>
-              <span class="badge badge-cyan">Meta Ads</span>
-              <span class="badge badge-cyan">Storytelling</span>
-              <span class="badge badge-cyan">Guest Spot LA</span>
-            </div>
-            <h3 class="case-card-title">Reposicionamiento internacional y activación de Guest Spot en Los Ángeles con Meta Ads</h3>
-            <p class="case-card-desc">13 años de experiencia internacional, pero sin estrategia ni narrativa de marca. Redefinimos el posicionamiento, creamos 30+ guiones, un plan editorial de 8 semanas y activamos campañas Meta Ads para captar clientes en Los Ángeles.</p>
-            <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-val">30+</div><div class="case-metric-label">Guiones</div></div>
-              <div class="case-metric"><div class="case-metric-val">8 sem</div><div class="case-metric-label">Plan editorial</div></div>
-              <div class="case-metric"><div class="case-metric-val">LA</div><div class="case-metric-label">Guest Spot activo</div></div>
-            </div>
-            <div class="case-card-arrow case-card-link"><span>Ver caso completo</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          </div>
-        </div>
-
-        <!-- ═══════════════════════════════════
-             CASO 6 — Ecommerce + Contenido IA
-             ═══════════════════════════════════ -->
-        <div class="case-card grid-item" data-cat="web ai" data-case="ecommerce" data-reveal data-reveal-delay="3">
-          <div class="case-card-banner">
-            <div class="case-card-banner-bg" style="background:linear-gradient(135deg,#000d0d 0%,#001818 50%,#000909 100%);"></div>
-            <div class="case-card-banner-overlay"></div>
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0.5;">
-              <svg width="160" height="110" viewBox="0 0 160 110" fill="none">
-                <rect x="20" y="15" width="60" height="70" rx="6" stroke="rgba(78,205,196,0.3)" stroke-width="1.5" fill="rgba(78,205,196,0.03)"/>
-                <rect x="30" y="25" width="40" height="50" rx="3" stroke="rgba(78,205,196,0.5)" stroke-width="1" fill="rgba(78,205,196,0.05)"/>
-                <circle cx="50" cy="50" r="15" stroke="#4ECDC4" stroke-width="1.5" stroke-dasharray="4 2" fill="none"/>
-                <path d="M100 35 L145 35 L145 80 L100 80 Z" stroke="rgba(78,205,196,0.4)" stroke-width="1.5" fill="rgba(78,205,196,0.03)"/>
-                <path d="M108 57 Q122 42 136 57 Q122 72 108 57 Z" stroke="#4ECDC4" stroke-width="1" fill="rgba(78,205,196,0.1)"/>
-                <path d="M100 25 L150 25" stroke="rgba(78,205,196,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
-              </svg>
-            </div>
-            <div class="case-card-logo">
-              <div class="case-logo-icon" style="background:#4ECDC4;color:#000;">E</div>
-              <div>
-                <div class="case-logo-name">Ecommerce + IA Visual</div>
-                <div class="case-logo-sector">Tienda online · Producto físico</div>
-              </div>
-            </div>
-          </div>
-          <div class="case-card-body">
-            <div class="case-tags">
-              <span class="badge badge-cyan">Ecommerce</span>
-              <span class="badge badge-cyan">Imágenes IA</span>
-              <span class="badge badge-cyan">Animación Producto</span>
-              <span class="badge badge-cyan">CRO</span>
-            </div>
-            <h3 class="case-card-title">Tienda online completa + imágenes lifestyle IA + animación de producto profesional</h3>
-            <p class="case-card-desc">Sin ecommerce previo, sin contenido visual propio. Lanzamos la tienda completa y creamos todo el material visual desde cero: imágenes lifestyle con IA (golden hour, composición real) y animaciones de producto listas para campañas desde el día 1.</p>
-            <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-val">Día 1</div><div class="case-metric-label">Tienda operativa</div></div>
-              <div class="case-metric"><div class="case-metric-val">100%</div><div class="case-metric-label">Contenido propio</div></div>
-              <div class="case-metric"><div class="case-metric-val">IA</div><div class="case-metric-label">Visual diferenciador</div></div>
-            </div>
-            <div class="case-card-arrow case-card-link"><span>Ver caso completo</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          </div>
-        </div>
-
-      </div><!-- /cases-grid -->
-
-      <!-- ── Process ── -->
-      <div class="case-process" data-reveal style="margin-top:80px;">
-        <div class="case-process-step">
-          <div class="case-process-num">01</div>
-          <h4>Diagnóstico</h4>
-          <p>Auditoría profunda de datos, competencia, oportunidades y puntos de fricción del funnel actual.</p>
-        </div>
-        <div class="case-process-step">
-          <div class="case-process-num">02</div>
-          <h4>Sistema</h4>
-          <p>Diseño del ecosistema digital: canales, métricas objetivo, arquitectura técnica y contenido.</p>
-        </div>
-        <div class="case-process-step">
-          <div class="case-process-num">03</div>
-          <h4>Ejecución</h4>
-          <p>Implementación en sprints semanales con testing continuo. Cada acción tiene un KPI directo.</p>
-        </div>
-        <div class="case-process-step">
-          <div class="case-process-num">04</div>
-          <h4>Escala</h4>
-          <p>Validado el sistema, lo escalamos con IA y automatizaciones para multiplicar los resultados.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── CTA Strip ── -->
-  <section class="cta-strip" data-reveal>
-    <div class="container">
-      <div class="cta-strip-inner">
-        <div>
-          <div class="section-label" style="margin-bottom:12px;">Tu empresa, el próximo caso</div>
-          <h2 class="heading-md">¿Listo para aparecer en esta página?<br/><span class="gradient-text">Empieza hoy.</span></h2>
-        </div>
-        <div class="cta-strip-actions">
-          <a href="contact.html" class="btn btn-primary">Quiero resultados así</a>
-          <a href="roi.html" class="btn btn-ghost">Calcular mi ROI</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ═══════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:inline-flex;">
-          <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-          <div class="logo-wordmark"><span class="logo-name">RaxisLab</span><span class="logo-tagline">Digital Lab</span></div>
-        </a>
-        <p>Laboratorio estratégico digital. Convertimos inversión en resultados medibles con tecnología, datos y creatividad.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Servicios</h5>
-        <a href="services.html">Meta &amp; Google Ads</a>
-        <a href="services.html">SEO Técnico</a>
-        <a href="services.html">CRM &amp; Automatización</a>
-        <a href="services.html">Diseño Web CRO</a>
-        <a href="services.html">Brand Film</a>
-      </div>
-      <div class="footer-col">
-        <h5>Agencia</h5>
-        <a href="cases.html">Casos de Éxito</a>
-        <a href="roi.html">Calculadora ROI</a>
-        <a href="lab.html">The Lab</a>
-        <a href="contact.html">Contacto</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contacto</h5>
-        <a href="mailto:hola@raxislab.com">hola@raxislab.com</a>
-        <a href="contact.html">Solicitar propuesta</a>
-        <a href="client-portal.html">🔐 Portal de cliente</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 RaxisLab. Todos los derechos reservados. — <span class="text-mono">PRECISION · INNOVATION · SCALABILITY</span></p>
-      <div class="footer-bottom-links"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-    </div>
+    <button class="sitenav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="sitenav-mobile">
+    <a href="services.html">Servicios</a>
+    <a href="ai.html">IA Studio</a>
+    <a href="resources.html">Recursos</a>
+    <a href="blog.html">Blog</a>
+    <a href="pricing.html">Precios</a>
+    <a href="cases.html" class="active">Casos de éxito</a>
+    <a href="about.html">Quiénes somos</a>
+    <a href="contact.html" class="sitenav-cta">Hablemos →</a>
   </div>
-</footer>
 
-<!-- ═══════════════════════════════════════════
-     MODAL OVERLAY + DRAWER
-═══════════════════════════════════════════ -->
-<div class="case-modal-overlay" id="drawerOverlay" role="dialog" aria-modal="true" aria-label="Detalle del caso"></div>
+  <main class="page-content">
 
-<aside class="case-drawer" id="caseDrawer">
-  <button class="drawer-close-btn" id="drawerClose" aria-label="Cerrar">✕</button>
-  <div id="drawerContent"></div>
-</aside>
+    <!-- HERO -->
+    <section class="cases-hero">
+      <div class="container">
+        <div class="cases-hero-tag reveal">📈 Casos de éxito</div>
+        <h1 class="reveal delay-1">Resultados reales.<br/><em>Métricas verificables.</em></h1>
+        <p class="cases-hero-desc reveal delay-2">Sin capturas de pantalla manipuladas ni promesas infladas. Aquí están los números exactos de proyectos reales con el contexto completo.</p>
+        <div class="cases-hero-stats reveal delay-3">
+          <div>
+            <div class="cases-stat-num"><span>4.8</span>×</div>
+            <div class="cases-stat-label">ROAS medio de campaña</div>
+          </div>
+          <div>
+            <div class="cases-stat-num"><span>−42</span>%</div>
+            <div class="cases-stat-label">reducción coste adquisición</div>
+          </div>
+          <div>
+            <div class="cases-stat-num"><span>+340</span>%</div>
+            <div class="cases-stat-label">crecimiento orgánico medio</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ═══════════════════════════════════════════
-     SCRIPTS
-═══════════════════════════════════════════ -->
-<script src="js/main.js"></script>
-<script src="js/cases.js"></script>
+    <!-- CASO DESTACADO -->
+    <section class="cases-featured">
+      <div class="container">
+        <div class="case-featured-grid">
+          <div class="reveal-left">
+            <div class="case-tag-row">
+              <span class="case-sector-tag">Sector servicios</span>
+              <span class="case-featured-badge">Caso destacado</span>
+            </div>
+            <h2 class="case-title">De 1.4× a 4.4× ROAS<br/>en 90 días con el<br/><em>mismo presupuesto.</em></h2>
+            <p class="case-desc">Un negocio del sector servicios con presupuesto de €2.800/mes en Meta Ads tenía un ROAS mediocre de 1.4×. El problema no era el presupuesto — era la estructura de cuenta y la arquitectura de campañas.</p>
+            <p class="case-desc">Aplicamos 3 cambios estructurales: consolidación de campañas, migración a Advantage+ como arquitectura principal, y sistema de test creativo sistemático (3 hooks × 3 ángulos × 2 formatos = 18 variantes).</p>
+            <a href="contact.html" class="btn-primary accent">Quiero resultados similares →</a>
+          </div>
+          <div class="case-results-panel reveal delay-2">
+            <div class="case-results-label">Resultados · 90 días</div>
+            <div class="case-metrics-grid">
+              <div class="case-metric-box">
+                <div class="case-metric-val accent">4.4×</div>
+                <div class="case-metric-label">ROAS final</div>
+              </div>
+              <div class="case-metric-box">
+                <div class="case-metric-val green">+214%</div>
+                <div class="case-metric-label">mejora vs inicio</div>
+              </div>
+              <div class="case-metric-box">
+                <div class="case-metric-val">€2.800</div>
+                <div class="case-metric-label">presupuesto /mes</div>
+              </div>
+              <div class="case-metric-box">
+                <div class="case-metric-val green">€12.3k</div>
+                <div class="case-metric-label">ingresos /mes</div>
+              </div>
+            </div>
+            <div class="case-timeline">
+              <strong>Mes 1:</strong> Auditoría y reestructuración · ROAS 2.1×<br/>
+              <strong>Mes 2:</strong> Advantage+ activado · ROAS 3.2×<br/>
+              <strong>Mes 3:</strong> Sistema creativo optimizado · ROAS 4.4×
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID DE CASOS -->
+    <section class="cases-grid-section">
+      <div class="container">
+        <span class="section-eyebrow reveal">Más proyectos</span>
+        <h2 class="section-title reveal delay-1">Cada caso,<br/><em>una historia diferente.</em></h2>
+
+        <div class="cases-grid">
+
+          <!-- Caso 1 -->
+          <article class="case-card reveal delay-1">
+            <div class="case-card-header">
+              <div class="case-card-sector">Salud &amp; Bienestar</div>
+              <h3>Clínica con alta competencia local: más reservas, menos coste</h3>
+              <p class="case-card-challenge">Saturación de competidores en Google Ads con CPCs muy altos. El negocio pagaba €18 por clic con una tasa de conversión de menos del 2%.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">+180%</div>
+                  <div class="case-mini-lbl">reservas/mes</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">−38%</div>
+                  <div class="case-mini-lbl">coste/clic</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">6.1×</div>
+                  <div class="case-mini-lbl">ROAS</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Google Ads</span>
+                <span class="tag">Search</span>
+                <span class="tag">Local</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 2 -->
+          <article class="case-card reveal delay-2">
+            <div class="case-card-header">
+              <div class="case-card-sector">Comercio &amp; Retail</div>
+              <h3>Ecommerce que duplicó su ticket medio en 60 días</h3>
+              <p class="case-card-challenge">Tienda online con mucho tráfico pero bajo ticket medio (€47). El problema era la segmentación y el tipo de producto anunciado.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">€107</div>
+                  <div class="case-mini-lbl">ticket medio</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">5.2×</div>
+                  <div class="case-mini-lbl">ROAS Meta</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">×2.3</div>
+                  <div class="case-mini-lbl">ticket ↑</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Meta Ads</span>
+                <span class="tag">Ecommerce</span>
+                <span class="tag">Shopping</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 3 -->
+          <article class="case-card reveal delay-1">
+            <div class="case-card-header">
+              <div class="case-card-sector">Hostelería &amp; Restauración</div>
+              <h3>Restaurante local que llenó agenda con Meta Ads orgánico y de pago</h3>
+              <p class="case-card-challenge">Dependencia total de plataformas de terceros para reservas. El negocio pagaba comisiones del 20% por cada mesa. Cero presencia digital propia.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">+340%</div>
+                  <div class="case-mini-lbl">reservas directas</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">−20%</div>
+                  <div class="case-mini-lbl">sin comisiones</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">4.8×</div>
+                  <div class="case-mini-lbl">ROAS</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Meta Ads</span>
+                <span class="tag">Contenido</span>
+                <span class="tag">Local</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 4 -->
+          <article class="case-card reveal delay-2">
+            <div class="case-card-header">
+              <div class="case-card-sector">Consultoría &amp; B2B</div>
+              <h3>Consultor que multiplicó sus leads cualificados con LinkedIn y automatizaciones</h3>
+              <p class="case-card-challenge">Generaba leads vía boca a boca exclusivamente. Sin sistema digital, sin pipeline predecible. Picos y valles constantes en ingresos.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">+280%</div>
+                  <div class="case-mini-lbl">leads/mes</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">48%</div>
+                  <div class="case-mini-lbl">conversión</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">24/7</div>
+                  <div class="case-mini-lbl">automatizado</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Automatización</span>
+                <span class="tag">LinkedIn</span>
+                <span class="tag">IA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 5 -->
+          <article class="case-card reveal delay-1">
+            <div class="case-card-header">
+              <div class="case-card-sector">Fitness &amp; Bienestar</div>
+              <h3>Centro de fitness que multiplicó sus bonos anuales con Reels estratégicos</h3>
+              <p class="case-card-challenge">Estancamiento en crecimiento de socios. Alta rotación mensual. El negocio no conseguía que los clientes compraran bonos de larga duración.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">×3.2</div>
+                  <div class="case-mini-lbl">bonos anuales</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">−55%</div>
+                  <div class="case-mini-lbl">rotación</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">3.2M</div>
+                  <div class="case-mini-lbl">vistas Reels</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Contenido</span>
+                <span class="tag">Reels</span>
+                <span class="tag">Meta Ads</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 6 -->
+          <article class="case-card reveal delay-2">
+            <div class="case-card-header">
+              <div class="case-card-sector">Inmobiliaria</div>
+              <h3>Agencia inmobiliaria con pipeline de compradores cualificados desde cero</h3>
+              <p class="case-card-challenge">Sin presencia digital. Dependencia de portales de terceros con leads de baja calidad. Coste por lead muy alto sin capacidad de cualificación previa.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">−62%</div>
+                  <div class="case-mini-lbl">coste por lead</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">+320%</div>
+                  <div class="case-mini-lbl">leads cualif.</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">90</div>
+                  <div class="case-mini-lbl">días al resultado</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Meta Ads</span>
+                <span class="tag">Lead Gen</span>
+                <span class="tag">CRM</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="cases-process">
+      <div class="container">
+        <span class="section-eyebrow reveal">Cómo lo hacemos</span>
+        <h2 class="section-title reveal delay-1">El mismo proceso<br/><em>en cada proyecto.</em></h2>
+        <div class="process-steps">
+          <div class="process-step reveal delay-1">
+            <span class="process-step-num">01</span>
+            <h3>Auditoría inicial</h3>
+            <p>Analizamos tu situación actual: web, ads activas, redes sociales, competencia y métricas históricas. Sin suposiciones, con datos.</p>
+          </div>
+          <div class="process-step reveal delay-2">
+            <span class="process-step-num">02</span>
+            <h3>Estrategia personalizada</h3>
+            <p>Diseñamos el plan adaptado a tu sector, objetivos y presupuesto. Sin plantillas genéricas, sin copy-paste de otros clientes.</p>
+          </div>
+          <div class="process-step reveal delay-3">
+            <span class="process-step-num">03</span>
+            <h3>Ejecución y optimización</h3>
+            <p>Implementamos y ajustamos de forma continua. Cada euro de tu presupuesto tiene un propósito claro y medible.</p>
+          </div>
+          <div class="process-step reveal delay-4">
+            <span class="process-step-num">04</span>
+            <h3>Reporting transparente</h3>
+            <p>Dashboard en tiempo real y reunión mensual con métricas que importan. Siempre sabes exactamente qué está pasando y por qué.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cases-cta">
+      <div class="container">
+        <h2 class="reveal">Tu negocio podría ser<br/><em>el próximo caso.</em></h2>
+        <p class="reveal delay-1">Empieza con una auditoría gratuita. Sin compromiso, con datos reales sobre tu situación actual.</p>
+        <a href="contact.html" class="btn-primary reveal delay-2" style="background:var(--accent);box-shadow:0 4px 24px rgba(0,87,255,0.35);font-size:15px;padding:16px 36px;">Solicitar auditoría gratuita →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="sitefooter">
+    <div class="container">
+      <div class="sitefooter-grid">
+        <div class="sitefooter-brand">
+          <a href="index.html" class="sitefooter-logo">
+  <img src="images/logo-mark-white.svg" alt="" height="26" style="display:block;flex-shrink:0;" />
+  <span>RAXIS<span style="font-weight:300;color:rgba(0,150,255,0.85);">LAB</span></span>
+</a>
+          <p>Agencia de marketing digital con IA integrada. Resultados medibles, transparencia total.</p>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="services.html">Meta Ads</a></li>
+            <li><a href="services.html">Google Ads</a></li>
+            <li><a href="services.html">Redes sociales</a></li>
+            <li><a href="ai.html">IA Studio</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="about.html">Quiénes somos</a></li>
+            <li><a href="cases.html">Casos de éxito</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Recursos</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sitefooter-bottom">
+        <p>© 2026 RaxisLab · <a href="https://raxislab.com" style="color:inherit;">raxislab.com</a></p>
+        <div class="sitefooter-bottom-links">
+          <a href="privacy.html">Privacidad</a>
+          <a href="terms.html">Términos</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
 </body>
 </html>

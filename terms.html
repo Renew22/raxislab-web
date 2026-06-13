@@ -1,151 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Términos y Condiciones · RaxisLab</title>
-  <meta name="description" content="Términos y condiciones de uso de los servicios de RaxisLab."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/legal.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso Legal · RaxisLab</title>
+  <meta name="description" content="Términos y condiciones de uso de los servicios de RaxisLab." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://raxislab.com/terms.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    .legal-hero { padding: 140px 0 72px; border-bottom: 1px solid var(--gray-200); }
+    .legal-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--gray-400); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 20px; }
+    .legal-hero h1 { font-size: clamp(36px, 5vw, 58px); font-weight: 300; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 16px; }
+    .legal-hero h1 em { font-style: italic; color: var(--accent); }
+    .legal-meta { font-family: var(--mono); font-size: 12px; color: var(--gray-400); margin-top: 12px; }
+    .legal-layout { display: grid; grid-template-columns: 220px 1fr; gap: 80px; padding: 72px 0 120px; align-items: start; }
+    .legal-toc { position: sticky; top: 88px; }
+    .legal-toc-label { font-family: var(--mono); font-size: 10px; color: var(--gray-400); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; display: block; }
+    .legal-toc ol { list-style: none; display: flex; flex-direction: column; gap: 4px; counter-reset: toc; }
+    .legal-toc ol li { counter-increment: toc; }
+    .legal-toc ol li a { font-size: 13px; color: var(--gray-600); display: flex; align-items: baseline; gap: 8px; padding: 6px 10px; border-radius: 8px; transition: background 0.2s, color 0.2s; line-height: 1.4; }
+    .legal-toc ol li a::before { content: counter(toc, decimal-leading-zero); font-family: var(--mono); font-size: 10px; color: var(--gray-400); flex-shrink: 0; }
+    .legal-toc ol li a:hover { background: var(--gray-100); color: var(--black); }
+    .legal-content h2 { font-size: 20px; font-weight: 500; letter-spacing: -0.02em; margin-top: 56px; margin-bottom: 16px; padding-top: 56px; border-top: 1px solid var(--gray-200); scroll-margin-top: 88px; }
+    .legal-content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+    .legal-content p { font-size: 15px; color: var(--gray-600); line-height: 1.75; margin-bottom: 14px; font-weight: 300; }
+    .legal-content ul, .legal-content ol { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .legal-content ul li, .legal-content ol li { font-size: 15px; color: var(--gray-600); line-height: 1.7; padding-left: 20px; position: relative; font-weight: 300; }
+    .legal-content ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); font-size: 12px; }
+    .legal-content ol { counter-reset: ol-count; }
+    .legal-content ol li { counter-increment: ol-count; }
+    .legal-content ol li::before { content: counter(ol-count) '.'; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); font-size: 11px; font-weight: 500; }
+    .legal-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-content strong { font-weight: 500; color: var(--black); }
+    .legal-note { background: var(--gray-50); border: 1px solid var(--gray-200); border-left: 3px solid var(--accent); border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+    .legal-note p { margin-bottom: 0; font-size: 14px; }
+    @media (max-width: 768px) { .legal-layout { grid-template-columns: 1fr; gap: 40px; } .legal-toc { position: static; } }
+  </style>
 </head>
 <body>
-<div class="grid-overlay" aria-hidden="true"></div>
-<nav class="navbar" id="navbar">
-  <div class="container"><div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-      <div class="logo-wordmark"><span class="logo-name">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
+
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <nav class="sitenav" id="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="sitenav-logo" aria-label="RaxisLab inicio">
+      <img src="images/logo-mark-light.svg" alt="" height="30" style="display:block;flex-shrink:0;" />
+      <span class="sitenav-logo-text">RAXIS<span class="sitenav-logo-lab">LAB</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html"    class="nav-link"><span class="nav-dot"></span>Home</a></li>
-      <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
-      <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
-      <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
-      <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
-      <li><a href="contact.html"  class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
+    <ul class="sitenav-links" role="list">
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="cases.html">Resultados</a></li>
+      <li><a href="pricing.html">Precios</a></li>
+      <li><a href="contact.html" class="sitenav-cta">Hablemos →</a></li>
     </ul>
-    <div class="nav-cta-area">
-      <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
-      <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <button class="sitenav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
+  <div class="sitenav-mobile" id="navMobile">
+    <a href="services.html">Servicios</a>
+    <a href="cases.html">Resultados</a>
+    <a href="pricing.html">Precios</a>
+    <a href="contact.html" class="sitenav-cta">Hablemos →</a>
+  </div>
+
+  <main>
+    <div class="legal-hero">
+      <div class="container">
+        <span class="legal-eyebrow">— Legal · Términos</span>
+        <h1>Aviso <em>Legal</em></h1>
+        <p class="legal-meta">Última actualización: 1 de marzo de 2026</p>
+      </div>
     </div>
-  </div></div>
-</nav>
-<div class="nav-mobile" id="navMobile">
-  <a href="index.html"    class="nav-link">Home</a>
-  <a href="services.html" class="nav-link">Servicios</a>
-  <a href="ai.html"       class="nav-link">IA Studio</a>
-  <a href="resources.html"class="nav-link">Recursos</a>
-  <a href="pricing.html"  class="nav-link">Precios</a>
-  <a href="contact.html"  class="nav-link">Contacto</a>
-  <a href="contact.html"  class="btn btn-primary">Iniciar Proyecto</a>
-</div>
-<main class="page-content">
-  <section class="legal-hero">
+
     <div class="container">
-      <div class="legal-badge">📄 Legal</div>
-      <h1 class="legal-title">Términos y <span class="gradient-text">Condiciones</span></h1>
-      <p class="legal-meta">Última actualización: 1 de marzo de 2026</p>
-    </div>
-  </section>
-  <div class="container">
-    <div class="legal-body">
+      <div class="legal-layout">
 
-      <div class="legal-highlight">
-        Al contratar los servicios de RaxisLab o usar esta web, aceptas los presentes términos y condiciones. Lee este documento antes de realizar cualquier contratación.
+        <nav class="legal-toc" aria-label="Índice">
+          <span class="legal-toc-label">Contenidos</span>
+          <ol>
+            <li><a href="#objeto">Objeto</a></li>
+            <li><a href="#servicios">Servicios prestados</a></li>
+            <li><a href="#contratacion">Proceso de contratación</a></li>
+            <li><a href="#precios">Precios y facturación</a></li>
+            <li><a href="#obligaciones">Obligaciones del cliente</a></li>
+            <li><a href="#propiedad">Propiedad intelectual</a></li>
+            <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
+            <li><a href="#cancelacion">Cancelación y reembolsos</a></li>
+            <li><a href="#confidencialidad">Confidencialidad</a></li>
+            <li><a href="#ley">Ley aplicable</a></li>
+          </ol>
+        </nav>
+
+        <div class="legal-content">
+
+          <div class="legal-note">
+            <p>Al contratar los servicios de RaxisLab o usar esta web, aceptas los presentes términos y condiciones. Lee este documento antes de realizar cualquier contratación.</p>
+          </div>
+
+          <h2 id="objeto">1. Objeto</h2>
+          <p>Los presentes Términos y Condiciones regulan la relación entre <strong>RaxisLab</strong> (René Benegas) y los usuarios/clientes que contratan sus servicios de marketing digital, estrategia de contenido, publicidad online, SEO, automatización y desarrollo web.</p>
+
+          <h2 id="servicios">2. Servicios prestados</h2>
+          <p>RaxisLab ofrece los siguientes servicios:</p>
+          <ul>
+            <li>Estrategia digital y consultoría</li>
+            <li>Gestión de campañas publicitarias (Meta Ads, Google Ads)</li>
+            <li>SEO técnico y local</li>
+            <li>Producción de contenido y diseño web</li>
+            <li>Automatizaciones con n8n y herramientas de IA</li>
+            <li>Desarrollo de software a medida</li>
+          </ul>
+          <p>El alcance exacto de cada servicio se detalla en la propuesta o contrato específico firmado con cada cliente.</p>
+
+          <h2 id="contratacion">3. Proceso de contratación</h2>
+          <ul>
+            <li>El cliente solicita información a través de los canales habilitados.</li>
+            <li>RaxisLab emite una propuesta personalizada con alcance, precio y condiciones.</li>
+            <li>El cliente acepta la propuesta mediante confirmación escrita (email o firma de contrato).</li>
+            <li>Se realiza el pago inicial según las condiciones acordadas.</li>
+            <li>Se inicia el proyecto en el plazo establecido.</li>
+          </ul>
+
+          <h2 id="precios">4. Precios y facturación</h2>
+          <p>Los precios indicados en la página de precios son orientativos. El precio final se determina en la propuesta personalizada.</p>
+          <ul>
+            <li>Los servicios mensuales se facturan por adelantado.</li>
+            <li>Los proyectos puntuales requieren un anticipo del 50% al inicio.</li>
+            <li>El método de pago habitual es transferencia bancaria o Stripe.</li>
+            <li>Las facturas se emiten en el momento del cobro.</li>
+          </ul>
+
+          <h2 id="obligaciones">5. Obligaciones del cliente</h2>
+          <p>El cliente se compromete a:</p>
+          <ul>
+            <li>Facilitar la información, accesos y materiales necesarios para la prestación del servicio.</li>
+            <li>Revisar y aprobar los entregables en los plazos acordados.</li>
+            <li>Cumplir con los pagos en los términos establecidos.</li>
+            <li>No usar los servicios para actividades ilegales o contrarias a la buena fe.</li>
+          </ul>
+
+          <h2 id="propiedad">6. Propiedad intelectual</h2>
+          <p>Los contenidos, diseños y sistemas entregados como parte de un proyecto son propiedad del cliente una vez completado el pago total. RaxisLab se reserva el derecho de utilizar el proyecto como referencia en su portfolio, salvo acuerdo de confidencialidad expreso.</p>
+          <p>Los recursos gratuitos (guías, plantillas) disponibles en la web son propiedad de RaxisLab y se ofrecen bajo licencia de uso personal. No está permitida su reventa o redistribución sin autorización.</p>
+
+          <h2 id="responsabilidad">7. Limitación de responsabilidad</h2>
+          <p>RaxisLab no garantiza resultados específicos de negocio, ya que estos dependen de factores externos como el mercado, la competencia y las acciones del propio cliente. Los resultados indicados en los casos de éxito son reales pero no garantizan resultados idénticos.</p>
+          <p>La responsabilidad máxima de RaxisLab ante cualquier reclamación se limita al importe abonado por el servicio en cuestión.</p>
+
+          <h2 id="cancelacion">8. Cancelación y reembolsos</h2>
+          <ul>
+            <li>Los servicios mensuales pueden cancelarse con 15 días de preaviso.</li>
+            <li>Los proyectos puntuales: el anticipo no es reembolsable si el proyecto se cancela tras el inicio de los trabajos.</li>
+            <li>En caso de incumplimiento grave por parte de RaxisLab, se estudiará el reembolso proporcional.</li>
+          </ul>
+
+          <h2 id="confidencialidad">9. Confidencialidad</h2>
+          <p>Ambas partes se comprometen a mantener la confidencialidad de la información sensible compartida durante la prestación del servicio. Esta obligación se mantiene durante 2 años tras la finalización del contrato.</p>
+
+          <h2 id="ley">10. Ley aplicable</h2>
+          <p>Estos términos se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de la ciudad donde RaxisLab tenga su domicilio, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+          <p>Para consultas sobre estos términos: <a href="mailto:hola@raxislab.com">hola@raxislab.com</a></p>
+
+        </div>
       </div>
-
-      <h2 id="objeto">1. Objeto</h2>
-      <p>Los presentes Términos y Condiciones regulan la relación entre <strong>RaxisLab</strong> (René Benegas) y los usuarios/clientes que contratan sus servicios de marketing digital, estrategia de contenido, publicidad online, SEO, automatización y desarrollo web.</p>
-
-      <h2>2. Servicios prestados</h2>
-      <p>RaxisLab ofrece los siguientes servicios:</p>
-      <ul>
-        <li>Estrategia digital y consultoría</li>
-        <li>Gestión de campañas publicitarias (Meta Ads, Google Ads)</li>
-        <li>SEO técnico y local</li>
-        <li>Producción de contenido y diseño web</li>
-        <li>Automatizaciones con n8n y herramientas de IA</li>
-        <li>Formación y recursos educativos</li>
-      </ul>
-      <p>El alcance exacto de cada servicio se detalla en la propuesta o contrato específico firmado con cada cliente.</p>
-
-      <h2>3. Proceso de contratación</h2>
-      <ol>
-        <li>El cliente solicita información a través de los canales habilitados.</li>
-        <li>RaxisLab emite una propuesta personalizada con alcance, precio y condiciones.</li>
-        <li>El cliente acepta la propuesta mediante confirmación escrita (email o firma de contrato).</li>
-        <li>Se realiza el pago inicial según las condiciones acordadas.</li>
-        <li>Se inicia el proyecto en el plazo establecido.</li>
-      </ol>
-
-      <h2>4. Precios y facturación</h2>
-      <p>Los precios indicados en pricing.html son orientativos. El precio final se determina en la propuesta personalizada.</p>
-      <ul>
-        <li>Los servicios mensuales se facturan por adelantado.</li>
-        <li>Los proyectos puntuales requieren un anticipo del 50% al inicio.</li>
-        <li>El método de pago habitual es transferencia bancaria o Stripe.</li>
-        <li>Las facturas se emiten en el momento del cobro.</li>
-      </ul>
-
-      <h2>5. Obligaciones del cliente</h2>
-      <p>El cliente se compromete a:</p>
-      <ul>
-        <li>Facilitar la información, accesos y materiales necesarios para la prestación del servicio.</li>
-        <li>Revisar y aprobar los entregables en los plazos acordados.</li>
-        <li>Cumplir con los pagos en los términos establecidos.</li>
-        <li>No usar los servicios para actividades ilegales o contrarias a la buena fe.</li>
-      </ul>
-
-      <h2>6. Propiedad intelectual</h2>
-      <p>Los contenidos, diseños y sistemas entregados como parte de un proyecto son propiedad del cliente una vez completado el pago total. RaxisLab se reserva el derecho de utilizar el proyecto como referencia en su portfolio, salvo acuerdo de confidencialidad expreso.</p>
-      <p>Los recursos gratuitos (guías, plantillas) disponibles en la web son propiedad de RaxisLab y se ofrecen bajo licencia de uso personal. No está permitida su reventa o redistribución sin autorización.</p>
-
-      <h2>7. Limitación de responsabilidad</h2>
-      <p>RaxisLab no garantiza resultados específicos de negocio, ya que estos dependen de factores externos como el mercado, la competencia y las acciones del propio cliente. Los resultados indicados en los casos de éxito son reales pero no garantizan resultados idénticos.</p>
-      <p>La responsabilidad máxima de RaxisLab ante cualquier reclamación se limita al importe abonado por el servicio en cuestión.</p>
-
-      <h2>8. Cancelación y reembolsos</h2>
-      <ul>
-        <li>Los servicios mensuales pueden cancelarse con 15 días de preaviso.</li>
-        <li>Los proyectos puntuales: el anticipo no es reembolsable si el proyecto se cancela tras el inicio de los trabajos.</li>
-        <li>En caso de incumplimiento grave por parte de RaxisLab, se estudiará el reembolso proporcional.</li>
-      </ul>
-
-      <h2>9. Confidencialidad</h2>
-      <p>Ambas partes se comprometen a mantener la confidencialidad de la información sensible compartida durante la prestación del servicio. Esta obligación se mantiene durante 2 años tras la finalización del contrato.</p>
-
-      <h2>10. Ley aplicable</h2>
-      <p>Estos términos se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de la ciudad donde RaxisLab tenga su domicilio, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
-
-      <h2>11. Contacto</h2>
-      <p>Para consultas sobre estos términos: <a href="mailto:hola@raxislab.com">hola@raxislab.com</a></p>
     </div>
-  </div>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="text-decoration:none;">
-          <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-          <div class="logo-wordmark"><span class="logo-name" style="font-size:15px;">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
-        </a>
-        <p>Laboratorio estratégico digital.</p>
+  </main>
+
+  <footer role="contentinfo" style="background:var(--black);color:var(--white);padding:60px 0 36px;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07);">
+        <div>
+          <a href="index.html" style="display:flex;align-items:center;gap:9px;margin-bottom:14px;text-decoration:none;">
+            <img src="images/logo-mark-white.svg" alt="" height="26" style="display:block;flex-shrink:0;" />
+            <span style="font-size:16px;font-weight:700;letter-spacing:-0.04em;color:var(--white);">RAXIS<span style="font-weight:300;color:rgba(0,150,255,0.85);">LAB</span></span>
+          </a>
+          <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:260px;">Agencia de marketing digital. Meta Ads, Google Ads y redes sociales con IA integrada.</p>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Servicios</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Meta Ads</a></li>
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Google Ads</a></li>
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Redes sociales</a></li>
+            <li><a href="pricing.html"  style="font-size:14px;color:rgba(255,255,255,0.55);">Precios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Legal</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="privacy.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Privacidad</a></li>
+            <li><a href="terms.html"   style="font-size:14px;color:rgba(255,255,255,0.55);">Aviso legal</a></li>
+            <li><a href="cookies.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Cookies</a></li>
+            <li><a href="faq.html"     style="font-size:14px;color:rgba(255,255,255,0.55);">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Contacto</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="mailto:hola@raxislab.com" style="font-size:14px;color:rgba(255,255,255,0.55);">hola@raxislab.com</a></li>
+            <li><a href="https://wa.me/34654835593" target="_blank" rel="noopener" style="font-size:14px;color:rgba(255,255,255,0.55);">WhatsApp</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-col"><h5>Recursos</h5><a href="resources.html">Guías gratuitas</a><a href="faq.html">FAQ</a><a href="help.html">Ayuda</a><a href="client-portal.html">🔐 Portal cliente</a></div>
-      <div class="footer-col"><h5>Legal</h5><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-      <div class="footer-col"><h5>Contacto</h5><a href="mailto:hola@raxislab.com">hola@raxislab.com</a><a href="contact.html">Formulario</a></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:28px;flex-wrap:wrap;gap:12px;">
+        <p style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">© 2026 RaxisLab · Agencia de marketing digital</p>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Privacidad</a>
+          <a href="terms.html"   style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Aviso legal</a>
+          <a href="cookies.html" style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Cookies</a>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 RaxisLab. Todos los derechos reservados.</p>
-      <div class="footer-bottom-links"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-    </div>
-  </div>
-</footer>
-<script src="js/main.js"></script>
+  </footer>
+
+  <script src="js/shared.js"></script>
 </body>
 </html>

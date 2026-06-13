@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Páginas principales -->
   <url><loc>https://raxislab.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://raxislab.com/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://raxislab.com/ai.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://raxislab.com/resources.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://raxislab.com/ai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://raxislab.com/cases.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://raxislab.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://raxislab.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://raxislab.com/pricing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://raxislab.com/roi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://raxislab.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Guías descargables -->
-  <url><loc>https://raxislab.com/guia-camara.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://raxislab.com/guia-reels.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://raxislab.com/guia-slack.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://raxislab.com/guia-calendario.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://raxislab.com/guia-ventas.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://raxislab.com/guia-scripts-dms.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://raxislab.com/guia-prompts-ia.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://raxislab.com/guia-metodo-raxisla.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <!-- Soporte y legal -->
+  <url><loc>https://raxislab.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raxislab.com/resources.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://raxislab.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://raxislab.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://raxislab.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://raxislab.com/help.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://raxislab.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://raxislab.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://raxislab.com/cookies.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://raxislab.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://raxislab.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://raxislab.com/cookies.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>

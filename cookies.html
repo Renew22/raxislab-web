@@ -1,131 +1,264 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Cookies · RaxisLab</title>
-  <meta name="description" content="Información sobre las cookies que utiliza RaxisLab y cómo gestionarlas."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/legal.css"/>
+  <meta name="description" content="Información sobre las cookies que utiliza RaxisLab y cómo gestionarlas." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://raxislab.com/cookies.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    .legal-hero { padding: 140px 0 72px; border-bottom: 1px solid var(--gray-200); }
+    .legal-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--gray-400); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 20px; }
+    .legal-hero h1 { font-size: clamp(36px, 5vw, 58px); font-weight: 300; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 16px; }
+    .legal-hero h1 em { font-style: italic; color: var(--accent); }
+    .legal-meta { font-family: var(--mono); font-size: 12px; color: var(--gray-400); margin-top: 12px; }
+    .legal-layout { display: grid; grid-template-columns: 220px 1fr; gap: 80px; padding: 72px 0 120px; align-items: start; }
+    .legal-toc { position: sticky; top: 88px; }
+    .legal-toc-label { font-family: var(--mono); font-size: 10px; color: var(--gray-400); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; display: block; }
+    .legal-toc ol { list-style: none; display: flex; flex-direction: column; gap: 4px; counter-reset: toc; }
+    .legal-toc ol li { counter-increment: toc; }
+    .legal-toc ol li a { font-size: 13px; color: var(--gray-600); display: flex; align-items: baseline; gap: 8px; padding: 6px 10px; border-radius: 8px; transition: background 0.2s, color 0.2s; line-height: 1.4; }
+    .legal-toc ol li a::before { content: counter(toc, decimal-leading-zero); font-family: var(--mono); font-size: 10px; color: var(--gray-400); flex-shrink: 0; }
+    .legal-toc ol li a:hover { background: var(--gray-100); color: var(--black); }
+    .legal-content h2 { font-size: 20px; font-weight: 500; letter-spacing: -0.02em; margin-top: 56px; margin-bottom: 16px; padding-top: 56px; border-top: 1px solid var(--gray-200); scroll-margin-top: 88px; }
+    .legal-content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+    .legal-content h3 { font-size: 15px; font-weight: 500; letter-spacing: -0.01em; margin-top: 28px; margin-bottom: 12px; color: var(--black); }
+    .legal-content p { font-size: 15px; color: var(--gray-600); line-height: 1.75; margin-bottom: 14px; font-weight: 300; }
+    .legal-content ul { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .legal-content ul li { font-size: 15px; color: var(--gray-600); line-height: 1.7; padding-left: 20px; position: relative; font-weight: 300; }
+    .legal-content ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-family: var(--mono); font-size: 12px; }
+    .legal-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-content strong { font-weight: 500; color: var(--black); }
+    .legal-note { background: var(--gray-50); border: 1px solid var(--gray-200); border-left: 3px solid var(--accent); border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+    .legal-note p { margin-bottom: 0; font-size: 14px; }
+    .cookie-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 13px; }
+    .cookie-table th { text-align: left; font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-400); padding: 10px 14px; border-bottom: 1px solid var(--gray-200); font-weight: 500; }
+    .cookie-table td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); vertical-align: top; line-height: 1.5; font-weight: 300; }
+    .cookie-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--black); font-weight: 500; }
+    .cookie-table tr:last-child td { border-bottom: none; }
+    .badge { display: inline-block; font-family: var(--mono); font-size: 10px; padding: 3px 8px; border-radius: 100px; font-weight: 500; }
+    .badge-req { background: rgba(22,163,74,0.1); color: var(--green); }
+    .badge-opt { background: rgba(0,87,255,0.08); color: var(--accent); }
+    @media (max-width: 768px) { .legal-layout { grid-template-columns: 1fr; gap: 40px; } .legal-toc { position: static; } .cookie-table { display: block; overflow-x: auto; } }
+  </style>
 </head>
 <body>
-<div class="grid-overlay" aria-hidden="true"></div>
-<nav class="navbar" id="navbar">
-  <div class="container"><div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-      <div class="logo-wordmark"><span class="logo-name">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
+
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <nav class="sitenav" id="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="sitenav-logo" aria-label="RaxisLab inicio">
+      <img src="images/logo-mark-light.svg" alt="" height="30" style="display:block;flex-shrink:0;" />
+      <span class="sitenav-logo-text">RAXIS<span class="sitenav-logo-lab">LAB</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html"    class="nav-link"><span class="nav-dot"></span>Home</a></li>
-      <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
-      <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
-      <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
-      <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
-      <li><a href="contact.html"  class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
+    <ul class="sitenav-links" role="list">
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="cases.html">Resultados</a></li>
+      <li><a href="pricing.html">Precios</a></li>
+      <li><a href="contact.html" class="sitenav-cta">Hablemos →</a></li>
     </ul>
-    <div class="nav-cta-area">
-      <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
-      <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <button class="sitenav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
+  <div class="sitenav-mobile" id="navMobile">
+    <a href="services.html">Servicios</a>
+    <a href="cases.html">Resultados</a>
+    <a href="pricing.html">Precios</a>
+    <a href="contact.html" class="sitenav-cta">Hablemos →</a>
+  </div>
+
+  <main>
+    <div class="legal-hero">
+      <div class="container">
+        <span class="legal-eyebrow">— Legal · Cookies</span>
+        <h1>Política de <em>Cookies</em></h1>
+        <p class="legal-meta">Última actualización: 1 de marzo de 2026</p>
+      </div>
     </div>
-  </div></div>
-</nav>
-<div class="nav-mobile" id="navMobile">
-  <a href="index.html"    class="nav-link">Home</a>
-  <a href="services.html" class="nav-link">Servicios</a>
-  <a href="ai.html"       class="nav-link">IA Studio</a>
-  <a href="resources.html"class="nav-link">Recursos</a>
-  <a href="pricing.html"  class="nav-link">Precios</a>
-  <a href="contact.html"  class="nav-link">Contacto</a>
-  <a href="contact.html"  class="btn btn-primary">Iniciar Proyecto</a>
-</div>
-<main class="page-content">
-  <section class="legal-hero">
+
     <div class="container">
-      <div class="legal-badge">🍪 Legal</div>
-      <h1 class="legal-title">Política de <span class="gradient-text">Cookies</span></h1>
-      <p class="legal-meta">Última actualización: 1 de marzo de 2026</p>
-    </div>
-  </section>
-  <div class="container">
-    <div class="legal-body">
+      <div class="legal-layout">
 
-      <h2>¿Qué son las cookies?</h2>
-      <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas una web. Nos permiten reconocerte en visitas posteriores, analizar el comportamiento de los usuarios y mejorar la experiencia de navegación.</p>
+        <nav class="legal-toc" aria-label="Índice">
+          <span class="legal-toc-label">Contenidos</span>
+          <ol>
+            <li><a href="#que-son">¿Qué son las cookies?</a></li>
+            <li><a href="#cuales">Cookies que usamos</a></li>
+            <li><a href="#gestionar">Cómo gestionarlas</a></li>
+            <li><a href="#navegadores">Por navegador</a></li>
+            <li><a href="#optout">Opt-out Analytics</a></li>
+            <li><a href="#contacto-ck">Contacto</a></li>
+          </ol>
+        </nav>
 
-      <h2>Cookies que utilizamos</h2>
+        <div class="legal-content">
 
-      <h3>Cookies técnicas (necesarias)</h3>
-      <p>Son imprescindibles para que la web funcione correctamente. No requieren consentimiento.</p>
-      <ul>
-        <li><strong>session_cookie:</strong> Mantiene la sesión activa durante tu visita.</li>
-        <li><strong>cookie_consent:</strong> Registra tus preferencias de cookies.</li>
-      </ul>
+          <h2 id="que-son">1. ¿Qué son las cookies?</h2>
+          <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas una web. Nos permiten reconocerte en visitas posteriores, analizar el comportamiento de los usuarios y mejorar la experiencia de navegación.</p>
 
-      <h3>Cookies analíticas</h3>
-      <p>Nos ayudan a entender cómo los usuarios interactúan con la web. Requieren tu consentimiento.</p>
-      <ul>
-        <li><strong>Google Analytics 4 (_ga, _ga_*):</strong> Registra páginas visitadas, tiempo en la web, origen del tráfico. Duración: 2 años. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Google</a>.</li>
-      </ul>
+          <h2 id="cuales">2. Cookies que utilizamos</h2>
 
-      <h3>Cookies de publicidad</h3>
-      <p>Permiten medir la efectividad de campañas publicitarias. Requieren tu consentimiento.</p>
-      <ul>
-        <li><strong>Meta Pixel (_fbp, _fbc):</strong> Seguimiento de conversiones de Meta Ads. Duración: 90 días.</li>
-        <li><strong>Google Ads (gclid):</strong> Seguimiento de conversiones de Google Ads. Duración: 90 días.</li>
-      </ul>
+          <h3>Cookies técnicas <span class="badge badge-req">Necesarias</span></h3>
+          <p>Son imprescindibles para que la web funcione correctamente. No requieren consentimiento.</p>
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Descripción</th>
+                <th>Duración</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>session_cookie</td>
+                <td>Mantiene la sesión activa durante tu visita</td>
+                <td>Sesión</td>
+              </tr>
+              <tr>
+                <td>cookie_consent</td>
+                <td>Registra tus preferencias de cookies</td>
+                <td>12 meses</td>
+              </tr>
+            </tbody>
+          </table>
 
-      <h2>Cómo gestionar las cookies</h2>
-      <p>Puedes gestionar tus preferencias de cookies de las siguientes formas:</p>
-      <ul>
-        <li><strong>Banner de cookies:</strong> Al acceder por primera vez, aparece un banner donde puedes aceptar o rechazar las cookies no necesarias.</li>
-        <li><strong>Configuración del navegador:</strong> Puedes bloquear o eliminar cookies desde la configuración de tu navegador.</li>
-      </ul>
+          <h3>Cookies analíticas <span class="badge badge-opt">Requieren consentimiento</span></h3>
+          <p>Nos ayudan a entender cómo los usuarios interactúan con la web para mejorar contenidos y servicios.</p>
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Descripción</th>
+                <th>Duración</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>_ga</td>
+                <td>Google Analytics 4. Registra páginas visitadas, tiempo en la web y origen del tráfico</td>
+                <td>2 años</td>
+              </tr>
+              <tr>
+                <td>_ga_*</td>
+                <td>Identificador de sesión de Google Analytics 4</td>
+                <td>2 años</td>
+              </tr>
+            </tbody>
+          </table>
 
-      <div class="legal-highlight">
-        Ten en cuenta que rechazar ciertas cookies puede afectar a la funcionalidad de la web y a la precisión de los datos de marketing.
+          <h3>Cookies de publicidad <span class="badge badge-opt">Requieren consentimiento</span></h3>
+          <p>Permiten medir la efectividad de las campañas publicitarias de Meta Ads y Google Ads.</p>
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Descripción</th>
+                <th>Duración</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>_fbp</td>
+                <td>Meta Pixel. Seguimiento de conversiones de campañas en Facebook e Instagram</td>
+                <td>90 días</td>
+              </tr>
+              <tr>
+                <td>_fbc</td>
+                <td>Meta Pixel. Identificador de clic en anuncio de Meta</td>
+                <td>90 días</td>
+              </tr>
+              <tr>
+                <td>gclid</td>
+                <td>Google Ads. Seguimiento de conversiones de campañas de Google</td>
+                <td>90 días</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="gestionar">3. Cómo gestionar las cookies</h2>
+          <p>Puedes gestionar tus preferencias de cookies de las siguientes formas:</p>
+          <ul>
+            <li><strong>Banner de cookies:</strong> Al acceder por primera vez aparece un aviso donde puedes aceptar o rechazar las cookies no necesarias.</li>
+            <li><strong>Configuración del navegador:</strong> Puedes bloquear o eliminar cookies desde la configuración de tu navegador (ver sección siguiente).</li>
+          </ul>
+          <div class="legal-note">
+            <p>Ten en cuenta que rechazar ciertas cookies puede afectar a la funcionalidad de la web y a la precisión de los datos de seguimiento de campañas.</p>
+          </div>
+
+          <h2 id="navegadores">4. Gestión por navegador</h2>
+          <ul>
+            <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome — Instrucciones para gestionar cookies</a></li>
+            <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox — Instrucciones para gestionar cookies</a></li>
+            <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari — Instrucciones para gestionar cookies</a></li>
+            <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge — Instrucciones para gestionar cookies</a></li>
+          </ul>
+
+          <h2 id="optout">5. Opt-out de Google Analytics</h2>
+          <p>Puedes desactivar el seguimiento de Google Analytics instalando el complemento oficial del navegador: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Add-on</a>.</p>
+
+          <h2 id="contacto-ck">6. Contacto</h2>
+          <p>Para cualquier consulta sobre el uso de cookies en esta web: <a href="mailto:hola@raxislab.com">hola@raxislab.com</a></p>
+          <p>También puedes consultar nuestra <a href="privacy.html">Política de Privacidad</a> para más información sobre el tratamiento de tus datos.</p>
+
+        </div>
       </div>
-
-      <h3>Gestión por navegador</h3>
-      <ul>
-        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
-        <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox</a></li>
-        <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
-        <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
-      </ul>
-
-      <h2>Opt-out de Google Analytics</h2>
-      <p>Puedes desactivar el seguimiento de Google Analytics instalando el complemento oficial: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Add-on</a>.</p>
-
-      <h2>Contacto</h2>
-      <p>Para cualquier consulta sobre cookies: <a href="mailto:hola@raxislab.com">hola@raxislab.com</a></p>
     </div>
-  </div>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="text-decoration:none;">
-          <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-          <div class="logo-wordmark"><span class="logo-name" style="font-size:15px;">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
-        </a>
-        <p>Laboratorio estratégico digital.</p>
+  </main>
+
+  <footer role="contentinfo" style="background:var(--black);color:var(--white);padding:60px 0 36px;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07);">
+        <div>
+          <a href="index.html" style="display:flex;align-items:center;gap:9px;margin-bottom:14px;text-decoration:none;">
+            <img src="images/logo-mark-white.svg" alt="" height="26" style="display:block;flex-shrink:0;" />
+            <span style="font-size:16px;font-weight:700;letter-spacing:-0.04em;color:var(--white);">RAXIS<span style="font-weight:300;color:rgba(0,150,255,0.85);">LAB</span></span>
+          </a>
+          <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:260px;">Agencia de marketing digital. Meta Ads, Google Ads y redes sociales con IA integrada.</p>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Servicios</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Meta Ads</a></li>
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Google Ads</a></li>
+            <li><a href="services.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Redes sociales</a></li>
+            <li><a href="pricing.html"  style="font-size:14px;color:rgba(255,255,255,0.55);">Precios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Legal</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="privacy.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Privacidad</a></li>
+            <li><a href="terms.html"   style="font-size:14px;color:rgba(255,255,255,0.55);">Aviso legal</a></li>
+            <li><a href="cookies.html" style="font-size:14px;color:rgba(255,255,255,0.55);">Cookies</a></li>
+            <li><a href="faq.html"     style="font-size:14px;color:rgba(255,255,255,0.55);">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono);margin-bottom:18px;">Contacto</h5>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
+            <li><a href="mailto:hola@raxislab.com" style="font-size:14px;color:rgba(255,255,255,0.55);">hola@raxislab.com</a></li>
+            <li><a href="https://wa.me/34654835593" target="_blank" rel="noopener" style="font-size:14px;color:rgba(255,255,255,0.55);">WhatsApp</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-col"><h5>Recursos</h5><a href="resources.html">Guías gratuitas</a><a href="faq.html">FAQ</a><a href="help.html">Ayuda</a><a href="client-portal.html">🔐 Portal cliente</a></div>
-      <div class="footer-col"><h5>Legal</h5><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-      <div class="footer-col"><h5>Contacto</h5><a href="mailto:hola@raxislab.com">hola@raxislab.com</a><a href="contact.html">Formulario</a></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:28px;flex-wrap:wrap;gap:12px;">
+        <p style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">© 2026 RaxisLab · Agencia de marketing digital</p>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Privacidad</a>
+          <a href="terms.html"   style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Aviso legal</a>
+          <a href="cookies.html" style="font-size:12px;color:rgba(255,255,255,0.2);font-family:var(--mono);">Cookies</a>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 RaxisLab. Todos los derechos reservados.</p>
-      <div class="footer-bottom-links"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-    </div>
-  </div>
-</footer>
-<script src="js/main.js"></script>
+  </footer>
+
+  <script src="js/shared.js"></script>
 </body>
 </html>

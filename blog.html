@@ -4,219 +4,663 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog — RaxisLab</title>
-  <meta name="description" content="Conocimiento estratégico sobre marketing digital, SEO, Meta Ads, automatización e IA. Artículos escritos desde la experiencia real."/>
-  <meta property="og:type"        content="website"/>
-  <meta property="og:url"         content="https://raxislab.com/blog.html"/>
-  <meta property="og:title"       content="Blog — Estrategia Digital Real · RaxisLab"/>
-  <meta property="og:description" content="Artículos prácticos sobre SEO, Meta Ads, Google Ads, IA y estrategia de contenido. Sin fluff, solo resultados."/>
-  <meta property="og:image"       content="https://raxislab.com/images/og-home.jpg"/>
-  <meta name="twitter:card"       content="summary_large_image"/>
-  <link rel="canonical"           href="https://raxislab.com/blog.html"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/blog.css"/>
-  <!-- Google Analytics 4 -->
+  <meta name="description" content="Artículos de estrategia digital, Meta Ads, Google Ads, IA y contenido. Sin teoría, con casos reales y métricas."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://raxislab.com/blog.html"/>
+  <meta property="og:title" content="Blog — Estrategia Digital Real · RaxisLab"/>
+  <meta property="og:description" content="Artículos de marketing digital con casos reales, métricas y estrategias accionables."/>
+  <meta property="og:image" content="https://raxislab.com/images/og-home.jpg"/>
+  <link rel="canonical" href="https://raxislab.com/blog.html"/>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGR4RYY1ER"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EGR4RYY1ER');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/shared.css"/>
+
+  <style>
+    /* ── Hero ── */
+    .blog-hero {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 96px 0 80px;
+    }
+    .blog-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-400);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      padding: 5px 14px;
+      border-radius: 100px;
+    }
+    .blog-hero h1 {
+      font-size: clamp(40px, 5.5vw, 72px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .blog-hero h1 em { font-style: italic; color: var(--accent); }
+    .blog-hero-desc {
+      font-size: 18px;
+      color: var(--gray-600);
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* ── Filtros ── */
+    .blog-filters {
+      padding: 36px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .blog-filters-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .filter-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-chip {
+      background: none;
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-family: var(--font);
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-chip:hover { border-color: var(--black); color: var(--black); }
+    .filter-chip.active { background: var(--black); border-color: var(--black); color: var(--white); }
+    .blog-search {
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      padding: 9px 18px;
+      font-family: var(--font);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 220px;
+      color: var(--black);
+      background: var(--white);
+    }
+    .blog-search:focus { border-color: var(--accent); }
+    .blog-search::placeholder { color: var(--gray-400); }
+
+    /* ── Layout ── */
+    .blog-layout {
+      padding: 72px 0 96px;
+    }
+    .blog-grid-main {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ── Artículo destacado ── */
+    .blog-featured {
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      transition: box-shadow 0.3s var(--ease);
+    }
+    .blog-featured:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.07); }
+    .blog-featured-top {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 40px 40px 32px;
+      position: relative;
+    }
+    .blog-featured-badge {
+      position: absolute;
+      top: 28px; right: 28px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      background: var(--accent-mid);
+      border: 1px solid rgba(0,87,255,0.15);
+      padding: 4px 12px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .blog-cat-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
+    }
+    .blog-featured h2 {
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      color: var(--black);
+    }
+    .blog-featured p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    .blog-featured-bottom {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .blog-meta span {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-400);
+    }
+    .blog-read-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .blog-read-link:hover { gap: 10px; }
+
+    /* ── Lista de artículos ── */
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .blog-card {
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .blog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+      border-color: var(--accent);
+    }
+    .blog-card h3 {
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      color: var(--black);
+    }
+    .blog-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4px;
+    }
+    .blog-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    /* ── Sidebar ── */
+    .blog-sidebar {
+      position: sticky;
+      top: calc(var(--nav-h) + 24px);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .sidebar-widget {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .sidebar-widget h4 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: var(--black);
+    }
+    .sidebar-topics {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .sidebar-topic-btn {
+      background: none;
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      padding: 7px 14px;
+      text-align: left;
+      font-family: var(--font);
+      font-size: 13px;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sidebar-topic-btn:hover { border-color: var(--black); color: var(--black); }
+    .sidebar-topic-count {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-400);
+    }
+    .sidebar-newsletter {
+      background: var(--black);
+      color: var(--white);
+      border: none;
+    }
+    .sidebar-newsletter h4 { color: var(--white); }
+    .sidebar-newsletter p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .sidebar-email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sidebar-email-form input {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-family: var(--font);
+      font-size: 13px;
+      color: var(--white);
+      outline: none;
+    }
+    .sidebar-email-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sidebar-email-form button {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 11px;
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .sidebar-email-form button:hover { opacity: 0.85; }
+
+    /* ── No resultados ── */
+    .blog-empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--gray-400);
+      font-size: 15px;
+      display: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .blog-grid-main { grid-template-columns: 1fr; }
+      .blog-sidebar { position: static; }
+    }
+    @media (max-width: 600px) {
+      .blog-featured-top { padding: 28px; }
+      .blog-featured-bottom { padding: 20px 28px; }
+    }
+  </style>
 </head>
 <body>
-<div class="grid-overlay" aria-hidden="true"></div>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="container"><div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-      <div class="logo-wordmark"><span class="logo-name">RAXISLAB</span><span class="logo-tagline">Digital Laboratory</span></div>
+  <!-- NAV -->
+  <nav class="sitenav" aria-label="Navegación principal">
+    <a href="index.html" class="sitenav-logo" aria-label="RaxisLab inicio">
+      <img src="images/logo-mark-light.svg" alt="" height="30" style="display:block;flex-shrink:0;" />
+      <span class="sitenav-logo-text">RAXIS<span class="sitenav-logo-lab">LAB</span></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html"    class="nav-link"><span class="nav-dot"></span>Home</a></li>
-      <li><a href="services.html" class="nav-link"><span class="nav-dot"></span>Servicios</a></li>
-      <li><a href="ai.html"       class="nav-link nav-link-highlight"><span class="nav-dot"></span>✨ IA Studio</a></li>
-      <li><a href="resources.html" class="nav-link nav-link-highlight"><span class="nav-dot"></span>🎁 Recursos</a></li>
-      <li><a href="blog.html"     class="nav-link active"><span class="nav-dot"></span>Blog</a></li>
-      <li><a href="pricing.html"  class="nav-link"><span class="nav-dot"></span>Precios</a></li>
-      <li><a href="contact.html"  class="nav-link"><span class="nav-dot"></span>Contacto</a></li>
-      <li class="nav-dropdown">
-        <button class="nav-link nav-dropdown-btn"><span class="nav-dot"></span>Más ▾</button>
-        <ul class="nav-dropdown-menu">
-          <li><a href="cases.html"  class="nav-link">Casos de Éxito</a></li>
-          <li><a href="about.html"  class="nav-link">Sobre mí</a></li>
-          <li><a href="roi.html"    class="nav-link">Calculadora ROI</a></li>
-          <li><a href="lab.html"    class="nav-link">The Lab</a></li>
-        </ul>
-      </li>
+    <ul class="sitenav-links" role="list">
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="ai.html">IA Studio</a></li>
+      <li><a href="resources.html">Recursos</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="pricing.html">Precios</a></li>
+      <li><a href="contact.html" class="sitenav-cta">Hablemos →</a></li>
     </ul>
-    <div class="nav-cta-area">
-      <div class="nav-status"><span class="nav-status-dot"></span><span>Sistema Activo</span></div>
-      <a href="contact.html" class="btn btn-primary">Iniciar Proyecto</a>
-      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
-    </div>
-  </div></div>
-</nav>
-<div class="nav-mobile" id="navMobile">
-  <a href="index.html"    class="nav-link">Home</a>
-  <a href="services.html" class="nav-link">Servicios</a>
-  <a href="cases.html"    class="nav-link">Casos</a>
-  <a href="about.html"    class="nav-link">Sobre mí</a>
-  <a href="blog.html"     class="nav-link active">Blog</a>
-  <a href="pricing.html"  class="nav-link">Precios</a>
-  <a href="roi.html"      class="nav-link">ROI</a>
-  <a href="lab.html"      class="nav-link">The Lab</a>
-  <a href="contact.html"  class="nav-link">Contacto</a>
-  <a href="contact.html"  class="btn btn-primary">Iniciar Proyecto</a>
-</div>
-
-<main class="page-content">
-
-  <!-- HERO -->
-  <section class="blog-hero" data-reveal>
-    <div class="container">
-      <div class="blog-hero-label">📝 Conocimiento sin filtros</div>
-      <h1 class="blog-hero-title">
-        Lo que funciona<br/><span class="gradient-text">en el mundo real</span>
-      </h1>
-      <p class="blog-hero-sub">
-        Sin teoría vacía. Estrategias, frameworks y datos extraídos directamente 
-        de campañas reales. Todo lo que aprendo, lo comparto aquí.
-      </p>
-
-      <!-- Search -->
-      <div class="blog-search-wrap">
-        <input type="text" class="blog-search-input" id="blogSearch"
-               placeholder="Buscar artículo, tema o herramienta..."
-               aria-label="Buscar artículos"/>
-        <div class="blog-search-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Filter -->
-      <div class="blog-filter-bar" id="blogFilterBar">
-        <button class="blog-filter-btn active" data-cat="all">Todos</button>
-        <button class="blog-filter-btn" data-cat="ads">Meta &amp; Google Ads</button>
-        <button class="blog-filter-btn" data-cat="seo">SEO</button>
-        <button class="blog-filter-btn" data-cat="cro">CRO &amp; Conversión</button>
-        <button class="blog-filter-btn" data-cat="ia">IA &amp; Automatización</button>
-        <button class="blog-filter-btn" data-cat="estrategia">Estrategia</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG CONTENT -->
-  <section class="section" style="padding-top:0; padding-bottom:120px;">
-    <div class="container">
-      <div class="blog-layout">
-
-        <!-- Articles -->
-        <div>
-          <div class="blog-grid" id="blogGrid">
-            <!-- Articles injected by JS -->
-          </div>
-          <div class="blog-no-results" id="blogNoResults">
-            No se encontraron artículos para tu búsqueda.
-          </div>
-        </div>
-
-        <!-- Sidebar -->
-        <aside class="blog-sidebar">
-
-          <!-- Popular topics -->
-          <div class="sidebar-card">
-            <div class="sidebar-card-title">Temas populares</div>
-            <div class="sidebar-topics" id="sidebarTopics">
-              <!-- Injected by JS -->
-            </div>
-          </div>
-
-          <!-- Newsletter -->
-          <div class="sidebar-card">
-            <div class="sidebar-card-title">Newsletter semanal</div>
-            <p class="sidebar-newsletter-desc">
-              Una estrategia accionable cada semana. Sin spam. Sin relleno. Solo lo que funciona.
-            </p>
-            <div class="sidebar-newsletter-form">
-              <input type="email" class="sidebar-newsletter-input"
-                     id="newsletterEmail" placeholder="tu@email.com"/>
-              <button class="sidebar-newsletter-btn" id="newsletterBtn">
-                Suscribirme →
-              </button>
-            </div>
-            <div class="sidebar-newsletter-ok" id="newsletterOk">
-              ✓ ¡Apuntado! Nos vemos en tu bandeja.
-            </div>
-          </div>
-
-          <!-- Latest articles -->
-          <div class="sidebar-card">
-            <div class="sidebar-card-title">Más recientes</div>
-            <div class="sidebar-latest" id="sidebarLatest">
-              <!-- Injected by JS -->
-            </div>
-          </div>
-
-        </aside>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:inline-flex;">
-          <div class="logo-icon"><img src="images/logo-raxislab.png" alt="RaxisLab" width="44" height="44"/></div>
-          <div class="logo-wordmark"><span class="logo-name">RaxisLab</span><span class="logo-tagline">Digital Lab</span></div>
-        </a>
-        <p>Laboratorio estratégico digital. Convertimos inversión en resultados medibles con tecnología, datos y creatividad.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Servicios</h5>
-        <a href="services.html">Meta &amp; Google Ads</a>
-        <a href="services.html">SEO Técnico</a>
-        <a href="services.html">CRM &amp; Automatización</a>
-        <a href="services.html">Diseño Web CRO</a>
-        <a href="services.html">Brand Film</a>
-      </div>
-      <div class="footer-col">
-        <h5>Agencia</h5>
-        <a href="about.html">Sobre mí</a>
-        <a href="cases.html">Casos de Éxito</a>
-        <a href="blog.html">Blog</a>
-        <a href="roi.html">Calculadora ROI</a>
-        <a href="lab.html">The Lab</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contacto</h5>
-        <a href="mailto:hola@raxislab.com">hola@raxislab.com</a>
-        <a href="contact.html">Solicitar propuesta</a>
-        <a href="client-portal.html">🔐 Portal de cliente</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 RaxisLab. Todos los derechos reservados. — <span class="text-mono">PRECISION · INNOVATION · SCALABILITY</span></p>
-      <div class="footer-bottom-links"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="cookies.html">Cookies</a></div>
-    </div>
+    <button class="sitenav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="sitenav-mobile">
+    <a href="services.html">Servicios</a>
+    <a href="ai.html">IA Studio</a>
+    <a href="resources.html">Recursos</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="pricing.html">Precios</a>
+    <a href="cases.html">Casos de éxito</a>
+    <a href="about.html">Quiénes somos</a>
+    <a href="contact.html" class="sitenav-cta">Hablemos →</a>
   </div>
-</footer>
 
-<!-- MODAL -->
-<div class="blog-modal-overlay" id="blogOverlay"></div>
-<div class="blog-modal" id="blogModal" role="dialog" aria-modal="true">
-  <div id="blogModalContent"></div>
-</div>
+  <main class="page-content">
 
-<script src="js/main.js"></script>
-<script src="js/blog.js"></script>
+    <!-- HERO -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="blog-hero-tag reveal">✦ Blog</div>
+        <h1 class="reveal delay-1">Estrategia digital<br/><em>sin teoría vacía.</em></h1>
+        <p class="blog-hero-desc reveal delay-2">Artículos con casos reales, métricas verificables y pasos accionables. Lo que funciona hoy, no lo que funcionó hace tres años.</p>
+      </div>
+    </section>
+
+    <!-- FILTROS -->
+    <div class="blog-filters">
+      <div class="container">
+        <div class="blog-filters-inner">
+          <div class="filter-chips">
+            <button class="filter-chip active" data-cat="all">Todos</button>
+            <button class="filter-chip" data-cat="ads">Meta &amp; Google Ads</button>
+            <button class="filter-chip" data-cat="redes">Redes sociales</button>
+            <button class="filter-chip" data-cat="ia">Inteligencia Artificial</button>
+            <button class="filter-chip" data-cat="estrategia">Estrategia</button>
+          </div>
+          <input type="text" class="blog-search" id="blog-search" placeholder="Buscar artículos..."/>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <section class="blog-layout">
+      <div class="container">
+        <div class="blog-grid-main">
+
+          <!-- Artículos -->
+          <div>
+            <!-- Destacado -->
+            <article class="blog-featured reveal" data-cat="ads">
+              <div class="blog-featured-top">
+                <span class="blog-featured-badge">Destacado</span>
+                <span class="blog-cat-tag">Meta &amp; Google Ads</span>
+                <h2>Cómo conseguimos ROAS 4.8× en Meta Ads con solo 3 cambios estructurales</h2>
+                <p>El 87% de las cuentas que rinden mal tienen el mismo problema: mala estructura. Una cuenta mal estructurada con €10.000/mes pierde contra una bien estructurada con €2.000/mes.</p>
+              </div>
+              <div class="blog-featured-bottom">
+                <div class="blog-meta">
+                  <span>Feb 2026</span>
+                  <span>8 min de lectura</span>
+                  <span>Meta Ads · ROAS · Estructura</span>
+                </div>
+                <a href="blog.html" class="blog-read-link">Leer artículo →</a>
+              </div>
+            </article>
+
+            <!-- Lista de artículos -->
+            <div class="blog-list" id="blog-list">
+
+              <article class="blog-card reveal delay-1" data-cat="ia" data-title="automatizar marketing con ia sin perder autenticidad">
+                <span class="blog-cat-tag">Inteligencia Artificial</span>
+                <h3>Cómo automatizar el 80% de tu marketing sin perder la autenticidad de marca</h3>
+                <p>La automatización no significa que todo suene a robot. Te mostramos el equilibrio entre eficiencia e identidad de marca con herramientas reales.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-meta">
+                    <span>Ene 2026</span>
+                    <span>6 min</span>
+                  </div>
+                  <a href="blog.html" class="blog-read-link">Leer →</a>
+                </div>
+              </article>
+
+              <article class="blog-card reveal delay-2" data-cat="redes" data-title="reels que generan ventas estructura y métricas">
+                <span class="blog-cat-tag">Redes Sociales</span>
+                <h3>Reels que generan ventas: la estructura que usamos con cada cliente</h3>
+                <p>No todos los Reels funcionan igual. Hay una fórmula detrás de los que convierten, y no tiene nada que ver con el número de seguidores.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-meta">
+                    <span>Ene 2026</span>
+                    <span>5 min</span>
+                  </div>
+                  <a href="blog.html" class="blog-read-link">Leer →</a>
+                </div>
+              </article>
+
+              <article class="blog-card reveal" data-cat="estrategia" data-title="auditoria digital gratuita cómo hacerla en 30 minutos">
+                <span class="blog-cat-tag">Estrategia</span>
+                <h3>Cómo hacer una auditoría digital de tu negocio en 30 minutos</h3>
+                <p>Antes de invertir en publicidad, necesitas saber exactamente dónde estás. Esta guía te da el marco completo para diagnosticar tu situación actual.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-meta">
+                    <span>Dic 2025</span>
+                    <span>7 min</span>
+                  </div>
+                  <a href="blog.html" class="blog-read-link">Leer →</a>
+                </div>
+              </article>
+
+              <article class="blog-card reveal delay-1" data-cat="ads" data-title="google ads performance max errores comunes">
+                <span class="blog-cat-tag">Meta &amp; Google Ads</span>
+                <h3>Performance Max: los 5 errores que comete el 90% de las agencias</h3>
+                <p>P-Max es una herramienta poderosa cuando se configura bien. Mal configurada, quema presupuesto sin control. Aquí están los errores más comunes y cómo evitarlos.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-meta">
+                    <span>Dic 2025</span>
+                    <span>9 min</span>
+                  </div>
+                  <a href="blog.html" class="blog-read-link">Leer →</a>
+                </div>
+              </article>
+
+              <article class="blog-card reveal delay-2" data-cat="ia" data-title="prompts ia marketing copywriting estrategia">
+                <span class="blog-cat-tag">Inteligencia Artificial</span>
+                <h3>Los 10 prompts de IA que más usamos para marketing y por qué funcionan</h3>
+                <p>No todos los prompts son iguales. Después de miles de iteraciones con Claude AI y ChatGPT, estos son los que generan resultados consistentes en marketing digital.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-meta">
+                    <span>Nov 2025</span>
+                    <span>5 min</span>
+                  </div>
+                  <a href="blog.html" class="blog-read-link">Leer →</a>
+                </div>
+              </article>
+
+              <article class="blog-card reveal" data-cat="estrategia" data-title="pricing servicios digitales cómo fijar precio">
+                <span class="blog-cat-tag">Estrategia</span>
+                <h3>Cómo fijar el precio correcto para tus servicios digitales sin infravalorarlos</h3>
+                <p>El precio no es solo un número. Es un mensaje de posicionamiento. Te explicamos el marco que usamos para calcular precios que generan márgenes reales.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-meta">
+                    <span>Nov 2025</span>
+                    <span>6 min</span>
+                  </div>
+                  <a href="blog.html" class="blog-read-link">Leer →</a>
+                </div>
+              </article>
+
+            </div>
+            <div class="blog-empty" id="blog-empty">No se encontraron artículos para ese criterio.</div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="blog-sidebar reveal delay-2">
+            <div class="sidebar-widget">
+              <h4>Temas</h4>
+              <div class="sidebar-topics">
+                <button class="sidebar-topic-btn" data-filter="ads">
+                  Meta &amp; Google Ads <span class="sidebar-topic-count">3</span>
+                </button>
+                <button class="sidebar-topic-btn" data-filter="redes">
+                  Redes sociales <span class="sidebar-topic-count">1</span>
+                </button>
+                <button class="sidebar-topic-btn" data-filter="ia">
+                  Inteligencia Artificial <span class="sidebar-topic-count">2</span>
+                </button>
+                <button class="sidebar-topic-btn" data-filter="estrategia">
+                  Estrategia <span class="sidebar-topic-count">2</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="sidebar-widget sidebar-newsletter">
+              <h4>Newsletter semanal</h4>
+              <p>Una táctica accionable cada lunes. Sin spam, con datos reales.</p>
+              <form class="sidebar-email-form" onsubmit="handleNewsletter(event)">
+                <input type="email" placeholder="tu@email.com" required/>
+                <button type="submit">Suscribirme →</button>
+              </form>
+            </div>
+
+            <div class="sidebar-widget">
+              <h4>¿Hablamos?</h4>
+              <p style="font-size:13px;color:var(--gray-600);margin-bottom:16px;line-height:1.6;">Auditoría digital gratuita para tu negocio. Sin compromiso.</p>
+              <a href="contact.html" class="btn-primary" style="font-size:13px;padding:11px 20px;width:100%;justify-content:center;">Solicitar auditoría →</a>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="sitefooter">
+    <div class="container">
+      <div class="sitefooter-grid">
+        <div class="sitefooter-brand">
+          <a href="index.html" class="sitefooter-logo">
+  <img src="images/logo-mark-white.svg" alt="" height="26" style="display:block;flex-shrink:0;" />
+  <span>RAXIS<span style="font-weight:300;color:rgba(0,150,255,0.85);">LAB</span></span>
+</a>
+          <p>Agencia de marketing digital con IA integrada. Resultados medibles, transparencia total.</p>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="services.html">Meta Ads</a></li>
+            <li><a href="services.html">Google Ads</a></li>
+            <li><a href="services.html">Redes sociales</a></li>
+            <li><a href="ai.html">IA Studio</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="about.html">Quiénes somos</a></li>
+            <li><a href="cases.html">Casos de éxito</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Recursos</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sitefooter-bottom">
+        <p>© 2026 RaxisLab · <a href="https://raxislab.com" style="color:inherit;">raxislab.com</a></p>
+        <div class="sitefooter-bottom-links">
+          <a href="privacy.html">Privacidad</a>
+          <a href="terms.html">Términos</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script>
+    const filterChips    = document.querySelectorAll('.filter-chip');
+    const sidebarTopics  = document.querySelectorAll('.sidebar-topic-btn');
+    const cards          = document.querySelectorAll('#blog-list .blog-card');
+    const featuredWrap   = document.querySelector('.blog-featured');
+    const emptyMsg       = document.getElementById('blog-empty');
+    const searchInput    = document.getElementById('blog-search');
+
+    function applyFilter(cat) {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(c => {
+        const catMatch   = cat === 'all' || c.dataset.cat === cat;
+        const titleMatch = !q || (c.dataset.title || '').includes(q) || c.querySelector('h3').textContent.toLowerCase().includes(q);
+        const show = catMatch && titleMatch;
+        c.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      // Destacado
+      if (featuredWrap) {
+        const fCat = featuredWrap.dataset.cat;
+        featuredWrap.style.display = (cat === 'all' || fCat === cat) ? '' : 'none';
+      }
+      emptyMsg.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    let currentCat = 'all';
+    filterChips.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterChips.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        applyFilter(currentCat);
+      });
+    });
+
+    sidebarTopics.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterChips.forEach(b => {
+          b.classList.toggle('active', b.dataset.cat === btn.dataset.filter);
+        });
+        currentCat = btn.dataset.filter;
+        applyFilter(currentCat);
+      });
+    });
+
+    searchInput.addEventListener('input', () => applyFilter(currentCat));
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      e.target.innerHTML = '<p style="color:rgba(255,255,255,0.7);text-align:center;font-size:13px;">✓ ¡Te has suscrito correctamente!</p>';
+    }
+  </script>
 </body>
 </html>
