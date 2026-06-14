@@ -997,6 +997,68 @@
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
+
+    /* ══════════════════════════════════════
+       CLIENTES — LOGO MARQUEE
+    ══════════════════════════════════════ */
+    #clientes {
+      padding: 72px 0 80px;
+      border-top: 1px solid var(--gray-200);
+      background: var(--white);
+    }
+    .clientes-title {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 48px;
+    }
+    .logos-overflow {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .logos-track {
+      display: flex;
+      align-items: center;
+      animation: logos-scroll 32s linear infinite;
+      width: max-content;
+    }
+    .logos-track:hover { animation-play-state: paused; }
+    @keyframes logos-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 44px;
+      height: 72px;
+      flex-shrink: 0;
+    }
+    .logo-item img {
+      height: 34px;
+      max-width: 130px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.45);
+      transition: filter 0.35s ease;
+      display: block;
+    }
+    .logo-item:hover img { filter: grayscale(0%) opacity(1); }
+    .logo-vsep {
+      width: 1px;
+      height: 28px;
+      background: var(--gray-200);
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .logo-item { padding: 0 28px; }
+      .logo-item img { height: 26px; }
+    }
   </style>
 </head>
 
@@ -1611,6 +1673,52 @@
           Quiero mi auditoría gratuita →
         </button>
       </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CLIENTES ═══════════════ -->
+  <section id="clientes" aria-label="Negocios que confían en Raxislab">
+    <p class="clientes-title reveal">Negocios que confían en Raxislab</p>
+    <div class="logos-overflow">
+      <div class="logos-track" aria-hidden="true">
+        <div class="logo-item"><img src="images/clientes/campus-paco-alcacer.png" alt="Campus Paco Alcácer"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/discobolo.png" alt="Discóbolo"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/guardian-del-arco.png" alt="Guardián del Arco"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/la-pobla-de-farnals.png" alt="La Pobla de Farnals"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/last-mile.png" alt="Last Mile Dist"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/primekit.png" alt="Primekit"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/malvarosa.png" alt="Malvarosa"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/identity.png" alt="Identity Peluqueros"/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/desancho.png" alt="Desancho Estilistas"/></div>
+        <div class="logo-vsep"></div>
+        <!-- Duplicado para scroll infinito -->
+        <div class="logo-item"><img src="images/clientes/campus-paco-alcacer.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/discobolo.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/guardian-del-arco.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/la-pobla-de-farnals.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/last-mile.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/primekit.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/malvarosa.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/identity.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+        <div class="logo-item"><img src="images/clientes/desancho.png" alt=""/></div>
+        <div class="logo-vsep"></div>
+      </div>
     </div>
   </section>
 
