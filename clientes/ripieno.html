@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ripieno Ibiza — Caso de cliente · RaxisLab</title>
+  <meta name="description" content="Cómo RaxisLab digitalizó Ripieno Ibiza: menú digital bilingüe, sistema de reservas propio, Google My Business y estrategia digital completa para restaurante en Ibiza."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://raxislab.com/clientes/ripieno"/>
+  <meta property="og:title" content="Ripieno Ibiza — Caso de cliente · RaxisLab"/>
+  <meta property="og:description" content="Menú digital + reservas + GMB + Google Ads para restaurante de pasta fresca en Santa Eulária, Ibiza."/>
+  <meta property="og:image" content="https://raxislab.com/images/og-home.jpg"/>
+  <link rel="canonical" href="https://raxislab.com/clientes/ripieno"/>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGR4RYY1ER"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EGR4RYY1ER');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/shared.css"/>
+
+  <style>
+    /* ── Tokens Ripieno ── */
+    :root {
+      --rip-red:   #8B1A1A;
+      --rip-gold:  #C8920A;
+      --rip-cream: #FAF5E4;
+      --rip-border:#E8DCC8;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 14px 0;
+    }
+    .breadcrumb-inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--gray-400);
+    }
+    .breadcrumb-inner a { color: var(--gray-400); transition: color 0.2s; }
+    .breadcrumb-inner a:hover { color: var(--black); }
+    .breadcrumb-sep { opacity: 0.4; }
+    .breadcrumb-current { color: var(--black); }
+
+    /* ── Hero ── */
+    .rip-hero {
+      background: linear-gradient(135deg, var(--rip-red) 0%, #6B1414 100%);
+      color: #fff;
+      padding: 80px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .rip-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .rip-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .rip-logo-mark {
+      width: 72px; height: 72px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 28px;
+      flex-shrink: 0;
+    }
+    .rip-logo-mark svg { width: 44px; height: 44px; }
+    .rip-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .rip-badge {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 13px;
+      border-radius: 100px;
+    }
+    .rip-badge.active {
+      background: rgba(22,163,74,0.2);
+      border: 1px solid rgba(22,163,74,0.4);
+      color: #4ade80;
+    }
+    .rip-badge.sector {
+      background: rgba(200,146,10,0.2);
+      border: 1px solid rgba(200,146,10,0.3);
+      color: #D4A017;
+    }
+    .rip-hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .rip-hero-subtitle {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+    .rip-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+    }
+    .rip-rating-stars { color: #FBBF24; letter-spacing: -1px; }
+    .rip-hero-panel {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 32px 28px;
+      min-width: 220px;
+      text-align: center;
+    }
+    .rip-hero-panel-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .rip-hero-stat {
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: -0.05em;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .rip-hero-stat span { color: #D4A017; }
+    .rip-hero-stat-lbl {
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      font-family: var(--mono);
+    }
+    .rip-hero-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin: 16px 0;
+    }
+
+    /* ── Sección genérica ── */
+    .rip-section { padding: 80px 0; }
+    .rip-section + .rip-section { border-top: 1px solid var(--gray-200); }
+    .rip-section-bg { background: var(--rip-cream); }
+    .rip-eyebrow {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--rip-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .rip-section h2 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .rip-section h2 em { font-style: italic; color: var(--rip-red); }
+    .rip-desc {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      font-weight: 300;
+      max-width: 640px;
+    }
+
+    /* ── Cards de servicios ── */
+    .rip-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .rip-card {
+      background: var(--white);
+      border: 1px solid var(--rip-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s, border-color 0.3s;
+    }
+    .rip-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(139,26,26,0.08);
+      border-color: var(--rip-red);
+    }
+    .rip-card-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--rip-gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .rip-card h3 {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+    .rip-card p {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .rip-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--rip-red);
+      transition: gap 0.2s;
+    }
+    .rip-card-link:hover { gap: 8px; }
+    .rip-card-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--rip-gold);
+      background: rgba(200,146,10,0.1);
+      border: 1px solid rgba(200,146,10,0.25);
+      padding: 3px 10px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+
+    /* ── Métricas placeholder ── */
+    .rip-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .rip-metric-box {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .rip-metric-box.pending::after {
+      content: 'Próximamente';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(2px);
+    }
+    .rip-metric-val {
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -0.05em;
+      color: var(--gray-200);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .rip-metric-lbl {
+      font-size: 12px;
+      color: var(--gray-400);
+      font-family: var(--mono);
+    }
+    .rip-in-progress {
+      margin-top: 32px;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .rip-in-progress-dot {
+      width: 8px; height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse-g 2s infinite;
+    }
+    @keyframes pulse-g {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+      50% { opacity: 0.7; box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+    }
+    .rip-in-progress p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+    .rip-in-progress strong { color: var(--black); }
+
+    /* ── Links útiles (admin) ── */
+    .rip-admin-section {
+      background: var(--black);
+      color: var(--white);
+      padding: 56px 0;
+    }
+    .rip-admin-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .rip-admin-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .rip-admin-link:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(200,146,10,0.35);
+      color: #D4A017;
+    }
+    .rip-admin-link span {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ── CTA final ── */
+    .rip-cta {
+      background: var(--rip-cream);
+      border-top: 1px solid var(--rip-border);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .rip-cta h2 {
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+    .rip-cta h2 em { font-style: italic; color: var(--rip-red); }
+    .rip-cta p {
+      font-size: 16px;
+      color: var(--gray-600);
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+    .btn-ripieno {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--rip-red);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: transform 0.25s var(--ease), box-shadow 0.25s;
+      box-shadow: 0 2px 16px rgba(139,26,26,0.25);
+    }
+    .btn-ripieno:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(139,26,26,0.35);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .rip-hero-inner { grid-template-columns: 1fr; }
+      .rip-hero-panel { display: none; }
+      .rip-cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .rip-metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .rip-admin-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .rip-cards-grid { grid-template-columns: 1fr; }
+      .rip-metrics-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav class="sitenav" aria-label="Navegación principal">
+    <a href="../index.html" class="sitenav-logo" aria-label="RaxisLab inicio">
+      <img src="../images/logo-mark-light.svg" alt="" height="30" style="display:block;flex-shrink:0;" />
+      <span class="sitenav-logo-text">RAXIS<span class="sitenav-logo-lab">LAB</span></span>
+    </a>
+    <ul class="sitenav-links" role="list">
+      <li><a href="../services.html">Servicios</a></li>
+      <li><a href="../ai.html">IA Studio</a></li>
+      <li><a href="../cases.html" class="active">Clientes</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../pricing.html">Precios</a></li>
+      <li><a href="../contact.html" class="sitenav-cta">Hablemos →</a></li>
+    </ul>
+    <button class="sitenav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="sitenav-mobile">
+    <a href="../services.html">Servicios</a>
+    <a href="../ai.html">IA Studio</a>
+    <a href="../cases.html" class="active">Clientes</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../pricing.html">Precios</a>
+    <a href="../about.html">Quiénes somos</a>
+    <a href="../contact.html" class="sitenav-cta">Hablemos →</a>
+  </div>
+
+  <main class="page-content">
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <div class="container">
+        <div class="breadcrumb-inner">
+          <a href="../index.html">Inicio</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="../cases.html">Clientes</a>
+          <span class="breadcrumb-sep">›</span>
+          <span class="breadcrumb-current">Ripieno Ibiza</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="rip-hero">
+      <div class="container">
+        <div class="rip-hero-inner">
+          <div>
+            <div class="rip-logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 8 C14 8 8 14 8 22 C8 30 14 36 22 36 C30 36 36 30 36 22" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M22 14 C18 14 15 17 15 21 C15 25 18 28 22 28 C26 28 29 25 29 21" stroke="#D4A017" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="22" cy="21" r="3" fill="rgba(255,255,255,0.7)"/>
+                <path d="M29 13 L36 8" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M32 10 L36 8 L34 12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="rip-badge-row">
+              <span class="rip-badge active">● Cliente activo</span>
+              <span class="rip-badge sector">Hostelería · Ibiza</span>
+            </div>
+            <h1 class="reveal">Ripieno Ibiza</h1>
+            <p class="rip-hero-subtitle reveal delay-1">Pasta Fresca · Pinsa Romana · Santa Eulária, Ibiza</p>
+            <div class="rip-rating reveal delay-2">
+              <span class="rip-rating-stars">★★★★★</span>
+              <span>4.8 · 177 reseñas Google</span>
+            </div>
+          </div>
+          <div class="rip-hero-panel reveal delay-2">
+            <div class="rip-hero-panel-label">Proyecto activo</div>
+            <div class="rip-hero-stat"><span>0€</span></div>
+            <div class="rip-hero-stat-lbl">comisión por reserva</div>
+            <hr class="rip-hero-divider"/>
+            <div class="rip-hero-stat">ES/EN</div>
+            <div class="rip-hero-stat-lbl">menú bilingüe</div>
+            <hr class="rip-hero-divider"/>
+            <div class="rip-hero-stat"><span>5</span>+</div>
+            <div class="rip-hero-stat-lbl">servicios activos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 1: EL RETO -->
+    <section class="rip-section">
+      <div class="container">
+        <span class="rip-eyebrow reveal">01 — El reto</span>
+        <h2 class="reveal delay-1">El desafío:<br/><em>cero presencia digital propia.</em></h2>
+        <p class="rip-desc reveal delay-2">
+          Ripieno Ibiza tenía un producto excepcional pero poca visibilidad digital. Sin menú online, sin presencia activa en redes, sin campañas. Dependían de plataformas de terceros con comisiones elevadas para gestionar sus reservas y no tenían canal directo con sus clientes.
+        </p>
+        <p class="rip-desc reveal delay-3" style="margin-top:16px;">
+          El objetivo era claro: crear una identidad digital propia que les permitiera controlar su relación con los clientes, eliminar las comisiones de intermediarios y construir una base sólida para crecer en temporada alta.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: LO QUE HICIMOS -->
+    <section class="rip-section rip-section-bg">
+      <div class="container">
+        <span class="rip-eyebrow reveal">02 — Lo que hicimos</span>
+        <h2 class="reveal delay-1">Solución completa,<br/><em>entregada en semanas.</em></h2>
+
+        <div class="rip-cards-grid">
+
+          <!-- Card 1 Menú Digital -->
+          <div class="rip-card reveal delay-1">
+            <div class="rip-card-num">01 / Menú Digital</div>
+            <h3>Menú bilingüe ES/EN</h3>
+            <p>Diseño y desarrollo de menú digital bilingüe alojado en nuestro servidor. Mobile-first, toggle de idioma, todas las categorías. Sin apps, sin descargas, directamente desde el QR.</p>
+            <a href="https://ripieno.raxislab.com" target="_blank" rel="noopener" class="rip-card-link">
+              Ver menú live →
+            </a>
+          </div>
+
+          <!-- Card 2 GMB -->
+          <div class="rip-card reveal delay-2">
+            <div class="rip-card-num">02 / Google My Business</div>
+            <h3>Perfil GMB optimizado</h3>
+            <p>Optimización completa del perfil GMB: descripción, horarios, fotos profesionales, posts semanales y gestión de reseñas para mantener y mejorar el rating de 4.8★.</p>
+            <a href="https://maps.app.goo.gl/ripienoibiza" target="_blank" rel="noopener" class="rip-card-link">
+              Ver perfil GMB →
+            </a>
+          </div>
+
+          <!-- Card 3 QR -->
+          <div class="rip-card reveal delay-3">
+            <div class="rip-card-num">03 / Imprenta</div>
+            <h3>QR en alta resolución</h3>
+            <p>QR en alta resolución (SVG + PNG 300dpi) con colores corporativos de Ripieno para pegatinas en mesas, mostrador y cartas físicas. Listo para imprenta.</p>
+          </div>
+
+          <!-- Card 4 Google Ads -->
+          <div class="rip-card reveal delay-1">
+            <div class="rip-card-num">04 / Publicidad</div>
+            <h3>Google Ads local</h3>
+            <p>Estructura de campañas de búsqueda local y Performance Max para captar turistas y residentes en Ibiza. Segmentación geográfica y por intención de búsqueda.</p>
+          </div>
+
+          <!-- Card 5 Instagram -->
+          <div class="rip-card reveal delay-2">
+            <div class="rip-card-num">05 / Redes Sociales</div>
+            <h3>Estrategia Instagram</h3>
+            <p>Plan de contenido, bio optimizada y estrategia de reels para @ripienoibiza. Creativos orientados a captar la estética del producto y atraer al público objetivo.</p>
+            <a href="https://www.instagram.com/ripienoibiza/" target="_blank" rel="noopener" class="rip-card-link">
+              Ver Instagram →
+            </a>
+          </div>
+
+          <!-- Card 6 Reservas -->
+          <div class="rip-card reveal delay-3">
+            <div class="rip-card-num">06 / Sistema Propio</div>
+            <h3>Sistema de reservas</h3>
+            <p>Sistema propio de reservas con emails automáticos post-visita para solicitar reseñas en Google. Panel admin integrado en RaxisLab OS.</p>
+            <span class="rip-card-badge">En desarrollo</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: RESULTADOS -->
+    <section class="rip-section">
+      <div class="container">
+        <span class="rip-eyebrow reveal">03 — Resultados</span>
+        <h2 class="reveal delay-1">Proyecto en curso.<br/><em>Métricas en 90 días.</em></h2>
+        <p class="rip-desc reveal delay-2">
+          El proyecto está activo. Los resultados se actualizarán cuando tengamos datos suficientes para reportar con honestidad. Sin promesas infladas — solo números reales.
+        </p>
+
+        <div class="rip-metrics-grid">
+          <div class="rip-metric-box pending reveal delay-1">
+            <div class="rip-metric-val">—</div>
+            <div class="rip-metric-lbl">Visitas al menú / mes</div>
+          </div>
+          <div class="rip-metric-box pending reveal delay-2">
+            <div class="rip-metric-val">—</div>
+            <div class="rip-metric-lbl">Nuevas reseñas Google</div>
+          </div>
+          <div class="rip-metric-box pending reveal delay-3">
+            <div class="rip-metric-val">—</div>
+            <div class="rip-metric-lbl">Clicks desde Google Ads</div>
+          </div>
+        </div>
+
+        <div class="rip-in-progress reveal delay-2">
+          <div class="rip-in-progress-dot"></div>
+          <p><strong>Proyecto activo desde junio 2026.</strong> Actualizaremos esta sección con datos reales de tráfico, reseñas y reservas una vez completado el primer trimestre.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: LINKS ÚTILES (solo admin) -->
+    <div class="rip-admin-section" id="admin-links" style="display:none;">
+      <div class="container">
+        <span style="font-family:var(--mono); font-size:10px; color:rgba(255,255,255,0.3); text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:12px;">Admin only</span>
+        <h3 style="font-size:22px; font-weight:300; color:#fff; letter-spacing:-0.03em;">Links del proyecto</h3>
+        <div class="rip-admin-grid">
+          <a href="https://ripieno.raxislab.com" target="_blank" rel="noopener" class="rip-admin-link">
+            Menú live
+            <span>ripieno.raxislab.com</span>
+          </a>
+          <a href="https://www.instagram.com/ripienoibiza/" target="_blank" rel="noopener" class="rip-admin-link">
+            Instagram
+            <span>@ripienoibiza</span>
+          </a>
+          <a href="https://maps.app.goo.gl/ripienoibiza" target="_blank" rel="noopener" class="rip-admin-link">
+            Google Maps / GMB
+            <span>Ver perfil →</span>
+          </a>
+          <a href="https://raxislab-os.vercel.app" target="_blank" rel="noopener" class="rip-admin-link">
+            Panel admin OS
+            <span>raxislab-os.vercel.app</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 5: CTA -->
+    <section class="rip-cta">
+      <div class="container">
+        <h2 class="reveal">¿Tienes un restaurante<br/>o negocio local?<br/><em>Hacemos lo mismo por ti.</em></h2>
+        <p class="reveal delay-1">Menú digital, Google My Business, campañas y estrategia completa. Todo medible, sin comisiones de terceros.</p>
+        <a href="../contact.html" class="btn-ripieno reveal delay-2">Hablemos →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="sitefooter">
+    <div class="container">
+      <div class="sitefooter-grid">
+        <div class="sitefooter-brand">
+          <a href="../index.html" class="sitefooter-logo">
+            <img src="../images/logo-mark-white.svg" alt="" height="26" style="display:block;flex-shrink:0;" />
+            <span>RAXIS<span style="font-weight:300;color:rgba(0,150,255,0.85);">LAB</span></span>
+          </a>
+          <p>Agencia de marketing digital con IA integrada. Resultados medibles, transparencia total.</p>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="../services.html">Meta Ads</a></li>
+            <li><a href="../services.html">Google Ads</a></li>
+            <li><a href="../services.html">Redes sociales</a></li>
+            <li><a href="../ai.html">IA Studio</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="../about.html">Quiénes somos</a></li>
+            <li><a href="../cases.html">Clientes</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../resources.html">Recursos</a></li>
+          </ul>
+        </div>
+        <div class="sitefooter-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="../privacy.html">Privacidad</a></li>
+            <li><a href="../terms.html">Términos</a></li>
+            <li><a href="../cookies.html">Cookies</a></li>
+            <li><a href="../contact.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sitefooter-bottom">
+        <p>© 2026 RaxisLab · <a href="https://raxislab.com" style="color:inherit;">raxislab.com</a></p>
+        <div class="sitefooter-bottom-links">
+          <a href="../privacy.html">Privacidad</a>
+          <a href="../terms.html">Términos</a>
+          <a href="../cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/shared.js"></script>
+  <script>
+    const p = new URLSearchParams(window.location.search);
+    if (p.get('admin') === 'true') {
+      document.getElementById('admin-links').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

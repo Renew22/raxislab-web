@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- build: 2026-06-21 -->
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>RaxisLab · Agencia de Marketing Digital · Meta Ads · Google Ads · IA</title>
@@ -998,68 +998,6 @@
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
-
-    /* ══════════════════════════════════════
-       CLIENTES — LOGO MARQUEE
-    ══════════════════════════════════════ */
-    #clientes {
-      padding: 72px 0 80px;
-      border-top: 1px solid var(--gray-200);
-      background: var(--white);
-    }
-    .clientes-title {
-      text-align: center;
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 48px;
-    }
-    .logos-overflow {
-      overflow: hidden;
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
-      mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
-    }
-    .logos-track {
-      display: flex;
-      align-items: center;
-      animation: logos-scroll 32s linear infinite;
-      width: max-content;
-    }
-    .logos-track:hover { animation-play-state: paused; }
-    @keyframes logos-scroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-    .logo-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 44px;
-      height: 72px;
-      flex-shrink: 0;
-    }
-    .logo-item img {
-      height: 34px;
-      max-width: 130px;
-      width: auto;
-      object-fit: contain;
-      filter: grayscale(100%) opacity(0.45);
-      transition: filter 0.35s ease;
-      display: block;
-    }
-    .logo-item:hover img { filter: grayscale(0%) opacity(1); }
-    .logo-vsep {
-      width: 1px;
-      height: 28px;
-      background: var(--gray-200);
-      flex-shrink: 0;
-    }
-    @media (max-width: 768px) {
-      .logo-item { padding: 0 28px; }
-      .logo-item img { height: 26px; }
-    }
   </style>
 </head>
 
@@ -1079,6 +1017,8 @@
       <li><a href="#casos">Resultados</a></li>
       <li><a href="#logistica">Logística</a></li>
       <li><a href="#proceso">Proceso</a></li>
+      <li><a href="cases.html">Clientes</a></li>
+      <li><a href="about.html">Quién soy</a></li>
       <li><a href="#contacto" class="nav-cta">Hablemos →</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -1092,6 +1032,8 @@
     <a href="#casos">Resultados</a>
     <a href="#logistica">Logística</a>
     <a href="#proceso">Proceso</a>
+    <a href="cases.html">Clientes</a>
+    <a href="about.html">Quién soy</a>
     <a href="#contacto" class="nav-cta">Hablemos →</a>
   </div>
 
@@ -1134,14 +1076,14 @@
       <div class="marquee-item"><strong>Meta Ads</strong><div class="marquee-sep"></div>Campañas Facebook e Instagram<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Google Ads</strong><div class="marquee-sep"></div>Search · Display · Performance Max<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Redes Sociales</strong><div class="marquee-sep"></div>Contenido + Comunidad + Crecimiento<div class="marquee-sep"></div></div>
-      <div class="marquee-item"><strong>IA Integrada</strong><div class="marquee-sep"></div>Claude · Windsor.ai · n8n · Perplexity<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>IA Integrada</strong><div class="marquee-sep"></div>Claude AI · Meta Ads API · Hetzner · Perplexity<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Reporting</strong><div class="marquee-sep"></div>Datos reales, decisiones claras<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Recursos Gratis</strong><div class="marquee-sep"></div>Guías, plantillas y herramientas<div class="marquee-sep"></div></div>
       <!-- Duplicado para loop continuo -->
       <div class="marquee-item"><strong>Meta Ads</strong><div class="marquee-sep"></div>Campañas Facebook e Instagram<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Google Ads</strong><div class="marquee-sep"></div>Search · Display · Performance Max<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Redes Sociales</strong><div class="marquee-sep"></div>Contenido + Comunidad + Crecimiento<div class="marquee-sep"></div></div>
-      <div class="marquee-item"><strong>IA Integrada</strong><div class="marquee-sep"></div>Claude · Windsor.ai · n8n · Perplexity<div class="marquee-sep"></div></div>
+      <div class="marquee-item"><strong>IA Integrada</strong><div class="marquee-sep"></div>Claude AI · Meta Ads API · Hetzner · Perplexity<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Reporting</strong><div class="marquee-sep"></div>Datos reales, decisiones claras<div class="marquee-sep"></div></div>
       <div class="marquee-item"><strong>Recursos Gratis</strong><div class="marquee-sep"></div>Guías, plantillas y herramientas<div class="marquee-sep"></div></div>
     </div>
@@ -1228,7 +1170,7 @@
           <p class="service-desc">Informes mensuales con datos reales de Meta y Google — sin humo. Qué funciona, qué ajustamos y qué hacemos el próximo mes para seguir mejorando.</p>
           <div class="service-tags">
             <span class="tag">Análisis</span><span class="tag">Estrategia</span>
-            <span class="tag">Informes</span><span class="tag">Windsor.ai</span>
+            <span class="tag">Informes</span><span class="tag">Meta Ads API</span>
           </div>
         </div>
 
@@ -1429,6 +1371,64 @@
     </div>
   </section>
 
+  <!-- ═══════════════ CLIENTES ═══════════════ -->
+  <section id="clientes" aria-labelledby="clientes-title" style="background:var(--gray-50); border-top:1px solid var(--gray-200);">
+    <div class="container">
+      <span class="section-eyebrow reveal">— Casos de éxito</span>
+      <h2 class="section-title reveal delay-1" id="clientes-title" style="margin-bottom:48px;">
+        Clientes reales.<br/><em>Resultados verificables.</em>
+      </h2>
+
+      <!-- Card Ripieno Ibiza -->
+      <div class="reveal delay-1" style="background:#fff; border:1px solid #E8DCC8; border-radius:20px; overflow:hidden; transition:transform 0.3s, box-shadow 0.3s, border-color 0.3s; max-width:800px;">
+        <div style="background:linear-gradient(135deg,#8B1A1A 0%,#6B1414 100%); padding:36px 40px 28px; position:relative; overflow:hidden;">
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;"></div>
+          <div style="display:flex;align-items:center;gap:18px;position:relative;">
+            <div style="width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="34" height="34" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+                <path d="M22 8 C14 8 8 14 8 22 C8 30 14 36 22 36 C30 36 36 30 36 22" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M22 14 C18 14 15 17 15 21 C15 25 18 28 22 28 C26 28 29 25 29 21" stroke="#D4A017" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="22" cy="21" r="3" fill="rgba(255,255,255,0.7)"/>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size:11px;font-family:var(--mono);color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Hostelería · Ibiza</div>
+              <h3 style="font-size:22px;font-weight:500;color:#fff;letter-spacing:-0.03em;margin-bottom:2px;">Ripieno Ibiza</h3>
+              <p style="font-size:13px;color:rgba(255,255,255,0.6);">Restaurante italiano · Santa Eulária del Río</p>
+            </div>
+            <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
+              <span style="font-family:var(--mono);font-size:9px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);color:#4ade80;padding:4px 12px;border-radius:100px;text-transform:uppercase;letter-spacing:0.06em;">● Cliente activo</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding:28px 40px 32px; background:#FAF5E4;">
+          <p style="font-size:14px;color:var(--gray-600);line-height:1.7;margin-bottom:20px;">Menú digital bilingüe · Google My Business · QR para imprenta · Google Ads · Estrategia Instagram · Sistema de reservas propio</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+            <span class="tag" style="background:#fff;border-color:#E8DCC8;">Menú Digital</span>
+            <span class="tag" style="background:#fff;border-color:#E8DCC8;">Google My Business</span>
+            <span class="tag" style="background:#fff;border-color:#E8DCC8;">Google Ads</span>
+            <span class="tag" style="background:#fff;border-color:#E8DCC8;">Instagram</span>
+            <span class="tag" style="background:#fff;border-color:#E8DCC8;">Reservas</span>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="clientes/ripieno.html" style="display:inline-flex;align-items:center;gap:6px;background:#8B1A1A;color:#fff;text-decoration:none;padding:11px 22px;border-radius:100px;font-size:13px;font-weight:500;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(139,26,26,0.25);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(139,26,26,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(139,26,26,0.25)'">
+              Ver caso completo →
+            </a>
+            <a href="https://ripieno.raxislab.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;border:1px solid #E8DCC8;color:#8B1A1A;text-decoration:none;padding:11px 20px;border-radius:100px;font-size:13px;font-weight:500;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#8B1A1A'" onmouseout="this.style.borderColor='#E8DCC8'">
+              Ver menú live
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;" class="reveal delay-2">
+        <a href="cases.html" style="font-size:14px;color:var(--accent);display:inline-flex;align-items:center;gap:6px;font-weight:500;transition:gap 0.2s;" onmouseover="this.style.gap='10px'" onmouseout="this.style.gap='6px'">
+          Ver todos los casos de éxito →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════ LOGÍSTICA ═══════════════ -->
   <section id="logistica" aria-labelledby="logistica-title" style="background:var(--black); color:var(--white);">
     <div class="container">
@@ -1544,12 +1544,12 @@
                 <span class="stack-item-role">Estrategia + Contenido</span>
               </div>
               <div class="stack-item">
-                <span class="stack-item-name">Windsor.ai</span>
-                <span class="stack-item-role">Datos Meta + Google</span>
+                <span class="stack-item-name">Meta Ads API</span>
+                <span class="stack-item-role">Datos Meta en tiempo real</span>
               </div>
               <div class="stack-item">
-                <span class="stack-item-name">n8n</span>
-                <span class="stack-item-role">Automatizaciones</span>
+                <span class="stack-item-name">Servidor propio</span>
+                <span class="stack-item-role">Automatizaciones 24/7</span>
               </div>
               <div class="stack-item">
                 <span class="stack-item-name">Perplexity</span>
@@ -1584,7 +1584,7 @@
         <div class="ia-card reveal">
           <div class="ia-card-num">01</div>
           <h4>Decisiones basadas en datos</h4>
-          <p>Windsor.ai conecta todas tus plataformas en tiempo real. Vemos exactamente qué funciona y ajustamos antes de que tu presupuesto se desperdicie.</p>
+          <p>La Meta Ads API conecta todas tus plataformas en tiempo real. Vemos exactamente qué funciona y ajustamos antes de que tu presupuesto se desperdicie.</p>
         </div>
         <div class="ia-card reveal delay-1">
           <div class="ia-card-num">02</div>
@@ -1594,7 +1594,7 @@
         <div class="ia-card reveal delay-2">
           <div class="ia-card-num">03</div>
           <h4>Automatizaciones que ahorran tiempo</h4>
-          <p>n8n automatiza procesos repetitivos: reportes, alertas de rendimiento, publicaciones en GMB. Más eficiencia, mismo coste para ti.</p>
+          <p>Sistema propio en servidor dedicado automatiza reportes, alertas de rendimiento y publicaciones en GMB. Más eficiencia, mismo coste para ti.</p>
         </div>
         <div class="ia-card reveal delay-3">
           <div class="ia-card-num">04</div>
@@ -1615,10 +1615,9 @@
       <div class="ia-tools reveal">
         <span class="ia-tools-label">Con tecnología de</span>
         <span class="tool-pill">Claude AI</span>
-        <span class="tool-pill">Windsor.ai</span>
-        <span class="tool-pill">n8n</span>
-        <span class="tool-pill">Perplexity</span>
         <span class="tool-pill">Meta Ads API</span>
+        <span class="tool-pill">Perplexity</span>
+        <span class="tool-pill">Servidor propio</span>
         <span class="tool-pill">Google Ads</span>
       </div>
     </div>
@@ -1677,52 +1676,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════ CLIENTES ═══════════════ -->
-  <section id="clientes" aria-label="Negocios que confían en Raxislab">
-    <p class="clientes-title reveal">Negocios que confían en Raxislab</p>
-    <div class="logos-overflow">
-      <div class="logos-track" aria-hidden="true">
-        <div class="logo-item"><img src="images/clientes/campus-paco-alcacer.png" alt="Campus Paco Alcácer"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/discobolo.png" alt="Discóbolo"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/guardian-del-arco.png" alt="Guardián del Arco"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/la-pobla-de-farnals.png" alt="La Pobla de Farnals"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/last-mile.png" alt="Last Mile Dist"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/primekit.png" alt="Primekit"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/malvarosa.png" alt="Malvarosa"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/identity.png" alt="Identity Peluqueros"/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/desancho.png" alt="Desancho Estilistas"/></div>
-        <div class="logo-vsep"></div>
-        <!-- Duplicado para scroll infinito -->
-        <div class="logo-item"><img src="images/clientes/campus-paco-alcacer.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/discobolo.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/guardian-del-arco.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/la-pobla-de-farnals.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/last-mile.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/primekit.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/malvarosa.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/identity.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-        <div class="logo-item"><img src="images/clientes/desancho.png" alt=""/></div>
-        <div class="logo-vsep"></div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer role="contentinfo">
     <div class="container">
@@ -1749,7 +1702,7 @@
             <li><a href="resources.html">Guías gratuitas</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="pricing.html">Precios</a></li>
-            <li><a href="#casos">Casos de éxito</a></li>
+            <li><a href="cases.html">Clientes</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1762,7 +1715,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 RaxisLab · Agencia de marketing digital</p>
+        <p>© 2026 RaxisLab · Agencia de marketing digital</p>
         <div class="footer-bottom-links">
           <a href="privacy.html">Privacidad</a>
           <a href="terms.html">Aviso legal</a>
@@ -1774,6 +1727,20 @@
 
   <!-- ═══════════════ SCRIPTS ═══════════════ -->
   <script>
+    // ── Cookie Banner RGPD ────────────────────────
+    (function() {
+      if (localStorage.getItem('rl_cookies_ok')) return;
+      var b = document.createElement('div');
+      b.id = 'cookie-banner';
+      b.innerHTML = '<div id="cookie-inner"><p>Usamos cookies propias y de análisis (Google Analytics) para mejorar tu experiencia. Puedes aceptarlas o rechazar las no esenciales. <a href="cookies.html">Más info</a></p><div id="cookie-btns"><button id="cookie-reject">Solo esenciales</button><button id="cookie-accept">Aceptar todas</button></div></div>';
+      var s = document.createElement('style');
+      s.textContent = '#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0a0a0a;color:#fff;padding:16px 24px;box-shadow:0 -2px 24px rgba(0,0,0,.18);}#cookie-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}#cookie-inner p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.55;flex:1;min-width:200px;}#cookie-inner p a{color:rgba(0,150,255,.85);text-decoration:underline;}#cookie-btns{display:flex;gap:10px;flex-shrink:0;}#cookie-reject{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);padding:9px 18px;border-radius:100px;font-size:13px;cursor:pointer;}#cookie-accept{background:#0057ff;border:none;color:#fff;padding:9px 22px;border-radius:100px;font-size:13px;font-weight:500;cursor:pointer;}@media(max-width:600px){#cookie-inner{flex-direction:column;}#cookie-btns{width:100%;}#cookie-reject,#cookie-accept{flex:1;text-align:center;}}';
+      document.head.appendChild(s);
+      document.body.appendChild(b);
+      document.getElementById('cookie-accept').addEventListener('click',function(){localStorage.setItem('rl_cookies_ok','all');b.remove();});
+      document.getElementById('cookie-reject').addEventListener('click',function(){localStorage.setItem('rl_cookies_ok','essential');b.remove();window['ga-disable-G-EGR4RYY1ER']=true;});
+    })();
+
     // ── Cursor personalizado ──────────────────────
     const cursor = document.getElementById('cursor');
     const ring   = document.getElementById('cursor-ring');

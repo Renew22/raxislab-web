@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Casos de Éxito — RaxisLab</title>
   <meta name="description" content="Resultados reales de clientes reales. ROI, leads, conversión y crecimiento digital demostrado con métricas verificables."/>
@@ -324,131 +325,10 @@
       font-weight: 300;
     }
 
-    /* ── Sectores ── */
-    .cases-sectors {
-      padding: 96px 0;
-    }
-    .sectors-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 56px;
-    }
-    .sector-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: transform 0.3s var(--ease), box-shadow 0.3s, border-color 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-    .sector-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.07);
-      border-color: var(--accent);
-    }
-    .sector-card-header {
-      background: var(--gray-50);
-      border-bottom: 1px solid var(--gray-200);
-      padding: 32px 32px 28px;
-    }
-    .sector-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--accent);
-      background: var(--accent-mid);
-      border: 1px solid rgba(0,87,255,0.15);
-      padding: 4px 12px;
-      border-radius: 100px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 14px;
-    }
-    .sector-card h3 {
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      line-height: 1.3;
-      color: var(--black);
-      margin-bottom: 10px;
-    }
-    .sector-reto {
-      font-size: 13px;
-      color: var(--gray-600);
-      line-height: 1.65;
-    }
-    .sector-card-body {
-      padding: 28px 32px 32px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .sector-acciones-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-    }
-    .sector-bullets {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-    }
-    .sector-bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--gray-600);
-      line-height: 1.5;
-    }
-    .sector-bullets li::before {
-      content: '';
-      width: 5px;
-      height: 5px;
-      background: var(--accent);
-      border-radius: 50%;
-      margin-top: 6px;
-      flex-shrink: 0;
-    }
-    .sector-result {
-      margin-top: auto;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .sector-result-val {
-      font-size: 22px;
-      font-weight: 300;
-      letter-spacing: -0.04em;
-      color: var(--green);
-      flex-shrink: 0;
-      line-height: 1;
-      white-space: nowrap;
-    }
-    .sector-result-lbl {
-      font-size: 12px;
-      color: var(--gray-600);
-      line-height: 1.4;
-    }
-
     /* ── Responsive ── */
     @media (max-width: 900px) {
       .case-featured-grid { grid-template-columns: 1fr; gap: 40px; }
       .cases-grid { grid-template-columns: 1fr; }
-      .sectors-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 600px) {
@@ -474,6 +354,7 @@
       <li><a href="resources.html">Recursos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="pricing.html">Precios</a></li>
+      <li><a href="cases.html" class="active">Clientes</a></li>
       <li><a href="contact.html" class="sitenav-cta">Hablemos →</a></li>
     </ul>
     <button class="sitenav-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -560,126 +441,266 @@
       </div>
     </section>
 
-    <!-- SECTORES -->
-    <section class="cases-sectors">
+    <!-- GRID DE CASOS -->
+    <section class="cases-grid-section">
       <div class="container">
-        <span class="section-eyebrow reveal">Por sector</span>
-        <h2 class="section-title reveal delay-1">Raxislab trabaja<br/><em>con cualquier negocio.</em></h2>
+        <span class="section-eyebrow reveal">Más proyectos</span>
+        <h2 class="section-title reveal delay-1">Cada caso,<br/><em>una historia diferente.</em></h2>
 
-        <div class="sectors-grid">
+        <div class="cases-grid">
 
-          <!-- SECTOR 1: Belleza y Estética -->
-          <article class="sector-card reveal delay-1">
-            <div class="sector-card-header">
-              <span class="sector-badge">✦ Belleza y Estética</span>
-              <h3>Peluquerías y centros de estética que llenan la agenda</h3>
-              <p class="sector-reto">La mayoría de los negocios de belleza dependen del boca a boca y no generan reservas de forma predecible. El reto es crear un sistema digital que llene la agenda de forma constante, sin depender de la suerte ni de plataformas que cobran comisión por reserva.</p>
+          <!-- Caso 1 -->
+          <article class="case-card reveal delay-1">
+            <div class="case-card-header">
+              <div class="case-card-sector">Salud &amp; Bienestar</div>
+              <h3>Clínica con alta competencia local: más reservas, menos coste</h3>
+              <p class="case-card-challenge">Saturación de competidores en Google Ads con CPCs muy altos. El negocio pagaba €18 por clic con una tasa de conversión de menos del 2%.</p>
             </div>
-            <div class="sector-card-body">
-              <div>
-                <p class="sector-acciones-label">Qué hacemos</p>
-                <ul class="sector-bullets">
-                  <li>Campañas en Meta Ads con segmentación geográfica precisa orientadas a captar reservas directas</li>
-                  <li>Integración con sistemas de reservas online (Booksy, Square, Fresha) para cerrar el ciclo</li>
-                  <li>Contenido de Instagram que muestra el trabajo real: antes/después, proceso, resultados</li>
-                </ul>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">+180%</div>
+                  <div class="case-mini-lbl">reservas/mes</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">−38%</div>
+                  <div class="case-mini-lbl">coste/clic</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">6.1×</div>
+                  <div class="case-mini-lbl">ROAS</div>
+                </div>
               </div>
-              <div class="sector-result">
-                <span class="sector-result-val">+60%</span>
-                <span class="sector-result-lbl">reservas online en los primeros 90 días de campaña activa</span>
+              <div class="case-tags-row">
+                <span class="tag">Google Ads</span>
+                <span class="tag">Search</span>
+                <span class="tag">Local</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 2 -->
+          <article class="case-card reveal delay-2">
+            <div class="case-card-header">
+              <div class="case-card-sector">Comercio &amp; Retail</div>
+              <h3>Ecommerce que duplicó su ticket medio en 60 días</h3>
+              <p class="case-card-challenge">Tienda online con mucho tráfico pero bajo ticket medio (€47). El problema era la segmentación y el tipo de producto anunciado.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">€107</div>
+                  <div class="case-mini-lbl">ticket medio</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">5.2×</div>
+                  <div class="case-mini-lbl">ROAS Meta</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">×2.3</div>
+                  <div class="case-mini-lbl">ticket ↑</div>
+                </div>
               </div>
               <div class="case-tags-row">
                 <span class="tag">Meta Ads</span>
-                <span class="tag">Redes sociales</span>
+                <span class="tag">Ecommerce</span>
+                <span class="tag">Shopping</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 3 -->
+          <article class="case-card reveal delay-1">
+            <div class="case-card-header">
+              <div class="case-card-sector">Hostelería &amp; Restauración</div>
+              <h3>Restaurante local que llenó agenda con Meta Ads orgánico y de pago</h3>
+              <p class="case-card-challenge">Dependencia total de plataformas de terceros para reservas. El negocio pagaba comisiones del 20% por cada mesa. Cero presencia digital propia.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">+340%</div>
+                  <div class="case-mini-lbl">reservas directas</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">−20%</div>
+                  <div class="case-mini-lbl">sin comisiones</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">4.8×</div>
+                  <div class="case-mini-lbl">ROAS</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Meta Ads</span>
                 <span class="tag">Contenido</span>
-                <span class="tag">Reservas</span>
+                <span class="tag">Local</span>
               </div>
             </div>
           </article>
 
-          <!-- SECTOR 2: Deporte y Clubes -->
-          <article class="sector-card reveal delay-2">
-            <div class="sector-card-header">
-              <span class="sector-badge">✦ Deporte y Clubes</span>
-              <h3>Clubes de fútbol y campus deportivos que multiplican inscripciones</h3>
-              <p class="sector-reto">Los clubes deportivos y campus tienen ventanas de inscripción muy cortas y necesitan llenarlas con rapidez. El problema es que sin presencia digital estructurada, la captación depende del cartelismo y el WhatsApp, y los plazos se cierran con plazas vacías.</p>
+          <!-- Caso 4 -->
+          <article class="case-card reveal delay-2">
+            <div class="case-card-header">
+              <div class="case-card-sector">Consultoría &amp; B2B</div>
+              <h3>Consultor que multiplicó sus leads cualificados con LinkedIn y automatizaciones</h3>
+              <p class="case-card-challenge">Generaba leads vía boca a boca exclusivamente. Sin sistema digital, sin pipeline predecible. Picos y valles constantes en ingresos.</p>
             </div>
-            <div class="sector-card-body">
-              <div>
-                <p class="sector-acciones-label">Qué hacemos</p>
-                <ul class="sector-bullets">
-                  <li>Campañas de captación de leads en Meta Ads coordinadas con las fechas de apertura de inscripciones</li>
-                  <li>Google Ads local para capturar búsquedas de alta intención en la zona geográfica del club</li>
-                  <li>Contenido orgánico en redes para mantener la comunidad activa y fidelizada durante todo el año</li>
-                </ul>
-              </div>
-              <div class="sector-result">
-                <span class="sector-result-val">×3</span>
-                <span class="sector-result-lbl">inscripciones respecto al período anterior, en la misma ventana de tiempo</span>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">+280%</div>
+                  <div class="case-mini-lbl">leads/mes</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">48%</div>
+                  <div class="case-mini-lbl">conversión</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">24/7</div>
+                  <div class="case-mini-lbl">automatizado</div>
+                </div>
               </div>
               <div class="case-tags-row">
-                <span class="tag">Meta Ads</span>
-                <span class="tag">Google Ads</span>
-                <span class="tag">Comunidad</span>
-                <span class="tag">Lead Gen</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- SECTOR 3: Logística y Distribución B2B -->
-          <article class="sector-card reveal delay-1">
-            <div class="sector-card-header">
-              <span class="sector-badge">✦ Logística y Distribución B2B</span>
-              <h3>Empresas de distribución que generan leads B2B cualificados</h3>
-              <p class="sector-reto">En el sector B2B, el lead genérico no vale nada. Las empresas de logística y distribución necesitan conectar con decisores reales: directores de compras, responsables de operaciones. Sin presencia digital profesional, ni siquiera entran en el proceso de evaluación.</p>
-            </div>
-            <div class="sector-card-body">
-              <div>
-                <p class="sector-acciones-label">Qué hacemos</p>
-                <ul class="sector-bullets">
-                  <li>Diseño web y branding corporativo para construir presencia profesional desde cero o mejorar la existente</li>
-                  <li>SEO técnico y de contenido orientado a búsquedas B2B específicas del sector</li>
-                  <li>Meta Ads y Google Ads con formularios cualificados diseñados para filtrar decisores reales</li>
-                </ul>
-              </div>
-              <div class="sector-result">
-                <span class="sector-result-val">−42%</span>
-                <span class="sector-result-lbl">coste por lead cualificado con decisores reales en el pipeline</span>
-              </div>
-              <div class="case-tags-row">
-                <span class="tag">Branding</span>
-                <span class="tag">SEO</span>
-                <span class="tag">Meta Ads</span>
-                <span class="tag">Google Ads</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- SECTOR 4: Diseño de Marca -->
-          <article class="sector-card reveal delay-2">
-            <div class="sector-card-header">
-              <span class="sector-badge">✦ Diseño de Marca</span>
-              <h3>Profesionales y negocios que necesitan una identidad que justifique precio premium</h3>
-              <p class="sector-reto">Sin marca definida, el precio siempre es el único argumento. Profesionales del tatuaje, fotografía, diseño o servicios creativos no pueden diferenciarse si su identidad visual es genérica — independientemente de la calidad de su trabajo.</p>
-            </div>
-            <div class="sector-card-body">
-              <div>
-                <p class="sector-acciones-label">Qué hacemos</p>
-                <ul class="sector-bullets">
-                  <li>Identidad visual completa (logo, paleta, tipografía, tono de voz) desarrollada con IA integrada en el proceso</li>
-                  <li>Web portfolio o corporativa diseñada, desarrollada y lista para posicionar en buscadores</li>
-                  <li>Estrategia de lanzamiento digital para dar visibilidad a la nueva marca desde el primer día</li>
-                </ul>
-              </div>
-              <div class="sector-result">
-                <span class="sector-result-val">Mes 1</span>
-                <span class="sector-result-lbl">marca operativa, web publicada y primeras campañas activas desde el arranque</span>
-              </div>
-              <div class="case-tags-row">
-                <span class="tag">Branding</span>
-                <span class="tag">Web</span>
+                <span class="tag">Automatización</span>
+                <span class="tag">LinkedIn</span>
                 <span class="tag">IA</span>
-                <span class="tag">Lanzamiento</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 5 -->
+          <article class="case-card reveal delay-1">
+            <div class="case-card-header">
+              <div class="case-card-sector">Fitness &amp; Bienestar</div>
+              <h3>Centro de fitness que multiplicó sus bonos anuales con Reels estratégicos</h3>
+              <p class="case-card-challenge">Estancamiento en crecimiento de socios. Alta rotación mensual. El negocio no conseguía que los clientes compraran bonos de larga duración.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">×3.2</div>
+                  <div class="case-mini-lbl">bonos anuales</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">−55%</div>
+                  <div class="case-mini-lbl">rotación</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">3.2M</div>
+                  <div class="case-mini-lbl">vistas Reels</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Contenido</span>
+                <span class="tag">Reels</span>
+                <span class="tag">Meta Ads</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Caso 6 -->
+          <article class="case-card reveal delay-2">
+            <div class="case-card-header">
+              <div class="case-card-sector">Inmobiliaria</div>
+              <h3>Agencia inmobiliaria con pipeline de compradores cualificados desde cero</h3>
+              <p class="case-card-challenge">Sin presencia digital. Dependencia de portales de terceros con leads de baja calidad. Coste por lead muy alto sin capacidad de cualificación previa.</p>
+            </div>
+            <div class="case-card-body">
+              <div class="case-mini-metrics">
+                <div class="case-mini-m">
+                  <div class="case-mini-val green">−62%</div>
+                  <div class="case-mini-lbl">coste por lead</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val accent">+320%</div>
+                  <div class="case-mini-lbl">leads cualif.</div>
+                </div>
+                <div class="case-mini-m">
+                  <div class="case-mini-val">90</div>
+                  <div class="case-mini-lbl">días al resultado</div>
+                </div>
+              </div>
+              <div class="case-tags-row">
+                <span class="tag">Meta Ads</span>
+                <span class="tag">Lead Gen</span>
+                <span class="tag">CRM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Caso Ripieno — Presencia Digital ── -->
+          <article class="case-card reveal delay-1" style="grid-column: 1 / -1; background: linear-gradient(135deg, #FAF5E4 0%, #fff 60%); border-color: #E8DCC8;">
+            <div class="case-card-header" style="background: #8B1A1A; border-bottom-color: rgba(255,255,255,0.15);">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+                <span class="case-card-sector" style="background:rgba(200,146,10,0.15); border-color:rgba(200,146,10,0.35); color:#D4A017;">Hostelería · Ibiza</span>
+                <span class="case-featured-badge" style="background:rgba(200,146,10,0.15); border-color:rgba(200,146,10,0.25); color:#D4A017;">Producto Digital</span>
+              </div>
+              <h3 style="color:#fff; font-size:22px;">Ripieno Ibiza — Menú digital + sistema de reservas propio</h3>
+              <p class="case-card-challenge" style="color:rgba(255,255,255,0.7); max-width:600px;">
+                Restaurante de pasta fresca y pinsa romana en Ibiza. Sin presencia digital propia y dependiente de plataformas de reservas de terceros con comisiones elevadas. Necesitaban su identidad online y canal directo con el cliente.
+              </p>
+            </div>
+            <div class="case-card-body" style="display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start;">
+              <div>
+                <p style="font-size:11px; font-family:var(--mono); color:var(--gray-400); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;">Solución entregada</p>
+                <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:20px;">
+                  <li style="display:flex; gap:10px; font-size:14px; color:var(--gray-600); align-items:flex-start;">
+                    <span style="color:#8B1A1A; flex-shrink:0; font-weight:700;">✓</span>
+                    Menú digital bilingüe (ES/EN) con todas las categorías, toggle de idioma y diseño mobile-first
+                  </li>
+                  <li style="display:flex; gap:10px; font-size:14px; color:var(--gray-600); align-items:flex-start;">
+                    <span style="color:#8B1A1A; flex-shrink:0; font-weight:700;">✓</span>
+                    Sistema de reservas propio con confirmación automática por email, recordatorio de reseña 24h después y panel admin
+                  </li>
+                  <li style="display:flex; gap:10px; font-size:14px; color:var(--gray-600); align-items:flex-start;">
+                    <span style="color:#8B1A1A; flex-shrink:0; font-weight:700;">✓</span>
+                    QR para imprenta en alta resolución con colores corporativos
+                  </li>
+                  <li style="display:flex; gap:10px; font-size:14px; color:var(--gray-600); align-items:flex-start;">
+                    <span style="color:#8B1A1A; flex-shrink:0; font-weight:700;">✓</span>
+                    Página shop placeholder lista para catálogo de productos
+                  </li>
+                </ul>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                  <a href="https://ripieno.raxislab.com" target="_blank" rel="noopener"
+                     style="display:inline-flex; align-items:center; gap:6px; background:#8B1A1A; color:#fff; text-decoration:none; padding:10px 18px; border-radius:8px; font-size:13px; font-weight:600; letter-spacing:0.02em;">
+                    Ver menú live →
+                  </a>
+                  <a href="clientes/ripieno.html"
+                     style="display:inline-flex; align-items:center; gap:6px; border:1px solid #8B1A1A; color:#8B1A1A; text-decoration:none; padding:10px 18px; border-radius:8px; font-size:13px; font-weight:600;">
+                    Ver caso completo →
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div class="case-mini-metrics" style="grid-template-columns:1fr 1fr; gap:12px;">
+                  <div class="case-mini-m" style="border-color:#E8DCC8;">
+                    <div class="case-mini-val" style="color:#8B1A1A;">0€</div>
+                    <div class="case-mini-lbl">comisión por reserva</div>
+                  </div>
+                  <div class="case-mini-m" style="border-color:#E8DCC8;">
+                    <div class="case-mini-val green">100%</div>
+                    <div class="case-mini-lbl">reservas directas</div>
+                  </div>
+                  <div class="case-mini-m" style="border-color:#E8DCC8;">
+                    <div class="case-mini-val" style="color:#8B1A1A;">ES / EN</div>
+                    <div class="case-mini-lbl">idiomas</div>
+                  </div>
+                  <div class="case-mini-m" style="border-color:#E8DCC8;">
+                    <div class="case-mini-val green">24h</div>
+                    <div class="case-mini-lbl">review automática</div>
+                  </div>
+                </div>
+                <div style="margin-top:16px;">
+                  <div class="case-tags-row">
+                    <span class="tag">Menú Digital</span>
+                    <span class="tag">Reservas</span>
+                    <span class="tag">Email Automation</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Mobile-First</span>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
